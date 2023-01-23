@@ -1,0 +1,19 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+import About from '../components/About.astro';
+import ProjectListing from '../components/ProjectListing.astro';
+import Contact from '../components/Contact.astro';
+import Newsletter from '../components/Newsletter.astro';
+
+import { config } from '../data/siteConfig';
+---
+
+<MainLayout
+  title={`Home - ${config.siteTitle} | Software Developer and Open Source Enthusiast`}
+>
+  <About />
+  <ProjectListing />
+  <Contact />
+  <Newsletter />
+</MainLayout>

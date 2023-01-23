@@ -1,0 +1,62 @@
+---
+import projects from '../data/projects.json';
+
+let styles = {
+  top: '50px',
+  transform: 'translate(100%) rotate(180deg)',
+};
+---
+
+<div>
+  <div class="overflow-x-hidden">
+    <div
+      class="projects container-inner mx-auto text-xl border-t border-gray-500 border-b py-16 mb-16 relative"
+    >
+      <h2 class="font-bold mb-6" id="projects">
+        Here are some projects I've worked on:
+      </h2>
+
+      <div class="absolute right-0 top-0" style={styles}>
+        <svg width="170px" height="170px">
+          <use xlink:href="#dots-triangle"></use>
+        </svg>
+      </div>
+
+      <ul class="text-lg sm:text-xl space-y-6">
+        {
+          projects.map((project) => (
+            <li class="checkmark mb-6">
+              <div>{project.title}</div>
+              <div class="text-lg text-gray-600">{project.description}</div>
+              <div class="mt-2">
+                <a
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  href={project.source}
+                >
+                  source
+                </a>
+                {project.path ? (
+                  <>
+                    <span class="px-1">|</span>
+                    <a
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      href={project.path}
+                    >
+                      View
+                    </a>
+                  </>
+                ) : (
+                  ''
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style></style>
