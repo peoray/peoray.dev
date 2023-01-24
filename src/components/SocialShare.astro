@@ -1,0 +1,61 @@
+---
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  RedditShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  RedditIcon,
+} from 'react-share';
+import urljoin from 'url-join';
+import { config } from '../data/siteConfig';
+
+const { post } = Astro.props;
+const url = urljoin(config.siteUrl, config.pathPrefix);
+// const url = urljoin(config.siteUrl, config.pathPrefix, postPath);
+
+const hashtagsArr = [
+  ...post.tags,
+  '100DaysOfCode',
+  'CodeNewbie',
+  'javascript',
+  'coding',
+  'WebDev',
+];
+const hashtags = [...new Set(hashtagsArr)];
+---
+
+<div class="flex flex-wrap items-baseline my-2">
+  {/* <p class='font-bold mr-4'>Share on:</p> */}
+
+  <TwitterShareButton
+    url={url}
+    title={post.title}
+    via="peoray_"
+    hashtags={hashtags}
+    class="mr-4 mb-3 lg:mb-0"
+  >
+    <TwitterIcon round size={32} />
+  </TwitterShareButton>
+  <FacebookShareButton
+    url={url}
+    quote={post.description}
+    class="mr-4 mb-3 lg:mb-0"
+  >
+    <FacebookIcon round size={32} />
+  </FacebookShareButton>
+  <LinkedinShareButton
+    url={url}
+    title={post.title}
+    summary={post.description}
+    source="peoray"
+    class="mr-4 mb-3 lg:mb-0"
+  >
+    <LinkedinIcon round size={32} />
+  </LinkedinShareButton>
+  <RedditShareButton url={url} title={post.title}>
+    <RedditIcon round size={32} />
+  </RedditShareButton>
+</div>

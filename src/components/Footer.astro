@@ -1,5 +1,6 @@
 ---
 import SocialLinks from './SocialLinks.astro';
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="text-white bg-green-700">
@@ -50,8 +51,7 @@ import SocialLinks from './SocialLinks.astro';
       </div>
       <div class="flex items-center mt-2 lg:mt-0">
         <p class="mr-2">
-          &copy; Emmanuel Raymond 2017 - {new Date().getFullYear()}. All rights
-          reserved.
+          &copy; Emmanuel Raymond 2017 - {currentYear}. All rights reserved.
         </p>
 
         {
