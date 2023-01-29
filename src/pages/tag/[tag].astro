@@ -1,0 +1,45 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Post from '../../components/Post.astro';
+
+import { formatBlogPosts, kebabCaseStr } from '../../utils/helpers';
+import type { PostFrontMatter, MyPostInstance } from '../../utils/types';
+import { config } from '../../data/siteConfig';
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob<PostFrontMatter>('../blog/*/**.md');
+  const formattedPosts = formatBlogPosts(posts);
+
+  const uniqueTags = [
+    ...new Set(
+      formattedPosts
+        .map((post: { frontmatter: { tags: any } }) => post.frontmatter.tags)
+        .flat()
+    ),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = formattedPosts.filter(
+      (post: { frontmatter: { tags: unknown[] } }) =>
+        post.frontmatter.tags.includes(tag)
+    );
+    return {
+      params: { tag: kebabCaseStr(tag) },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+console.log(tag);
+---
+
+<MainLayout title={`Posts tagged as "${tag}" – ${config.siteTitle}`}>
+  <div class="container-inner mx-auto my-16">
+    <h2 class="text-4xl font-bold mb-8 border-b">Tag: {tag}</h2>
+
+    {posts.map((post: any) => <Post post={post.frontmatter} />)}
+  </div>
+</MainLayout>

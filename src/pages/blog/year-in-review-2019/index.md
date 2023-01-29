@@ -13,7 +13,7 @@ lastmod: false
 thumbnail: './images/cover.png'
 ---
 
-![2019 image](./images/2019.jpg)
+![2019 image](/images/blog/year-in-review-2019/2019.jpg)
 
 Writing yearly reviews like this is a great way to analyse:
 
@@ -21,7 +21,7 @@ Writing yearly reviews like this is a great way to analyse:
 - What worked for me and didn't work.
 - My wins and losses.
 
-I started writing yearly reviews in [2017](./year-in-review-2017) and continue the tradition in [2018](./year-in-review-2018). Now, this is 2019 and I feel it's important I don't break the cycle. While this doesn't reflect the whole part of my life, it's also a huge part of me as it reflects the person I am and want to be.
+I started writing yearly reviews in [2017](/blog/year-in-review-2017) and continue the tradition in [2018](/blog/year-in-review-2018). Now, this is 2019 and I feel it's important I don't break the cycle. While this doesn't reflect the whole part of my life, it's also a huge part of me as it reflects the person I am and want to be.
 
 This year couldn't have started any better for me, I got a job and not just any job, a software development job. Heck yeah! I started work at [Bubble](https://bubble.ng/) mid-January after an interviewing process that took longer than I expected. During my time at Bubble, I got to work on amazing products using Vue (best part of the Job) and also got to work with awesome teammates who remain good friends till date.
 

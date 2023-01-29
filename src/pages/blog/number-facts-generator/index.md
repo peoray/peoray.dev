@@ -10,10 +10,10 @@ tags: ['programming', 'javascript']
 # category: ['Web Development']
 template: post
 lastmod: false
-thumbnail: './images/cover.png'
+thumbnail: '/images/blog/number-facts-generator/cover.png'
 ---
 
-![gif demo of application](./images/preview.gif)
+![gif demo of application](/images/blog/number-facts-generator/preview.gif)
 
 **UPDATE: I finally managed to host the app thanks to The Shalvah**
 

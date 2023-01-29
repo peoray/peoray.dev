@@ -1,15 +1,16 @@
 ---
+layout: ../../../layouts/BlogLayout.astro
 title: 'How to Hide Vue Source Map on Browser Devtools'
 description: 'How to disable source map or debug mode in production for Vue.js applications'
 date: 2019-07-09T11:25:37+01:00
 draft: false
-slug: 'hide-vue-source-map-code-in-production'
-path: '/blog/hide-vue-source-map-code-in-production'
+slug: 'hide-vue-code-production'
+path: '/blog/hide-vue-source-map-code-production'
 tags: ['vue', 'webpack']
 # category: ['Web Development']
 template: post
 lastmod: false
-thumbnail: './images/cover.png'
+thumbnail: '/images/hide-vue-code-production/cover.png'
 ---
 
 If you have ever created your Vue project using the Vue CLI and deployed to production before, chances are you might not know that your whole code is visible on the devtools.

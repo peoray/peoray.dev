@@ -1,10 +1,19 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
-import Post from '../../components/Post.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import Post from '../components/Post.astro';
 
-import { config } from '../../data/siteConfig';
+import { formatBlogPosts } from '../utils/helpers';
+import { config } from '../data/siteConfig';
 
-const posts = await Astro.glob('./*/**.md');
+const posts = await Astro.glob('./blog/*/**.md');
+
+const formattedPosts = formatBlogPosts(posts, {
+  //   filterOutDrafts: false,
+  //   filterOutFuturePosts: false,
+  //   limit: 10,
+});
+// p.map((matt) => console.log(matt.frontmatter.title));
+
 let publishedPosts = posts.filter((post) => !post?.frontmatter?.draft);
 
 publishedPosts = publishedPosts.sort((a, b) => {
@@ -68,12 +77,18 @@ publishedPosts = publishedPosts.sort((a, b) => {
         <p
           class="px-4 py-2 mr-4 font-medium text-white bg-gray-600 rounded-full hover:bg-green-600"
         >
-          {publishedPosts.length}
+          <!-- {publishedPosts.length} -->
+          {formattedPosts.length}
         </p>
       </div>
     </div>
 
-    {publishedPosts.map((post) => <Post post={post.frontmatter} />)}
+    {
+      formattedPosts.map((post: { frontmatter: any }) => (
+        <Post post={post.frontmatter} />
+      ))
+    }
+    <!-- {publishedPosts.map((post) => <Post post={post.frontmatter} />)} -->
   </div>
 </MainLayout>
 

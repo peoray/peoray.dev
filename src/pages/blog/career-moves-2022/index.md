@@ -10,7 +10,7 @@ tags: ['career']
 # category: ['Programming']
 template: post
 lastmod: false
-thumbnail: './images/cover.png'
+thumbnail: '/images/career-moves-2022/cover.png'
 ---
 
 It has been two years since I last wrote on this blog. A lot has happened between that time. There was a pandemic, I have changed jobs, massive Blockchain and Web3 hype and so much more. However, I decided to pick up active blogging again this year to document my learnings and experiences. I hope to become consistent moving forward.

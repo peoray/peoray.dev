@@ -10,10 +10,10 @@ tags: ['javascript']
 # category: ['Web Development']
 template: post
 lastmod: false
-thumbnail: './images/cover.png'
+thumbnail: '/images/blog/display-password-form-input/cover.png'
 ---
 
-![hero image](./images/preview.jpg)
+![hero image](/images/blog/display-password-form-input/preview.jpg)
 
 On most websites, when filling in the password in a form either to sign up or to log in, you will often see a button (or a checkbox) telling you to show password. This is often good for user experience so that the user, if unsure can check to see if they made an error.
 
@@ -32,7 +32,7 @@ Basic understanding of the skills above is enough for you to be able to follow a
 
 For context, this is a sample of what we will be building At the end of this tutorial we will have something like this:
 
-![hero image](./images/preview2.gif)
+![hero image](/images/blog/display-password-form-input/preview2.gif)
 
 The final code snippet will be provided in a Codepen link at the end of the article.
 
@@ -149,7 +149,7 @@ button {
 
 Ensure that your code is saved and when you open up your browser, your page should be looking like this:
 
-![hero image](./images/preview3.png)
+![hero image](/images/blog/display-password-form-input/preview3.png)
 
 Let’s move over to the app.js file and begin to write our JavaScript code.
 
@@ -198,4 +198,9 @@ togglePassword.addEventListener('change', showOrHidePassword);
 
 You can find the complete code on this [repo](https://github.com/peoray/toggle-form-password). Also, the Codepen below contains the complete code:
 
-https://codepen.io/peoray/pen/qyBVmJ
+<p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="qyBVmJ" data-user="peoray" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/peoray/pen/qyBVmJ">
+  How to toggle your password</a> by Emmanuel Raymond (<a href="https://codepen.io/peoray">@peoray</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>

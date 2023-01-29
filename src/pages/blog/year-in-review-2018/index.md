@@ -10,10 +10,10 @@ tags: ['year in review', 'career']
 # category: ['Personal']
 template: post
 lastmod: false
-thumbnail: './images/cover.png'
+thumbnail: '/images/blog/year-in-review-2018/cover.png'
 ---
 
-![2018 image](./images/2018.jpg)
+![2018 image](/images/blog/year-in-review-2018/2018.jpg)
 
 2018 has been a wonderful year regardless of the setbacks that happened, it was truly my best year yet. I have probably grown more this year than any other year in the past. [Last year](/blog/year-in-review-2017/), I had lots of goals I wanted to achieve before this day, while I completed most, attempted a few and completely didn't do some, looking back, I'm grateful for the position I am in because it wasn't so 365 days ago.
 

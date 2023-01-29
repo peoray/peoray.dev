@@ -10,10 +10,10 @@ tags: ['100 days of code', 'career']
 # category: ['Programming']
 template: post
 lastmod: false
-thumbnail: './images/cover.png'
+thumbnail: '/images/blog/100-days-of-code/cover.png'
 ---
 
-![picture of a computer](./images/header.jpg)
+![picture of a computer](/images/blog/100-days-of-code/header.jpg)
 
 ## WHAT IS IT?
 
@@ -33,11 +33,13 @@ If you feel you are ready for the challenge, then joining is pretty simple. All 
 
 After months of speculation, I have decided to join the #100DaysofCode challenge. This will not be the first time I will be committing to this, first time I got halfway but unfortunately school and exams got in the way and I couldn’t keep up.
 
-https://twitter.com/peoray_/status/858427384349044737
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Starting <a href="https://twitter.com/hashtag/100DaysofCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysofCode</a> tomorrow.<br>Follow my daily log on github <a href="https://t.co/Q6es5GT2xW">https://t.co/Q6es5GT2xW</a></p>&mdash; Emmanuel Raymond (@peoray_) <a href="https://twitter.com/peoray_/status/858427384349044737?ref_src=twsrc%5Etfw">April 29, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!-- https://twitter.com/peoray_/status/858427384349044737 -->
 
 At that stage, my coding experience isn’t as it is now and I wasn’t feeling the level of motivation I feel now. Also, I was alone, didn’t have mentors, friends who code or anyone to push me, I was all alone and that was a big factor. But I’m glad I’m doing it now, I mean there is no better time than now and I hope to start and finish without missing a day.
 
-![Can I get an Amen gif](./images/giphy.gif)
+![Can I get an Amen gif](/images/blog/100-days-of-code/giphy.gif)
 
 My goal is to grow and improve my skills, as this challenge will help me keep track of my activities. Also, by doing this challenge, I hope to tackle my bad habit of starting a project and abandoning it half-way. I want to be able to build projects to show off in my portfolio and build my confidence overall.
 
@@ -61,6 +63,6 @@ I hope to achieve the following the following goals during this time:
 
 - Build stuff. Lots of them!!!
 
-![A goal without a plan is just a wish](./images/plan.jpeg)
+![A goal without a plan is just a wish](/images/blog/100-days-of-code/plan.jpeg)
 
 Well, I’m pumped up and I can’t wait to see how this turns out. You can follow my daily [tweets](https://twitter.com/super_raay/status/950187188104454145) or check out my daily log on my [GitHub repo](https://github.com/peoray/100-Days-Of-Code). Also, you can check out my [learning tracker](https://github.com/peoray/My-Learning-Tracker) to keep up to date with my progress. I will be writing about my experience about the challenge in the next 100 days from today. So until then, Happy Coding!

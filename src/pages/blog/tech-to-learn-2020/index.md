@@ -10,10 +10,10 @@ tags: ['career']
 # category: ['Programming']
 template: post
 lastmod: false
-thumbnail: './images/cover.png'
+thumbnail: '/images/blog/tech-to-learn-2020/cover.png'
 ---
 
-In 2019, I wrote a blog [article](./things-i-dont-know-2019) about the list of technologies I didn't know yet. It's been a year on from then and this is an update to the list as well as listing out the technologies I want to learn this year to improve as a software developer.
+In 2019, I wrote a blog [article](/blog/things-i-dont-know-2019) about the list of technologies I didn't know yet. It's been a year on from then and this is an update to the list as well as listing out the technologies I want to learn this year to improve as a software developer.
 
 ## WHAT I HAVE LEARNED SO FAR
 

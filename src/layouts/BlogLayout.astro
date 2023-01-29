@@ -8,20 +8,21 @@ import Bio from '../components/Bio.astro';
 
 import readingTime from 'reading-time';
 
-import { config } from '../data/siteConfig';
+// import { config } from '../data/siteConfig';
 import { editOnGithub, formatDate, kebabCaseStr } from '../utils/helpers';
 
 import '../styles/github-markdown.css';
 
-const { post, content } = Astro.props;
-const stats = readingTime(Astro.props.rawContent());
+const { content } = Astro.props;
+// console.log(content.astro.source);
+const stats = readingTime(content.astro.source);
 
-let { title, description, keywords, date, tags, lastmod, slug } =
-  Astro.props?.frontmatter;
+let { title, description, date, tags, lastmod, slug } = content;
 
 const githubLink = editOnGithub(slug);
 
-console.log(tags);
+// console.log(title);
+// console.log(stats);
 ---
 
 <MainLayout title="Blog">
@@ -51,7 +52,7 @@ console.log(tags);
       {
         tags.map((tag: string) => (
           <a
-            href={`tag/${kebabCaseStr(tag)}`}
+            href={`/tag/${kebabCaseStr(tag)}`}
             class="inline-block px-4 py-2 mb-4 mr-4 bg-gray-300 rounded-full lg:mb-0 hover:bg-green-300"
           >
             {tag}

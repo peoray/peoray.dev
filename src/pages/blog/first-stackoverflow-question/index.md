@@ -10,7 +10,7 @@ tags: ['programming']
 # category: ['Programming']
 template: post
 lastmod: false
-thumbnail: './images/cover.png'
+thumbnail: '/images/blog/first-stackoverflow-question/cover.png'
 ---
 
 I asked my first [question](https://stackoverflow.com/questions/50488003/why-does-my-replace-methods-throws-an-error) on StackOverflow today and within minutes, I got answers to my question. Unlike what I read online about difficulties in asking a question, mine was actually easy. Aside from insisting I used a title that describes the question and no one has used before which took few minutes, everything went well.

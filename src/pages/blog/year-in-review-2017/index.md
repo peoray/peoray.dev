@@ -10,12 +10,12 @@ tags: ['year in review', 'career']
 # category: ['Personal']
 template: post
 lastmod: false
-thumbnail: './images/cover.png'
+thumbnail: '/images/blog/year-in-review-2017/cover.png'
 ---
 
-![2017 picture](./images/2017.jpg)
+![2017 picture](/images/blog/year-in-review-2017/2017.jpg)
 
-2107 has been a great year despite many ups and downs, I’m excited about everything that happened and especially the progress I made personally in various aspects of my life. I also managed to learn more about myself and how I handle adversity and setbacks in my life.
+2017 has been a great year despite many ups and downs, I’m excited about everything that happened and especially the progress I made personally in various aspects of my life. I also managed to learn more about myself and how I handle adversity and setbacks in my life.
 
 ### Graduation
 
@@ -67,6 +67,6 @@ Cheers to an amazing 2017. I’m super excited to get going for 2018 and see how
 
 **Happy New Year!**
 
-![2018 picture](./images/2018.jpg)
+![2018 picture](/images/blog/year-in-review-2017/2018.jpg)
 
 **_Cheers!_**
