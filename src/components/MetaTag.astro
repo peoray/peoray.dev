@@ -1,9 +1,14 @@
 ---
-interface Props {
-  title: string;
-}
+import Seo from './Seo.astro';
+// interface Props {
+//   title: string;
+//   description: string;
+//   image: string;
+//   frontmatter: string;
+//   robots: string;
+// }
 
-const { title } = Astro.props as Props;
+const { title, description, image, frontmatter, robots } = Astro.props;
 ---
 
 <head>
@@ -12,4 +17,6 @@ const { title } = Astro.props as Props;
   <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
+
+  <Seo {title} {description} url={Astro.url} {image} {frontmatter} {robots} />
 </head>

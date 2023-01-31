@@ -8,7 +8,7 @@ import Bio from '../components/Bio.astro';
 
 import readingTime from 'reading-time';
 
-// import { config } from '../data/siteConfig';
+// import config from '../data/siteConfig';
 import { editOnGithub, formatDate, kebabCaseStr } from '../utils/helpers';
 
 import '../styles/github-markdown.css';
@@ -23,9 +23,16 @@ const githubLink = editOnGithub(slug);
 
 // console.log(title);
 // console.log(stats);
+// console.log(content.thumbnail);
 ---
 
-<MainLayout title="Blog">
+<MainLayout
+  title={content.title}
+  {description}
+  {content}
+  image={content.thumbnail}
+  robots={content.robots}
+>
   <div class="mx-auto my-16 container-inner">
     <h1 class="text-4xl font-bold leading-tight">{title}</h1>
     <div class="mt-2 text-gray-600">

@@ -10,7 +10,7 @@ import {
   RedditIcon,
 } from 'react-share';
 import urljoin from 'url-join';
-import { config } from '../data/siteConfig';
+import config from '../data/siteConfig';
 
 const { post } = Astro.props;
 const url = urljoin(config.siteUrl, config.pathPrefix);

@@ -1,0 +1,32 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+// import Post from '../../components/Post.astro';
+
+import { formatBlogPosts } from '../../utils/helpers';
+import config from '../../data/siteConfig';
+// import Pagination from '../../components/Pagination.astro';
+import BlogPosts from '../../components/BlogPost';
+
+// export async function getStaticPaths({ paginate }: any) {
+const posts = await Astro.glob('./*/**.md');
+
+const formattedPosts = formatBlogPosts(posts);
+
+// return paginate(formattedPosts);
+// }
+
+// const { page } = Astro.props;
+// const { data, currentPage, url, lastPage } = page;
+---
+
+<MainLayout
+  title={`Blog - ${config.siteTitle} | Software Developer and Open Source Enthusiast`}
+>
+  <div class="py-10 mx-auto container-inner">
+    <BlogPosts posts={formattedPosts} client:load />
+
+    <!-- <hr class="mb-10 mt-20" /> -->
+
+    <!-- <Pagination url={url} currentPage={currentPage} totalPages={lastPage} /> -->
+  </div>
+</MainLayout>

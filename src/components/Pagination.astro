@@ -1,0 +1,36 @@
+---
+const { url, currentPage, totalPages } = Astro.props;
+const { prev, next } = url;
+
+const showPreviousPage = currentPage !== 1;
+const showNextPage = currentPage !== totalPages;
+---
+
+<nav aria-label="blog pages" class="flex justify-between text-xl items-center">
+  <a
+    href={prev}
+    data-paginate="true"
+    class:list={[{ paginate: !showPreviousPage }]}
+    data-cypress="prev"
+  >
+    Prev &larr;
+  </a>
+
+  <div class="text-base">Page {currentPage} of {totalPages}</div>
+
+  <a
+    href={next}
+    data-paginate
+    class:list={[{ paginate: !showNextPage }]}
+    data-cypress="next"
+    >Next &rarr;
+  </a>
+</nav>
+
+<style is:global>
+  a.paginate {
+    /* @apply text-green-400 hover:text-gray-400 cursor-not-allowed !important; */
+    color: rgba(203, 213, 224, 0.3) !important;
+    cursor: not-allowed !important;
+  }
+</style>

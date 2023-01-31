@@ -3,15 +3,15 @@ import Footer from '../components/Footer.astro';
 import MetaTag from '../components/MetaTag.astro';
 import Navbar from '../components/Navbar.astro';
 
-interface Props {
-  title: string;
-}
+// interface Props {
+//   title: string;
+// }
 
-const { title } = Astro.props;
+const { title, description, image, frontmatter, robots } = Astro.props;
 ---
 
 <html lang="en">
-  <MetaTag title={title} />
+  <MetaTag title={title} {description} {image} {frontmatter} {robots} />
   <body>
     <div
       class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen"

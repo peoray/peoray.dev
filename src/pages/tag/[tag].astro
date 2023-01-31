@@ -4,7 +4,7 @@ import Post from '../../components/Post.astro';
 
 import { formatBlogPosts, kebabCaseStr } from '../../utils/helpers';
 import type { PostFrontMatter, MyPostInstance } from '../../utils/types';
-import { config } from '../../data/siteConfig';
+import config from '../../data/siteConfig';
 
 export async function getStaticPaths() {
   const posts = await Astro.glob<PostFrontMatter>('../blog/*/**.md');
