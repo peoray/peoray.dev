@@ -1,85 +1,42 @@
 ---
-// import author from '/images/author.jpg';
-import mind_map from '/images/mind_map.svg';
-import code_review from '/images/code_review.svg';
 import SocialLinks from './SocialLinks.astro';
+
+const styles = {
+  top: '0px',
+  transform: 'translate(100%) rotate(180deg)',
+};
 ---
 
-<div>
-  <div
-    class="flex flex-col items-center justify-between pt-16 pb-8 mx-auto hero container-inner sm:flex-row"
-  >
-    <div class="font-bold text-center lg:focus:w-full sm:w-3/5 sm:text-left">
-      <div class="text-5xl leading-tight">Emmanuel Raymond</div>
-      <div class="text-lg leading-tight text-green-700">
-        Software Engineer, Technical Writer and Open Source Enthusiast
-      </div>
-      <div class="flex justify-center mt-2 md:justify-start">
-        <SocialLinks />
-      </div>
-    </div>
-    {/* <div class='sm:mt-32 md:mt-8'> */}
-    {
-      /* <div class='mt-8 md:mt-0'>
-          <img
-            src={author}
-            alt='author'
-            class='object-cover w-48 h-48 mx-auto rounded-full sm:mx-0'
-          />
-        </div> */
-    }
+<div class="mx-auto container-inner relative">
+  <div class="absolute right-0" style={styles}>
+    <svg
+      id="dots-triangle"
+      width="170"
+      height="170"
+      xmlns="http://www.w3.org/2000/svg"
+      ><path
+        d="M168.152 170a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm-18.478-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm-18.478 0a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.479a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm-18.479 0a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zM94.24 133.043a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm-18.478 36.956a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm-18.478 55.434a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.479a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm-18.479 73.913a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.479a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm-18.478 92.391a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0 18.479a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.479a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zM1.848 133.044a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.695zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0 18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-55.435a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.479a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.695 1.848 1.848 0 0 1 0 3.695zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696zm0-18.478a1.848 1.848 0 1 1 0-3.696 1.848 1.848 0 0 1 0 3.696z"
+        fill="#2C8056"
+        fill-rule="evenodd"
+        opacity=".503"></path></svg
+    >
   </div>
 
-  <div class="mx-auto container-inner">
-    <div class="text-xl md:text-lg">
-      <p class="">
-        Hi 👋, I'm Emmanuel and welcome to my Digital Garden. I'm passionate
-        about Open Source and Learning in Public.
-      </p>
+  <h1 class="flex flex-col space-y-2">
+    <span>Hello,</span>
+    <span>I'm Emmanuel Raymond</span>
+  </h1>
 
-      <p class="mt-8">
-        I'm a Product Engineer with over 4+ years of experience with a track
-        record in building complex applications on a global scale with tools
-        such as Javascript, Nodejs, Vuejs (2 & 3), Nuxt, MySQL, MongoDB and
-        other modern technologies.
-      </p>
-
-      <p class="mt-4">
-        {' '}
-        I'm experienced in different industries such as SaaS, B2C, B2B, start-ups
-        and scale-up stage companies. Worked with different teams large and small,
-        as well as teams in different geographical zones. Familiar with agile/scrum
-        development process and have used tools such as Jira, Notion, Zoom, Slack,
-        Asana, Basecamp, Google suite, etc.
-      </p>
-
-      <p class="mt-4">
-        I'm an active contributor to open source projects. I'm a core team
-        contribitor to{' '}
-        <a href="https://vue.chakra-ui.com/">Chakra UI Vue</a>
-      </p>
-
-      <p class="mt-4">
-        Besides programming and writing for this blog, I enjoy watching football
-        and movies, playing chess when I can, hanging out with friends and
-        family, reading books, and doing my best to learn the Guitar.
-      </p>
-
-      {
-        /* <p class='mt-2'>
-            Join my adventure in discovering everything about my experiences in software
-            development and everything in-between.
-          </p> */
-      }
-    </div>
-
-    <div class="flex items-center justify-between py-6">
-      <div class="w-full px-8 py-8 sm:w-1/2 sm:py-0">
-        <img src={mind_map} alt="" />
-      </div>
-      <div class="justify-end hidden w-1/2 px-8 sm:flex">
-        <img src={code_review} alt="" />
-      </div>
-    </div>
+  <div class="text-xl md:text-lg mt-6 w-2/3">
+    <p class="">
+      I'm a Product Engineer based in Nigeria. I'm passionate about building
+      great products and writing about it. I'm currently working at <a
+        href="https://www.tecmie.co/">Tecmie</a
+      > as a Senior Software Engineer. I'm also a core team contributer to{' '}
+      <a href="https://vue.chakra-ui.com/">Chakra UI Vue</a>
+    </p>
+  </div>
+  <div class="flex justify-center mt-2 md:justify-start">
+    <SocialLinks />
   </div>
 </div>

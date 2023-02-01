@@ -3,27 +3,19 @@ import MainLayout from './MainLayout.astro';
 
 import Newsletter from '../components/Newsletter.astro';
 import Bio from '../components/Bio.astro';
-// import SocialShare from '../components/SocialShare.astro';
-// import Suggested from '../components/Suggested.astro';
 
 import readingTime from 'reading-time';
 
-// import config from '../data/siteConfig';
 import { editOnGithub, formatDate, kebabCaseStr } from '../utils/helpers';
 
 import '../styles/github-markdown.css';
 
 const { content } = Astro.props;
-// console.log(content.astro.source);
 const stats = readingTime(content.astro.source);
 
 let { title, description, date, tags, lastmod, slug } = content;
 
 const githubLink = editOnGithub(slug);
-
-// console.log(title);
-// console.log(stats);
-// console.log(content.thumbnail);
 ---
 
 <MainLayout
