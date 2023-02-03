@@ -9,7 +9,7 @@ tags: ['git', 'programming']
 # category: ['Personal']
 template: post
 lastmod: false
-# thumbnail: './images/cover.png'
+thumbnail: '/images/git-switch/cover.png'
 ---
 
 Imagine a typical day, you open your laptop ready to work, you look through the tasks board, check the ones assigned to you and pick one to start with.

@@ -1,0 +1,21 @@
+---
+import { getCollection, CollectionEntry } from 'astro:content';
+
+import MainLayout from '../layouts/MainLayout.astro';
+
+import { formatBlogPosts } from '../utils/helpers';
+import config from '../data/siteConfig';
+import BlogPosts from '../components/BlogPost';
+
+const posts = await getCollection('blog');
+
+const formattedPosts: CollectionEntry<'blog'> = formatBlogPosts(posts);
+---
+
+<MainLayout
+  title={`Blog - ${config.siteTitle} | Software Developer and Open Source Enthusiast`}
+>
+  <div class="mx-auto container-inner">
+    <BlogPosts posts={formattedPosts} client:load />
+  </div>
+</MainLayout>

@@ -31,11 +31,11 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
     keys: [
       {
         name: 'title',
-        getFn: (post) => post.frontmatter.title,
+        getFn: (post) => post.data.title,
       },
       {
         name: 'description',
-        getFn: (post) => post.frontmatter.description,
+        getFn: (post) => post.data.description,
       },
     ],
     threshold: 0.3,
@@ -127,13 +127,10 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
       {results ? (
         results.length > 0 ? (
           results.map(
-            (result: {
-              refIndex: any;
-              item: { url: any; frontmatter: any };
-            }) => (
+            (result: { refIndex: any; item: { path: any; data: any } }) => (
               <Post
-                key={`${result.refIndex}-${result.item.url}`}
-                post={result.item.frontmatter}
+                key={`${result.refIndex}-${result.item.data.path}`}
+                post={result.item.data}
               />
             )
           )
@@ -147,18 +144,15 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
 
             {posts.slice(0, 3).map((post: any) => (
               <Post
-                key={`${config.siteUrl}${post.frontmatter.path}`}
-                post={post.frontmatter}
+                key={`${config.siteUrl}${post.data.path}`}
+                post={post.data}
               />
             ))}
           </>
         )
       ) : (
         posts.map((post: any) => (
-          <Post
-            key={`${config.siteUrl}${post.frontmatter.path}`}
-            post={post.frontmatter}
-          />
+          <Post key={`${config.siteUrl}${post.data.path}`} post={post.data} />
         ))
       )}
       {/* </div> */}

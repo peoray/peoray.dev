@@ -8,11 +8,11 @@ import '../styles/global.css';
 //   title: string;
 // }
 
-const { title, description, image, frontmatter, robots } = Astro.props;
+const { title, description, image, data, robots } = Astro.props;
 ---
 
 <html lang="en">
-  <MetaTag title={title} {description} {image} {frontmatter} {robots} />
+  <MetaTag {title} {description} {image} {data} {robots} />
   <body>
     <div
       class="content-wrapper bg-background-primary font-sans text-copy-primary leading-normal flex flex-col min-h-screen"

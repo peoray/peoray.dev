@@ -12,7 +12,7 @@ export default function jsonLDGenerator({ type, post, url }: any) {
         },
         "headline": "${post.title}",
         "description": "${post.description}",
-        "image": "${post.image.src}",
+        "image": "${post.thumbnail}",
         "author": {
           "@type": "Person",
           "name": "Emmanuel Raymond",

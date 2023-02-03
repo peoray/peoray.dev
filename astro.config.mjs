@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import { remarkReadingTime } from './remark-reading-time.mjs';
+import { remarkReadingTime } from './src/utils/remark-reading-time.mjs';
 
 // https://astro.build/config
 import tailwind from '@astrojs/tailwind';
@@ -27,7 +27,6 @@ export default defineConfig({
   site: 'https://peoray.dev',
   markdown: {
     remarkPlugins: [remarkReadingTime],
-    extendDefaultPlugins: true,
     rehypePlugins: [
       [
         inspectUrls,
@@ -39,9 +38,6 @@ export default defineConfig({
         },
       ],
     ],
-    // shikiConfig: {
-    //   theme: 'vitesse-dark',
-    // },
   },
   integrations: [
     tailwind(),

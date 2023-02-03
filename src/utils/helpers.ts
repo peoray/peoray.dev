@@ -26,7 +26,7 @@ const formatBlogPosts = (
   } = {}
 ) => {
   const filteredPosts = posts.reduce((acc: any, post: any) => {
-    const { draft, date } = post.frontmatter;
+    const { draft, date } = post.data;
     // filterOutDrafts if true, filter out posts with draft: true
     if (filterOutDrafts && draft) {
       return acc;
@@ -41,7 +41,7 @@ const formatBlogPosts = (
   // sort by date if true
   const sortedPosts = sortByDate
     ? filteredPosts.sort((a: any, b: any) => {
-        return dayjs(b.frontmatter.date).diff(dayjs(a.frontmatter.date));
+        return dayjs(b.data.date).diff(dayjs(a.data.date));
       })
     : filteredPosts;
 
