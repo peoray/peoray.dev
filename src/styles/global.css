@@ -1,25 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,800');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-
-/* .theme-light .search-highlighted {
-  background: #f0fff4;
-}
-
-.theme-light .search-hover:hover {
-  background: #f0fff4;
-}
-
-.theme-dark .markdown-body {
-  color: #24292e;
-} 
-
- .theme-dark .search-highlighted {
-  background: #2d3748;
-}
-
-.theme-dark .search-hover:hover {
-  background: #2d3748;
-} */
 
 :root {
   --bg-background-primary: #111827;
@@ -47,25 +26,17 @@ h6 {
   color: #cbd5e0;
 }
 
-.theme-dark nav .active {
-  @apply border-white border-b;
-}
-
 .content-wrapper {
   transition: background-color 0.25s;
 }
 
 a {
-  @apply text-blue-100 font-bold;
+  @apply text-purple-100 font-bold;
+  cursor: pointer !important;
 }
 
 a:hover {
-  @apply text-green-800;
-}
-
-nav .active {
-  font-weight: bold;
-  @apply border-black border-b;
+  @apply text-purple-200;
 }
 
 .container-inner {
@@ -91,12 +62,6 @@ nav .active {
   }
 }
 
-.checkmark {
-  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2229%22%20height%3D%2229%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M4.427%2024.93A14.5%2014.5%200%201%201%2024.93%204.427c5.495%205.69%205.416%2014.733-.177%2020.326s-14.637%205.672-20.326.177z%22%20fill%3D%22%232E855A%22/%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M10.234%2012.803l3.67%203.253L20.766%2010%2023%2012l-9.096%208L8%2014.789l2.234-2z%22/%3E%3C/svg%3E');
-  background-repeat: no-repeat;
-  @apply pl-10;
-}
-
 .responsive-container {
   position: relative;
   overflow: hidden;
@@ -112,6 +77,7 @@ nav .active {
   border: 0;
 }
 
-a {
-  cursor: pointer !important;
+hr.hr {
+  color: red;
+  border-top: 1px solid rgba(252, 252, 252, 0.1);
 }

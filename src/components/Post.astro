@@ -7,20 +7,6 @@ const { post } = Astro.props;
 <div class="post mb-6">
   <span class="opacity-75">
     <span>{formatDate(post.date)}</span>
-    {/* <span>Published {post.node.frontmatter.date}</span> */}
-    {
-      /* <span> &middot; </span>
-        <span>Last Updated {post.node.parent.mtime}</span> */
-    }
-
-    {
-      /* <span> &middot; </span>
-        <span role='img' aria-label='popcorn'>
-          🍿
-        </span>
-        {post.node.timeToRead} min read
-        */
-    }
   </span>
 
   <h2 class="text-2xl font-bold">

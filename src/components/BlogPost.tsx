@@ -14,7 +14,6 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
   //     // setQuery('');
   //     if (event.key === '/') {
   //       //   setQuery('');
-  //       console.log(query);
   //       inputRef.current.focus();
   //     }
   //   }, []);

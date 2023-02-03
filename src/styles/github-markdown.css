@@ -24,96 +24,29 @@ img {
   font-weight: bold;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  margin-bottom: -.55rem;
+  margin-bottom: -0.55rem;
 }
-
-.gatsby-highlight-code-line {
-  background-color: #feb;
-  display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  padding-right: 1em;
-  padding-left: 0.75em;
-  border-left: 0.25em solid #f99;
-}
-
-/**
- * Add back the container background-color, border-radius, padding, margin
- * and overflow that we removed from <pre>.
- */
- .gatsby-highlight {
-  background-color: #fdf6e3;
-  border-radius: 0.3em;
-  margin: 0.5em 0;
-  padding: 1em;
-  overflow: auto;
-}
-
-/**
- * Remove the default PrismJS theme background-color, border-radius, margin,
- * padding and overflow.
- * 1. Make the element just wide enough to fit its content.
- * 2. Always fill the visible space in .gatsby-highlight.
- * 3. Adjust the position of the line numbers
- */
-.gatsby-highlight pre[class*="language-"] {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  overflow: initial;
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
-}
-
-
-/* Adjust the position of the line numbers */
-.gatsby-highlight pre[class*="language-"].line-numbers {
-  padding-left: 2.8em;
-}
-
-
-/**
- * If you only want to use line numbering
- */
-
- .gatsby-highlight {
-  background-color: #fdf6e3;
-  border-radius: 0.3em;
-  margin: 0.5em 0;
-  padding: 1em;
-  overflow: auto;
-}
-
-.gatsby-highlight pre[class*="language-"].line-numbers {
-  padding: 0;
-  padding-left: 2.8em;
-  overflow: initial;
-}
-
-/* command line */
 
 .command-line-prompt > span:before {
   color: #999;
-  content: " ";
+  content: ' ';
   display: block;
   padding-right: 0.8em;
 }
 
 /* Prompt for all users */
 .command-line-prompt > span[data-user]:before {
-  content: "[" attr(data-user) "@" attr(data-host) "] $";
+  content: '[' attr(data-user) '@' attr(data-host) '] $';
 }
 
 /* Prompt for root */
-.command-line-prompt > span[data-user="root"]:before {
-  content: "[" attr(data-user) "@" attr(data-host) "] #";
+.command-line-prompt > span[data-user='root']:before {
+  content: '[' attr(data-user) '@' attr(data-host) '] #';
 }
 
 .command-line-prompt > span[data-prompt]:before {
   content: attr(data-prompt);
 }
-
-/* ************************** */
 
 .markdown-body .octicon {
   display: inline-block;
@@ -228,7 +161,7 @@ img {
 }
 
 .markdown-body .pl-c2:before {
-  content: "^M";
+  content: '^M';
 }
 
 .markdown-body .pl-sr .pl-cce {
@@ -348,7 +281,7 @@ img {
   overflow: visible;
 }
 
-.markdown-body [type="checkbox"] {
+.markdown-body [type='checkbox'] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -368,7 +301,7 @@ img {
 }
 
 .markdown-body hr {
-  background: transparent;
+  background: red;
   border: 0;
   border-bottom: 1px solid #dfe2e5;
   height: 0;
@@ -377,13 +310,13 @@ img {
 }
 
 .markdown-body hr:before {
-  content: "";
+  content: '';
   display: table;
 }
 
 .markdown-body hr:after {
   clear: both;
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -593,13 +526,13 @@ img {
 }
 
 .markdown-body:before {
-  content: "";
+  content: '';
   display: table;
 }
 
 .markdown-body:after {
   clear: both;
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -630,8 +563,6 @@ img {
 .markdown-body p {
   margin-top: 0 !important;
 }
-
-
 
 .markdown-body hr {
   background-color: #a0aec0;
@@ -794,25 +725,23 @@ img {
   max-width: 100%;
 }
 
-.markdown-body img[align="right"] {
+.markdown-body img[align='right'] {
   padding-left: 20px;
 }
 
-.markdown-body img[align="left"] {
+.markdown-body img[align='left'] {
   padding-right: 20px;
 }
 
 .markdown-body code {
   /* background-color: rgba(27, 31, 35, 0.05) !important; */
   background-color: #0d1117;
-  color: #C9D1D9;
+  color: #c9d1d9;
   border-radius: 3px;
   font-size: 85%;
   margin: 0;
   padding: 0.2em 0.4em;
 }
-
-
 
 .markdown-body pre {
   word-wrap: normal;
@@ -952,62 +881,62 @@ img {
   z-index: 1;
 }
 
-.markdown-body .tab-size[data-tab-size="1"] {
+.markdown-body .tab-size[data-tab-size='1'] {
   -moz-tab-size: 1;
   tab-size: 1;
 }
 
-.markdown-body .tab-size[data-tab-size="2"] {
+.markdown-body .tab-size[data-tab-size='2'] {
   -moz-tab-size: 2;
   tab-size: 2;
 }
 
-.markdown-body .tab-size[data-tab-size="3"] {
+.markdown-body .tab-size[data-tab-size='3'] {
   -moz-tab-size: 3;
   tab-size: 3;
 }
 
-.markdown-body .tab-size[data-tab-size="4"] {
+.markdown-body .tab-size[data-tab-size='4'] {
   -moz-tab-size: 4;
   tab-size: 4;
 }
 
-.markdown-body .tab-size[data-tab-size="5"] {
+.markdown-body .tab-size[data-tab-size='5'] {
   -moz-tab-size: 5;
   tab-size: 5;
 }
 
-.markdown-body .tab-size[data-tab-size="6"] {
+.markdown-body .tab-size[data-tab-size='6'] {
   -moz-tab-size: 6;
   tab-size: 6;
 }
 
-.markdown-body .tab-size[data-tab-size="7"] {
+.markdown-body .tab-size[data-tab-size='7'] {
   -moz-tab-size: 7;
   tab-size: 7;
 }
 
-.markdown-body .tab-size[data-tab-size="8"] {
+.markdown-body .tab-size[data-tab-size='8'] {
   -moz-tab-size: 8;
   tab-size: 8;
 }
 
-.markdown-body .tab-size[data-tab-size="9"] {
+.markdown-body .tab-size[data-tab-size='9'] {
   -moz-tab-size: 9;
   tab-size: 9;
 }
 
-.markdown-body .tab-size[data-tab-size="10"] {
+.markdown-body .tab-size[data-tab-size='10'] {
   -moz-tab-size: 10;
   tab-size: 10;
 }
 
-.markdown-body .tab-size[data-tab-size="11"] {
+.markdown-body .tab-size[data-tab-size='11'] {
   -moz-tab-size: 11;
   tab-size: 11;
 }
 
-.markdown-body .tab-size[data-tab-size="12"] {
+.markdown-body .tab-size[data-tab-size='12'] {
   -moz-tab-size: 12;
   tab-size: 12;
 }

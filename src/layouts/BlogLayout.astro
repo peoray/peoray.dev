@@ -2,11 +2,9 @@
 import MainLayout from './MainLayout.astro';
 
 import Newsletter from '../components/Newsletter.astro';
-import Bio from '../components/Bio.astro';
+// import Bio from '../components/Bio.astro';
 
-import readingTime from 'reading-time';
-
-import { editOnGithub, formatDate, kebabCaseStr } from '../utils/helpers';
+import { formatDate, kebabCaseStr } from '../utils/helpers';
 
 import '../styles/github-markdown.css';
 
@@ -23,59 +21,54 @@ let {
   robots,
   minutesRead,
 } = data;
-
-// const stats = readingTime(data.astro.source);
-
-// const githubLink = editOnGithub(slug);
 ---
 
 <MainLayout {title} {description} {data} image={thumbnail} robots={robots}>
-  <article>
-    <div class="mx-auto mb-16 container-inner">
-      <h1 class="text-4xl font-bold leading-tight">{title}</h1>
-      <div class="mt-2 text-gray-600">
-        {
-          !lastmod ? (
-            <span>{formatDate(date)}</span>
-          ) : (
-            <span>Last Updated on {formatDate(lastmod)}</span>
-          )
-        }
+  <article class="mx-auto mb-16 container-inner">
+    <h1 class="text-4xl font-bold leading-tight">{title}</h1>
+    <div class="mt-2 text-gray-600">
+      {
+        !lastmod ? (
+          <span>{formatDate(date)}</span>
+        ) : (
+          <span>Last Updated on {formatDate(lastmod)}</span>
+        )
+      }
 
-        <!-- <span class="mx-2"> &middot;</span>
+      <!-- <span class="mx-2"> &middot;</span>
         <time>
           <span class="align-middle" role="img" aria-label="clock"> 🕒</span>
-          <span class="ml-1 text-md">{stats.text}</span>
+          <span class="ml-1 text-md">{minutesRead}</span>
         </time> -->
-      </div>
+    </div>
 
-      <div class="flex flex-wrap mt-4 text-sm">
-        {
-          tags.map((tag: string) => (
-            <a
-              href={`/tag/${kebabCaseStr(tag)}`}
-              class="inline-block px-4 py-2 mb-4 mr-4 bg-gray-300 rounded-full lg:mb-0 hover:bg-green-300"
-            >
-              {tag}
-            </a>
-          ))
-        }
-      </div>
+    <div class="flex flex-wrap mt-4 text-sm">
+      {
+        tags.map((tag: string) => (
+          <a
+            href={`/tag/${kebabCaseStr(tag)}`}
+            class="inline-block px-4 py-2 mb-4 mr-4 bg-gray-300 rounded-full lg:mb-0 hover:bg-purple-200 hover:text-white"
+          >
+            {tag}
+          </a>
+        ))
+      }
+    </div>
 
-      <div class="mt-12 markdown-body">
-        <slot />
-      </div>
+    <div class="mt-12 markdown-body">
+      <slot />
+    </div>
 
-      {/* <hr /> */}
+    {/* <hr /> */}
 
-      <div class="text-3xl tracking-widest text-center md:text-5xl">
-        <span>.</span>
-        <span>.</span>
-        <span>.</span>
-      </div>
+    <div class="text-3xl tracking-widest text-center md:text-5xl">
+      <span>.</span>
+      <span>.</span>
+      <span>.</span>
+    </div>
 
-      <div class="mt-5 mb-8">
-        <!-- <p>
+    <div class="mt-5 mb-8">
+      <!-- <p>
           If you find any error or typo in this article, please feel free to{
             ' '
           }
@@ -90,19 +83,18 @@ let {
           .
         </p> -->
 
-        <!-- <div class="mt-6"> -->
-        <p class="">
-          If this was helpful, interesting, or caused some other positive
-          emotion, please share!
-        </p>
-        <!-- </div> -->
-      </div>
+      <!-- <div class="mt-6"> -->
+      <p class="">
+        If this was helpful, interesting, or caused some other positive emotion,
+        please share!
+      </p>
+      <!-- </div> -->
     </div>
   </article>
 
   <div class="py-4 mx-auto container-inner">
-    <hr class="" />
+    <hr class="hr" />
   </div>
-  <Bio />
+  <!-- <Bio /> -->
   <Newsletter />
 </MainLayout>
