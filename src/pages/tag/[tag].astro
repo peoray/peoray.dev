@@ -6,7 +6,7 @@ import { getCollection, CollectionEntry } from 'astro:content';
 
 import { formatBlogPosts, kebabCaseStr } from '../../utils/helpers';
 import type { PostFrontMatter, MyPostInstance } from '../../utils/types';
-import config from '../../data/siteConfig';
+import config from '../../data/site-config';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');

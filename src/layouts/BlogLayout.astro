@@ -10,17 +10,7 @@ import '../styles/github-markdown.css';
 
 const { data } = Astro.props;
 
-let {
-  title,
-  description,
-  date,
-  tags,
-  lastmod,
-  slug,
-  thumbnail,
-  robots,
-  minutesRead,
-} = data;
+let { title, description, date, tags, lastmod, thumbnail, robots } = data;
 ---
 
 <MainLayout {title} {description} {data} image={thumbnail} robots={robots}>

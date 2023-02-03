@@ -5,6 +5,21 @@ import BlogLayout from '../../layouts/BlogLayout.astro';
 
 import { formatBlogPosts } from '../../utils/helpers';
 
+// export async function getStaticPaths({ params }: any) {
+//   const allPosts = await getCollection('blog');
+//   const formattedPosts = formatBlogPosts(allPosts);
+
+//   const post = formattedPosts.find(
+//     (post: { data: { slug: any } }) => post.data.slug === params.slug
+//   );
+
+//   return {
+//     props: {
+//       post,
+//     },
+//   };
+// }
+
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
   const formattedPosts = formatBlogPosts(allPosts);

@@ -67,120 +67,120 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"blog": {
-"100-days-of-code-experience/index.md": {
-  id: "100-days-of-code-experience/index.md",
+"100-days-of-code-experience.md": {
+  id: "100-days-of-code-experience.md",
   slug: "100-days-of-code-experience",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"100-days-of-code/index.md": {
-  id: "100-days-of-code/index.md",
+"100-days-of-code.md": {
+  id: "100-days-of-code.md",
   slug: "100-days-of-code",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"a-new-ending/index.md": {
-  id: "a-new-ending/index.md",
+"a-new-ending.md": {
+  id: "a-new-ending.md",
   slug: "a-new-ending",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"career-moves-2022/index.md": {
-  id: "career-moves-2022/index.md",
+"career-moves-2022.md": {
+  id: "career-moves-2022.md",
   slug: "career-moves-2022",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"display-password-form-input/index.md": {
-  id: "display-password-form-input/index.md",
+"display-password-form-input.md": {
+  id: "display-password-form-input.md",
   slug: "display-password-form-input",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"first-day-at-learnfactory/index.md": {
-  id: "first-day-at-learnfactory/index.md",
+"first-day-at-learnfactory.md": {
+  id: "first-day-at-learnfactory.md",
   slug: "first-day-at-learnfactory",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"first-stackoverflow-question/index.md": {
-  id: "first-stackoverflow-question/index.md",
+"first-stackoverflow-question.md": {
+  id: "first-stackoverflow-question.md",
   slug: "first-stackoverflow-question",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"git-switch/index.md": {
-  id: "git-switch/index.md",
+"git-switch.md": {
+  id: "git-switch.md",
   slug: "git-switch",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"hello-world/index.md": {
-  id: "hello-world/index.md",
+"hello-world.md": {
+  id: "hello-world.md",
   slug: "hello-world",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"hide-vue-code-production/index.md": {
-  id: "hide-vue-code-production/index.md",
+"hide-vue-code-production.md": {
+  id: "hide-vue-code-production.md",
   slug: "hide-vue-code-production",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"number-facts-generator/index.md": {
-  id: "number-facts-generator/index.md",
+"number-facts-generator.md": {
+  id: "number-facts-generator.md",
   slug: "number-facts-generator",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"tech-to-learn-2020/index.md": {
-  id: "tech-to-learn-2020/index.md",
+"tech-to-learn-2020.md": {
+  id: "tech-to-learn-2020.md",
   slug: "tech-to-learn-2020",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"things-i-dont-know-2019/index.md": {
-  id: "things-i-dont-know-2019/index.md",
+"things-i-dont-know-2019.md": {
+  id: "things-i-dont-know-2019.md",
   slug: "things-i-dont-know-2019",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"using-concurrently/index.md": {
-  id: "using-concurrently/index.md",
+"using-concurrently.md": {
+  id: "using-concurrently.md",
   slug: "using-concurrently",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"year-in-review-2017/index.md": {
-  id: "year-in-review-2017/index.md",
+"year-in-review-2017.md": {
+  id: "year-in-review-2017.md",
   slug: "year-in-review-2017",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"year-in-review-2018/index.md": {
-  id: "year-in-review-2018/index.md",
+"year-in-review-2018.md": {
+  id: "year-in-review-2018.md",
   slug: "year-in-review-2018",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"year-in-review-2019/index.md": {
-  id: "year-in-review-2019/index.md",
+"year-in-review-2019.md": {
+  id: "year-in-review-2019.md",
   slug: "year-in-review-2019",
   body: string,
   collection: "blog",

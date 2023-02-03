@@ -13,6 +13,14 @@
   --border-border-color-primary: #1a202c;
 }
 
+body {
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  width: 100%;
+}
+
 h1,
 h2,
 h3,

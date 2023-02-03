@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Fuse from 'fuse.js';
 
 import Post from './Post';
-import config from '../data/siteConfig';
+import config from '../data/site-config';
 
 export const BlogPosts = ({ posts }: { posts: any }) => {
   const inputRef = useRef<HTMLInputElement>(null || undefined);
@@ -88,7 +88,7 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
             aria-label="Search"
             id="search-form"
             placeholder="Type to filter posts..."
-            className="w-full px-4 py-2 pl-10 border border-gray-500 rounded-full outline-none bg-background-form focus:border-green-500"
+            className="w-full px-4 py-2 pl-10 border border-gray-500 rounded-full outline-none bg-background-form focus:border-purple-200"
           />
           <div className="absolute top-0 ml-3" style={{ top: `${10}px` }}>
             <svg
@@ -117,7 +117,7 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
         </div>
 
         <div className="self-center ml-2 text-sm">
-          <p className="px-4 py-2 mr-4 font-medium text-white bg-gray-600 rounded-full hover:bg-green-600">
+          <p className="px-4 py-2 mr-4 font-medium text-white bg-purple-100 rounded-full hover:bg-purple-200">
             {posts.length}
           </p>
         </div>
