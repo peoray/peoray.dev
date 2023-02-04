@@ -124,7 +124,9 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
 
         <div className="self-center ml-2 text-sm">
           <p className="px-4 py-2 mr-4 font-medium text-white bg-purple-100 rounded-full hover:bg-purple-200">
-            {posts.length}
+            {query.length > 0 && !results?.length
+              ? 0
+              : results?.length || posts.length}
           </p>
         </div>
       </div>

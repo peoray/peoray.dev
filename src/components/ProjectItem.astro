@@ -19,8 +19,26 @@ const { project } = Astro.props;
   </div>
 
   <div class="flex space-x-4 mt-4">
-    {project.source && <Badge link={project.source}>Source</Badge>}
-    {project.demo && <Badge link={project.demo}>Demo</Badge>}
-    {project.article && <Badge link={project.article}>Article</Badge>}
+    {
+      project.source && (
+        <Badge classes="bg-transparent border" link={project.source}>
+          Source
+        </Badge>
+      )
+    }
+    {
+      project.demo && (
+        <Badge classes="bg-transparent border" link={project.demo}>
+          Demo
+        </Badge>
+      )
+    }
+    {
+      project.article && (
+        <Badge classes="bg-transparent border" link={project.article}>
+          Article
+        </Badge>
+      )
+    }
   </div>
 </div>
