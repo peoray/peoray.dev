@@ -1,19 +1,25 @@
 ---
 import MainLayout from './MainLayout.astro';
-
 import Newsletter from '../components/Newsletter.astro';
-// import Bio from '../components/Bio.astro';
 
 import { formatDate, kebabCaseStr } from '../utils/helpers';
 
 import '../styles/github-markdown.css';
 
 const { data } = Astro.props;
-
-let { title, description, date, tags, lastmod, thumbnail, robots } = data;
+let {
+  title,
+  description,
+  date,
+  tags,
+  lastmod,
+  thumbnail,
+  robots,
+  minutesRead,
+} = data;
 ---
 
-<MainLayout {title} {description} {data} image={thumbnail} robots={robots}>
+<MainLayout {title} {description} data={data} image={thumbnail} robots={robots}>
   <article class="mx-auto mb-16 container-inner">
     <h1 class="text-4xl font-bold leading-tight">{title}</h1>
     <div class="mt-2 text-gray-600">
@@ -25,11 +31,11 @@ let { title, description, date, tags, lastmod, thumbnail, robots } = data;
         )
       }
 
-      <!-- <span class="mx-2"> &middot;</span>
-        <time>
-          <span class="align-middle" role="img" aria-label="clock"> 🕒</span>
-          <span class="ml-1 text-md">{minutesRead}</span>
-        </time> -->
+      <span class="mx-2"> &middot;</span>
+      <time>
+        <span class="align-middle" role="img" aria-label="clock"> 🕒</span>
+        <span class="ml-1 text-md">{minutesRead}</span>
+      </time>
     </div>
 
     <div class="flex flex-wrap mt-4 text-sm">

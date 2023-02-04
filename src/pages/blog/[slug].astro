@@ -36,11 +36,16 @@ interface Props {
 }
 
 const { post } = Astro.props;
+console.log(post);
 const { title, description } = post.data;
 
-const { Content } = await post.render();
+const { Content, remarkPluginFrontmatter } = await post.render();
 ---
 
-<BlogLayout title={title} description={description} data={post.data}>
+<BlogLayout
+  title={title}
+  description={description}
+  data={remarkPluginFrontmatter}
+>
   <Content />
 </BlogLayout>

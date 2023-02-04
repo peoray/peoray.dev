@@ -1,4 +1,6 @@
 ---
+import readingTime from 'reading-time';
+
 import MainLayout from '../../layouts/MainLayout.astro';
 import Post from '../../components/Post.astro';
 
@@ -33,6 +35,15 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+
+// get reading time of each post
+posts.map((post: { data?: any; body?: any }) => {
+  const time = readingTime(post.body).text;
+  post.data.readTime = time;
+  return post;
+});
+
+// const { Content, remarkPluginFrontmatter } = await post.render();
 ---
 
 <MainLayout title={`Posts tagged as "${tag}" – ${config.siteTitle}`}>

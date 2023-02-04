@@ -1,4 +1,5 @@
 ---
+import user from '../data/user';
 ---
 
 <ul class="flex items-baseline space-x-6">
@@ -22,7 +23,7 @@
 
   <li class="">
     <a
-      href="https://github.com/peoray"
+      href={user.github}
       target="_blank"
       rel="nofollow noopener noreferrer"
       class="text-white hover:text-gray-400"
@@ -42,7 +43,7 @@
 
   <li class="">
     <a
-      href="https://twitter.com/peoray_"
+      href={user.twitter}
       target="_blank"
       rel="nofollow noopener noreferrer"
       class="text-white hover:text-gray-400"

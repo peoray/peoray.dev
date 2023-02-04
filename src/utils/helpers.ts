@@ -1,6 +1,6 @@
 import urljoin from 'url-join';
 import dayjs from 'dayjs';
-import config from '../data/siteConfig';
+import config from '../data/site-config';
 // @ts-ignore
 import kebabCase from 'lodash.kebabCase';
 

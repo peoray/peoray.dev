@@ -4,7 +4,7 @@ import { getCollection, CollectionEntry } from 'astro:content';
 import MainLayout from '../layouts/MainLayout.astro';
 
 import { formatBlogPosts } from '../utils/helpers';
-import config from '../data/siteConfig';
+import config from '../data/site-config';
 import BlogPosts from '../components/BlogPost';
 
 const posts = await getCollection('blog');

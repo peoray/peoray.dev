@@ -15,11 +15,7 @@ import ProjectItem from './ProjectItem.astro';
   <div class="grid lg:grid-cols-2 gap-4 lg:gap-8">
     {
       projects.map((project) => (
-        <ProjectItem
-          title={project.title}
-          description={project.description}
-          source={project.source}
-        />
+        <ProjectItem project={project} />
         // path={project.path}
       ))
     }

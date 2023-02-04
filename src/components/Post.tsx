@@ -1,35 +1,50 @@
-// export interface Props {
-//     title: string;
-//     description: string;
-//     date: string;
-//     readingTime: string;
-//     url: string;
-//   }
+// interface Props {
+//   title: string;
+//   description: string;
+//   date: string;
+//   readingTime: string;
+//   url: string;
+// }
+
+// import readingTime from 'reading-time';
+// import { toString } from 'mdast-util-to-string';
 import { formatDate } from '../utils/helpers';
 
+// const Post = ({ time, post }: any) => {
 const Post = ({ post }: any) => {
+  // const time = readingTime(post.body).text;
+  // console.log(post.body);
+  // const textOnPage = toString(post.body);
+  // const time = readingTime(textOnPage);
+  // console.log(time.text);
+
+  // const { data } = post;
+  // const { title, description, path, date } = data;
+  const { title, description, path, date } = post;
   return (
-    <div className="post mb-6">
-      <span className="opacity-75">
-        <span>{formatDate(post.date)}</span>
-        {/* <span>Published {post.node.frontmatter.date}</span> */}
-        {/* <span> &middot; </span>
-              <span>Last Updated {post.node.parent.mtime}</span> */}
+    <a
+      href={path}
+      rel="prefetch"
+      className="flex flex-col gap-y-3 hover:bg-background-secondary p-4 mb-6 transition-all rounded-xl text-copy-primary hover:text-copy-primary"
+    >
+      <h2 className="text-purple-100 text-2xl">{title}</h2>
 
-        {/* <span> &middot; </span>
-              <span role='img' aria-label='popcorn'>
-                🍿
-              </span>
-              {post.node.timeToRead} min read
-              */}
-      </span>
+      <p className="text-xl font-medium">{description}</p>
 
-      <h2 className="text-2xl font-bold">
-        <a href={`${post.path}`} className="text-copy-primary">
-          {post.title}
-        </a>
-      </h2>
-    </div>
+      <div className="flex items-center gap-x-2 font-medium">
+        <time>
+          {new Date(date).toLocaleDateString('en-us', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })}
+        </time>
+
+        <span>•</span>
+
+        {/* <span>{time}</span> */}
+      </div>
+    </a>
   );
 };
 

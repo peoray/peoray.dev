@@ -1,4 +1,4 @@
-import config from '../data/siteConfig';
+import config from '../data/site-config';
 
 export default function jsonLDGenerator({ type, post, url }: any) {
   if (type === 'post') {

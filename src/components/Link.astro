@@ -1,0 +1,20 @@
+---
+interface Props {
+  text: string;
+  href: string;
+  classes?: string;
+}
+
+const { href, text, classes, ...rest } = Astro.props as Props;
+---
+
+<a
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  href={href}
+  class:list={['inline-block', classes]}
+  {...rest}
+>
+  <!-- <slot /> -->
+  {text}
+</a>

@@ -1,9 +1,15 @@
 ---
+import Link from '../components/Link.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import MainLayout from '../layouts/MainLayout.astro';
+
+import user from '../data/user';
+import config from '../data/site-config';
+
+const title = `About - ${config.siteTitle} | Software Developer and Open Source Enthusiast`;
 ---
 
-<MainLayout>
+<MainLayout title={title}>
   <div class="mx-auto container-inner">
     <!-- <div
       class="flex flex-col items-center justify-between pt-8 pb-8 mx-auto hero container-inner sm:flex-row"
@@ -46,11 +52,23 @@ import MainLayout from '../layouts/MainLayout.astro';
       </p>
 
       <p class="mt-4">
-        Besides programming and writing for this blog, I enjoy watching football
-        and movies, playing chess when I can, hanging out with friends and
-        family, reading books, and doing my best to learn the Guitar.
+        In my free time, I like to journal. I read <Link
+          classes="link"
+          href={user.goodreads}
+          text="books"
+        /> to music, playing chess when I can, hanging out with friends and family,
+        reading books, and doing my best to learn the Guitar.
       </p>
+
+      <p class="mt-2">
+        I listen to quite a couple of (seemingly random) collection of songs
+        that may seem chaotic to you but I like them anyway. <br /> I also enjoy
+        watching sitcom, documentaries, and detective series.
+      </p>
+
+      I also like listening to music and going on cycling trips with friends.
     </div>
+
     <div class="flex justify-start mt-4">
       <SocialLinks />
     </div>
