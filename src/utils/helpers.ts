@@ -2,7 +2,7 @@ import urljoin from 'url-join';
 import dayjs from 'dayjs';
 import config from '../data/site-config';
 // @ts-ignore
-import kebabCase from 'lodash.kebabCase';
+import kebabCase from 'lodash.kebabcase';
 
 const editOnGithub = (slug: string) => {
   return urljoin(config.repo, '/blob/master/content/posts', `${slug}/index.md`);

@@ -1,18 +1,15 @@
 ---
-import readingTime from 'reading-time';
-
 import MainLayout from '../../layouts/MainLayout.astro';
 import Post from '../../components/Post.astro';
 
 import { getCollection, CollectionEntry } from 'astro:content';
 
 import { formatBlogPosts, kebabCaseStr } from '../../utils/helpers';
-import type { PostFrontMatter, MyPostInstance } from '../../utils/types';
 import config from '../../data/site-config';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  const formattedPosts = formatBlogPosts(posts);
+  const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts);
 
   const uniqueTags = [
     ...new Set(
@@ -37,13 +34,11 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 
 // get reading time of each post
-posts.map((post: { data?: any; body?: any }) => {
-  const time = readingTime(post.body).text;
-  post.data.readTime = time;
+posts.map(async (post: any) => {
+  const { remarkPluginFrontmatter } = await post.render();
+  post.data.minutesRead = remarkPluginFrontmatter.minutesRead;
   return post;
 });
-
-// const { Content, remarkPluginFrontmatter } = await post.render();
 ---
 
 <MainLayout title={`Posts tagged as "${tag}" – ${config.siteTitle}`}>

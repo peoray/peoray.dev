@@ -9,7 +9,13 @@ import BlogPosts from '../components/BlogPost';
 
 const posts = await getCollection('blog');
 
-const formattedPosts: CollectionEntry<'blog'> = formatBlogPosts(posts);
+const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts);
+
+formattedPosts.map(async (post) => {
+  const { remarkPluginFrontmatter } = await post.render();
+  post.data.minutesRead = remarkPluginFrontmatter.minutesRead;
+  return post;
+});
 ---
 
 <MainLayout

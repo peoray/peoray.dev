@@ -1,26 +1,15 @@
-// interface Props {
-//   title: string;
-//   description: string;
-//   date: string;
-//   readingTime: string;
-//   url: string;
-// }
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  minutesRead: string;
+  path: string;
+}
 
-// import readingTime from 'reading-time';
-// import { toString } from 'mdast-util-to-string';
 import { formatDate } from '../utils/helpers';
 
-// const Post = ({ time, post }: any) => {
 const Post = ({ post }: any) => {
-  // const time = readingTime(post.body).text;
-  // console.log(post.body);
-  // const textOnPage = toString(post.body);
-  // const time = readingTime(textOnPage);
-  // console.log(time.text);
-
-  // const { data } = post;
-  // const { title, description, path, date } = data;
-  const { title, description, path, date } = post;
+  const { title, description, path, date, minutesRead } = post as Props;
   return (
     <a
       href={path}
@@ -42,7 +31,7 @@ const Post = ({ post }: any) => {
 
         <span>•</span>
 
-        {/* <span>{time}</span> */}
+        <span>{minutesRead}</span>
       </div>
     </a>
   );

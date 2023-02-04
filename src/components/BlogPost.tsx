@@ -10,6 +10,12 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState(null);
 
+  posts.map(async (post) => {
+    const { remarkPluginFrontmatter } = await post.render();
+    post.data.minutesRead = remarkPluginFrontmatter.minutesRead;
+    return post;
+  });
+
   //   const focusSearch = useCallback((event: { key: string }) => {
   //     // setQuery('');
   //     if (event.key === '/') {
@@ -30,7 +36,7 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
     keys: [
       {
         name: 'title',
-        getFn: (post) => post.data.title,
+        getFn: (post) => post.data?.title,
       },
       {
         name: 'description',
