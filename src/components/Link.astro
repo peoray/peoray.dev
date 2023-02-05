@@ -12,7 +12,7 @@ const { href, text, classes, ...rest } = Astro.props as Props;
   target="_blank"
   rel="nofollow noopener noreferrer"
   href={href}
-  class:list={['inline-block', classes]}
+  class:list={[classes]}
   {...rest}
 >
   <span>{text}</span>
