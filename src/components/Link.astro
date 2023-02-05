@@ -15,7 +15,5 @@ const { href, text, classes, ...rest } = Astro.props as Props;
   class:list={['inline-block', classes]}
   {...rest}
 >
-  <!-- <slot /> -->
-  {text}
-  {' '}
+  <span>{text}</span>
 </a>
