@@ -23,6 +23,9 @@ import inspectUrls from '@jsdevtools/rehype-url-inspector';
 import react from '@astrojs/react';
 
 // https://astro.build/config
+import compress from 'astro-compress';
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://peoray.dev',
   markdown: {
@@ -48,6 +51,7 @@ export default defineConfig({
     }),
     mdx(),
     react(),
+    compress(),
   ],
   legacy: {
     astroFlavoredMarkdown: true,
