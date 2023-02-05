@@ -26,6 +26,12 @@ import react from '@astrojs/react';
 import compress from 'astro-compress';
 
 // https://astro.build/config
+import partytown from '@astrojs/partytown';
+
+// https://astro.build/config
+import prefetch from '@astrojs/prefetch';
+
+// https://astro.build/config
 export default defineConfig({
   site: 'https://peoray.dev',
   markdown: {
@@ -51,6 +57,8 @@ export default defineConfig({
     }),
     mdx(),
     react(),
+    partytown(),
+    prefetch(),
     compress(),
   ],
   legacy: {
