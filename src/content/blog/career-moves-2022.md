@@ -4,7 +4,7 @@ description: 'Growing my career as a software developer'
 date: 2022-01-06
 slug: 'career-moves-2022'
 path: '/blog/career-moves-2022'
-draft: false
+draft: true
 tags: ['career']
 lastmod: false
 thumbnail: '/images/career-moves-2022/cover.png'

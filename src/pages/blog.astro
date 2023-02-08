@@ -16,11 +16,13 @@ formattedPosts.map(async (post) => {
   post.data.minutesRead = remarkPluginFrontmatter.minutesRead;
   return post;
 });
+
+const title = `Blog - ${config.siteTitle} | Software Developer and Open Source Enthusiast`;
+const description = `About - ${config.siteDescription}`;
+const image = config.image.src;
 ---
 
-<MainLayout
-  title={`Blog - ${config.siteTitle} | Software Developer and Open Source Enthusiast`}
->
+<MainLayout title={title} description={description} image={image}>
   <div class="mx-auto container-inner">
     <BlogPosts posts={formattedPosts} client:load />
   </div>

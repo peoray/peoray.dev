@@ -5,12 +5,15 @@ import ProjectListing from '../components/ProjectListing.astro';
 import Newsletter from '../components/Newsletter.astro';
 
 import config from '../data/site-config';
+import PostCard from '../components/PostCard.astro';
 
 const title = `Home - ${config.siteTitle} | Software Developer and Open Source Enthusiast`;
+const description = `Home - ${config.siteDescription}`;
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} description={description} image={config.image.src}>
   <About />
+  <PostCard />
   <ProjectListing />
   <Newsletter />
 </MainLayout>

@@ -4,7 +4,7 @@ description: 'How to disable source map or debug mode in production for Vue.js a
 date: 2019-07-09T11:25:37+01:00
 draft: false
 slug: 'hide-vue-code-production'
-path: '/blog/hide-vue-source-map-code-production'
+path: '/blog/hide-vue-code-production'
 tags: ['vue', 'webpack']
 lastmod: false
 thumbnail: '/images/hide-vue-code-production/cover.png'

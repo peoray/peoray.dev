@@ -12,7 +12,7 @@ const Post = ({ post }: any) => {
   const { title, description, path, date, minutesRead } = post as Props;
   return (
     <a
-      href={path}
+      href={`${path}/`}
       rel="prefetch"
       className="flex flex-col gap-y-3 hover:bg-background-secondary p-4 mb-6 transition-all rounded-xl text-copy-primary hover:text-copy-primary"
     >

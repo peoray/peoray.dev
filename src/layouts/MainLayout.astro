@@ -3,16 +3,22 @@ import Footer from '../components/Footer.astro';
 import MetaTag from '../components/MetaTag.astro';
 import Navbar from '../components/Navbar.astro';
 
+import config from '../data/site-config';
+
 import '../styles/global.css';
 // interface Props {
 //   title: string;
+//   description: string;
+//   image: string;
+//   data: string;
+//   robots: string;
 // }
 
 const { title, description, image, data, robots } = Astro.props;
 ---
 
 <html lang="en">
-  <MetaTag {title} {description} {image} {data} {robots} />
+  <MetaTag {title} {description} image={image} {data} {robots} />
   <body>
     <div
       class="content-wrapper bg-background-primary text-copy-primary leading-normal flex flex-col min-h-screen"

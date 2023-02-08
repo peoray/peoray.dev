@@ -16,15 +16,29 @@ let {
   lastmod,
   thumbnail,
   robots,
-  minutesRead,
+  // minutesRead,
 } = data;
 ---
 
-<MainLayout {title} {description} data={data} image={thumbnail} robots={robots}>
+<MainLayout
+  title={title}
+  description={description}
+  data={data}
+  image={thumbnail}
+  robots={robots}
+>
   <article class="mx-auto mb-16 container-inner">
     <h1 class="text-4xl font-bold leading-tight">{title}</h1>
-    <div class="mt-2 text-gray-600">
-      {
+    {
+      lastmod && (
+        <div class="mt-2 text-gray-600">
+          <time>
+            <span>Last Updated on {formatDate(lastmod)}</span>
+          </time>
+        </div>
+      )
+    }
+    <!-- {
         !lastmod ? (
           <span>{formatDate(date)}</span>
         ) : (
@@ -36,15 +50,15 @@ let {
       <time>
         <span class="align-middle" role="img" aria-label="clock"> 🕒</span>
         <span class="ml-1 text-md">{minutesRead}</span>
-      </time>
-    </div>
+      </time> 
+    </div> -->
 
     <div class="flex flex-wrap space-x-4 mt-4 text-sm">
       {
         tags.map((tag: string) => (
           <>
             <Badge
-              link={`/tag/${kebabCaseStr(tag)}`}
+              link={`/tag/${kebabCaseStr(tag)}/`}
               classes="bg-gray-300 text-purple-100"
             >
               {tag}

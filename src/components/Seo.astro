@@ -14,18 +14,19 @@ const {
 const jsonLD = jsonLDGenerator({
   type: data ? 'post' : 'website',
   post: data,
-  url,
+  url: url.href,
 });
 ---
 
 <!-- SEO -->
-<link rel="canonical" href={url} />
+<link rel="canonical" href={url.href} />
 
 <!-- Open Graph -->
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content={config.siteDescription} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:url" content={url} />
+<meta property="og:url" content={url.href} />
 <meta property="og:image" content={image || config.image.src} />
 <meta property="og:image:url" content={image || config.image.src} />
 <meta property="og:image:secure_url" content={image || config.image.src} />
