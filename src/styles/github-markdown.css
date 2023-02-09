@@ -238,6 +238,12 @@ img {
 
 .markdown-body a {
   background-color: transparent;
+  @apply text-purple-100;
+  cursor: pointer !important;
+}
+
+.markdown-body a:hover {
+  @apply text-purple-200;
 }
 
 .markdown-body a:active,

@@ -69,7 +69,7 @@ h6 {
 }
 
 a.link {
-  @apply text-purple-100 font-bold;
+  @apply text-purple-100;
   cursor: pointer !important;
 }
 
