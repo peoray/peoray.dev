@@ -21,7 +21,7 @@ Nowadays, while building applications with Javascript, you'd need to run differe
 
 > **NB:** This `package.json` file is the one in the server directory and not the one in the client folder.
 
-This would require you to open multiple terminal tabs and run `npm run client` and <br> `npm run server`. Overtime, this can get tiring.
+This would require you to open multiple terminal tabs and run `npm run client` and `npm run server`. Overtime, this can get tiring.
 
 To save time, you can run both commands using a single script. All you need is to use a package called [concurrently](https://github.com/kimmobrunfeldt/concurrently).
 
