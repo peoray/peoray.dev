@@ -1,7 +1,7 @@
 ---
-title: Things I want to focus on in 2023
+title: Things I Want to Focus on in 2023
 date: 2023-01-12
-description: 'Towards a More Pragmatic and Purposeful 2023'
+description: 'Towards a more pragmatic and purposeful 2023'
 slug: 'things-to-focus-2023'
 path: '/blog/things-to-focus-2023'
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: My blog is dead. Long live my digital garden
+title: My Blog is Dead. Long Live my Digital Garden
 date: 2023-01-05
 description: '2023 is the year I tend to my digital garden'
 slug: 'digital-garden'
