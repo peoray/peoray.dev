@@ -16,11 +16,11 @@ const Post = ({ post }: any) => {
       rel="prefetch"
       className="flex flex-col gap-y-3 hover:bg-background-secondary p-4 mb-6 transition-all rounded-xl text-copy-primary hover:text-copy-primary"
     >
-      <h2 className="text-purple-100 text-2xl">{title}</h2>
+      <h2 className="text-purple-100 text-2xl font-bold">{title}</h2>
 
-      <p className="text-xl font-medium">{description}</p>
+      <p className="text-xl font-light">{description}</p>
 
-      <div className="flex items-center gap-x-2 font-medium">
+      <div className="flex items-center gap-x-2 font-light">
         <time>
           {new Date(date).toLocaleDateString('en-us', {
             year: 'numeric',

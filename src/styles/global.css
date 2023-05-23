@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-copy-heading text-4xl font-extrabold;
+  @apply text-copy-heading;
 }
 
 :root .markdown-body {
