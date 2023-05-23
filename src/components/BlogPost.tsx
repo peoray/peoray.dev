@@ -1,20 +1,20 @@
 // ts-ignore
-import { useCallback, useEffect, useRef, useState } from 'react';
-import Fuse from 'fuse.js';
+import { useCallback, useEffect, useRef, useState } from 'react'
+import Fuse from 'fuse.js'
 
-import Post from './Post';
-import config from '../data/site-config';
+import Post from './Post'
+import config from '../data/site-config'
 
 export const BlogPosts = ({ posts }: { posts: any }) => {
-  const inputRef = useRef<HTMLInputElement>(null || undefined);
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState(null);
+  const inputRef = useRef<HTMLInputElement>(null || undefined)
+  const [query, setQuery] = useState('')
+  const [results, setResults] = useState(null)
 
   posts.map(async (post) => {
-    const { remarkPluginFrontmatter } = await post.render();
-    post.data.minutesRead = remarkPluginFrontmatter.minutesRead;
-    return post;
-  });
+    const { remarkPluginFrontmatter } = await post.render()
+    post.data.minutesRead = remarkPluginFrontmatter.minutesRead
+    return post
+  })
 
   //   const focusSearch = useCallback((event: { key: string }) => {
   //     // setQuery('');
@@ -44,34 +44,34 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
       },
     ],
     threshold: 0.3,
-  });
+  })
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search).get('q');
+    const searchParams = new URLSearchParams(window.location.search).get('q')
 
-    if (searchParams) setQuery(searchParams);
+    if (searchParams) setQuery(searchParams)
 
     setTimeout(() => {
       if (inputRef.current) {
         inputRef.current.selectionStart = inputRef.current.selectionEnd =
-          searchParams?.length || 0;
+          searchParams?.length || 0
       }
-    }, 50);
-  }, []);
+    }, 50)
+  }, [])
 
   useEffect(() => {
-    setResults(query.length > 0 ? fuse.search(query) : null);
+    setResults(query.length > 0 ? fuse.search(query) : null)
 
     if (query.length > 0) {
-      const searchParams = new URLSearchParams(window.location.search);
-      searchParams.set('q', query);
+      const searchParams = new URLSearchParams(window.location.search)
+      searchParams.set('q', query)
 
-      const newUrl = `${window.location.pathname}?${searchParams.toString()}`;
-      history.pushState(null, '', newUrl);
+      const newUrl = `${window.location.pathname}?${searchParams.toString()}`
+      history.pushState(null, '', newUrl)
     } else {
-      history.pushState(null, '', window.location.pathname);
+      history.pushState(null, '', window.location.pathname)
     }
-  }, [query]);
+  }, [query])
 
   return (
     <>
@@ -143,18 +143,22 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
           )
         ) : (
           <>
-            <span className="text-xl text-gray-500 p-4">
+            <span className="text-xl md:text-2xl text-center text-gray-500 py-4 font-extrabold">
               No posts found. Maybe try one of these instead?
             </span>
 
             <h2 className="mb-10" />
 
-            {posts.slice(0, 3).map((post: any) => (
-              <Post
-                key={`${config.siteUrl}${post.data.path}`}
-                post={post.data}
-              />
-            ))}
+            {posts
+              .map((post) => ({ post, random: Math.random() })) // Add random property to each post object
+              .sort((a, b) => a.random - b.random) // Sort the posts based on the random property
+              .slice(0, 3) // Take the first three posts
+              .map((item: any) => (
+                <Post
+                  key={`${config.siteUrl}${item.post.data.path}`}
+                  post={item.post.data}
+                />
+              ))}
           </>
         )
       ) : (
@@ -164,7 +168,7 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
       )}
       {/* </div> */}
     </>
-  );
-};
+  )
+}
 
-export default BlogPosts;
+export default BlogPosts
