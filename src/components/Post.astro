@@ -1,29 +1,21 @@
 ---
-interface Props {
-  title: string;
-  description: string;
-  date: string;
-  minutesRead: string;
-  path: string;
-}
-
-const { post } = Astro.props;
-const { title, description, path, date, minutesRead } = post as Props;
+const { post } = Astro.props
+const { title, description, path, date, minutesRead } = post
 ---
 
 <a
   href={`${path}/`}
   rel="prefetch"
-  class="flex flex-col gap-y-3 hover:bg-background-secondary p-4 mb-6 transition-all rounded-xl text-copy-primary hover:text-copy-primary"
+  class="flex flex-col gap-y-3 bg-background-tertiary hover:bg-background-secondary p-4 mb-6 transition-all rounded-xl text-copy-primary hover:text-copy-primary ease-out"
 >
-  <h2 class="text-purple-100 text-2xl">{title}</h2>
+  <h2 class="text-purple-100 text-2xl font-bold">{title}</h2>
 
-  <p class="text-xl font-medium">{description}</p>
+  <p class="text-xl">{description}</p>
 
-  <div class="flex items-center gap-x-2 font-medium">
+  <div class="flex items-center gap-x-2">
     <time>
       {
-        new Date(date).toLocaleDateString('en-gb', {
+        new Date(date).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'short',
           day: 'numeric',

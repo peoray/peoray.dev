@@ -2,7 +2,8 @@
 import { getCollection, CollectionEntry } from 'astro:content'
 
 import { formatBlogPosts } from '../utils/helpers'
-import Post from '../components/Post'
+import Post from '../components/Post.astro'
+import Link from './Link.astro'
 
 const posts = await getCollection('blog')
 
@@ -18,13 +19,15 @@ formattedPosts.map(async (post) => {
 ---
 
 <div id="projects" class="projects container-inner mx-auto relative my-20">
-  <h2 class="mb-6 text-4xl font-extrabold">Latest Articles</h2>
-
-  <p class="text-xl mb-6 lg:w-2/3">
-    During my free time, I like to hack on things that I find interesting and/or
-    would use. Here are a couple of them, you can find other random things I
-    build on my <a href="https://github.com/peoray">GitHub</a> page.
-  </p>
+  <div class="flex items-center mb-6 justify-between">
+    <h2 class="text-4xl font-extrabold">Latest Articles</h2>
+    <div class="self-center text-xl">
+      <a
+        class="link bg-background-tertiary hover:bg-background-secondary p-3 rounded-lg hover:bg-opacity-80"
+        href="/blog">View all</a
+      >
+    </div>
+  </div>
 
   <div class="">
     {formattedPosts.map((post) => <Post post={post.data} />)}
