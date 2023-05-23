@@ -18,9 +18,9 @@ const Post = ({ post }: any) => {
     >
       <h2 className="text-purple-100 text-2xl font-bold">{title}</h2>
 
-      <p className="text-xl font-light">{description}</p>
+      <p className="text-xl">{description}</p>
 
-      <div className="flex items-center gap-x-2 font-light">
+      <div className="flex items-center gap-x-2">
         <time>
           {new Date(date).toLocaleDateString('en-us', {
             year: 'numeric',
