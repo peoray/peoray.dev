@@ -1,15 +1,15 @@
 interface Props {
-  title: string;
-  description: string;
-  date: string;
-  minutesRead: string;
-  path: string;
+  title: string
+  description: string
+  date: string
+  minutesRead: string
+  path: string
 }
 
-import { formatDate } from '../utils/helpers';
+import { formatDate } from '../utils/helpers'
 
 const Post = ({ post }: any) => {
-  const { title, description, path, date, minutesRead } = post as Props;
+  const { title, description, path, date, minutesRead } = post as Props
   return (
     <a
       href={`${path}/`}
@@ -34,7 +34,7 @@ const Post = ({ post }: any) => {
         <span>{minutesRead}</span>
       </div>
     </a>
-  );
-};
+  )
+}
 
-export default Post;
+export default Post

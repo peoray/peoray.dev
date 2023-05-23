@@ -256,11 +256,6 @@ img {
   font-weight: bolder;
 }
 
-.markdown-body h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 .markdown-body img {
   border-style: none;
 }
@@ -351,7 +346,12 @@ img {
 }
 
 .markdown-body h1 {
-  font-size: 32px;
+  font-size: 2em !important;
+  margin: 0.67em 0;
+}
+
+.markdown-body h1 {
+  /* font-size: 32px; */
 }
 
 .markdown-body h1,
@@ -360,11 +360,11 @@ img {
 }
 
 .markdown-body h2 {
-  font-size: 24px;
+  font-size: 24px !important;
 }
 
 .markdown-body h3 {
-  font-size: 20px;
+  font-size: 20px !important;
 }
 
 .markdown-body h3,
@@ -373,11 +373,11 @@ img {
 }
 
 .markdown-body h4 {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .markdown-body h5 {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 .markdown-body h5,
@@ -386,7 +386,7 @@ img {
 }
 
 .markdown-body h6 {
-  font-size: 12px;
+  font-size: 12px !important;
 }
 
 .markdown-body p {
