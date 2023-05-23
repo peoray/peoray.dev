@@ -1,5 +1,6 @@
 ---
 import projects from '../data/projects'
+import Link from './Link.astro'
 import ProjectItem from './ProjectItem.astro'
 ---
 
@@ -9,7 +10,11 @@ import ProjectItem from './ProjectItem.astro'
   <p class="mb-6 lg:w-2/3 text-xl">
     During my free time, I like to hack on things that I find interesting and/or
     would use. Here are a couple of them, you can find other random things I
-    build on my <a href="https://github.com/peoray">GitHub</a> page.
+    build on my <Link
+      href="https://github.com/peoray"
+      text="GitHub"
+      classes="link"
+    />page.
   </p>
 
   <div class="grid lg:grid-cols-2 gap-4 lg:gap-8">
