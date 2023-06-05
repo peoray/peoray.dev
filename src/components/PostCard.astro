@@ -1,20 +1,7 @@
 ---
-import { getCollection, CollectionEntry } from 'astro:content'
-
-import { formatBlogPosts } from '../utils/helpers'
 import Post from '../components/Post.astro'
 
-const posts = await getCollection('blog')
-
-const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts, {
-  limit: 5,
-})
-
-formattedPosts.map(async (post) => {
-  const { remarkPluginFrontmatter } = await post.render()
-  post.data.minutesRead = remarkPluginFrontmatter.minutesRead
-  return post
-})
+const { formattedPosts } = Astro.props
 ---
 
 <div id="projects" class="projects container-inner mx-auto relative my-20">
@@ -29,6 +16,6 @@ formattedPosts.map(async (post) => {
   </div>
 
   <div class="">
-    {formattedPosts.map((post) => <Post post={post.data} />)}
+    {formattedPosts.map((post: { data: any }) => <Post post={post.data} />)}
   </div>
 </div>
