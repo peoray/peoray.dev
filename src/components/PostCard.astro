@@ -2,6 +2,19 @@
 import Post from '../components/Post.astro'
 
 const { formattedPosts } = Astro.props
+
+formattedPosts.map(
+  async (post: {
+    render: () =>
+      | PromiseLike<{ remarkPluginFrontmatter: any }>
+      | { remarkPluginFrontmatter: any }
+    data: { minutesRead: any }
+  }) => {
+    const { remarkPluginFrontmatter } = await post.render()
+    post.data.minutesRead = remarkPluginFrontmatter.minutesRead
+    return post
+  }
+)
 ---
 
 <div id="projects" class="projects container-inner mx-auto relative my-20">
