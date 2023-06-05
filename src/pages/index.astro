@@ -9,27 +9,11 @@ import PostCard from '../components/PostCard.astro'
 
 const title = `Home - ${config.siteTitle} | Software Developer and Open Source Enthusiast`
 const description = `Home - ${config.siteDescription}`
-
-import { getCollection, CollectionEntry } from 'astro:content'
-
-import { formatBlogPosts } from '../utils/helpers'
-
-const posts = await getCollection('blog')
-
-const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts, {
-  limit: 5,
-})
-
-formattedPosts.map(async (post) => {
-  const { remarkPluginFrontmatter } = await post.render()
-  post.data.minutesRead = remarkPluginFrontmatter.minutesRead
-  return post
-})
 ---
 
 <MainLayout title={title} description={description} image={config.image.src}>
   <About />
-  <PostCard formattedPosts={formattedPosts} />
+  <PostCard />
   <ProjectListing />
   <Newsletter />
 </MainLayout>

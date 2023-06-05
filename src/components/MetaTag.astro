@@ -1,6 +1,6 @@
 ---
-import config from '../data/site-config';
-import Seo from './Seo.astro';
+import config from '../data/site-config'
+import Seo from './Seo.astro'
 // interface Props {
 //   title: string;
 //   description: string;
@@ -9,9 +9,7 @@ import Seo from './Seo.astro';
 //   robots: string;
 // }
 
-const { title, description, image, data, robots } = Astro.props;
-
-// console.log(Astro.props);
+const { title, description, image, data, robots } = Astro.props
 ---
 
 <head>
@@ -25,8 +23,8 @@ const { title, description, image, data, robots } = Astro.props;
   <Seo {title} {description} {image} {data} {robots} />
 
   <script>
-    import { inject } from '@vercel/analytics';
-    inject();
+    import { inject } from '@vercel/analytics'
+    inject()
   </script>
 
   <!-- Google tag (gtag.js) -->

@@ -1,19 +1,22 @@
 ---
 import Post from '../components/Post.astro'
 
-const { formattedPosts } = Astro.props
+import { getCollection, CollectionEntry } from 'astro:content'
 
-formattedPosts.map(
-  async (post: {
-    render: () =>
-      | PromiseLike<{ remarkPluginFrontmatter: any }>
-      | { remarkPluginFrontmatter: any }
-    data: { minutesRead: any }
-  }) => {
+import { formatBlogPosts } from '../utils/helpers'
+
+const posts = await getCollection('blog')
+
+const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts, {
+  limit: 5,
+})
+
+await Promise.all(
+  formattedPosts.map(async (post) => {
     const { remarkPluginFrontmatter } = await post.render()
     post.data.minutesRead = remarkPluginFrontmatter.minutesRead
     return post
-  }
+  })
 )
 ---
 
