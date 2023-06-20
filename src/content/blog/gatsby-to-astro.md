@@ -5,7 +5,7 @@ date: 2023-03-16
 published: true
 slug: 'rebuilding-with-astro'
 path: '/blog/rebuilding-with-astro'
-tags: ['programming']
+tags: ['programming', 'astro']
 lastmod: false
 thumbnail: ''
 ---
