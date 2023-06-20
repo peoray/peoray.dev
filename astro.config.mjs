@@ -1,35 +1,35 @@
-import { defineConfig } from 'astro/config';
-import { remarkReadingTime } from './src/utils/remark-reading-time.mjs';
+import { defineConfig } from 'astro/config'
+import { remarkReadingTime } from './src/utils/remark-reading-time.mjs'
 
 // https://astro.build/config
-import tailwind from '@astrojs/tailwind';
+import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
-import robotsTxt from 'astro-robots-txt';
+import robotsTxt from 'astro-robots-txt'
 
 // https://astro.build/config
-import sitemap from '@astrojs/sitemap';
+import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
-import image from '@astrojs/image';
+import image from '@astrojs/image'
 
 // https://astro.build/config
-import mdx from '@astrojs/mdx';
+import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
-import inspectUrls from '@jsdevtools/rehype-url-inspector';
+import inspectUrls from '@jsdevtools/rehype-url-inspector'
 
 // https://astro.build/config
-import react from '@astrojs/react';
+import react from '@astrojs/react'
 
 // https://astro.build/config
-import compress from 'astro-compress';
+import compress from 'astro-compress'
 
 // https://astro.build/config
-import partytown from '@astrojs/partytown';
+import partytown from '@astrojs/partytown'
 
 // https://astro.build/config
-import prefetch from '@astrojs/prefetch';
+import prefetch from '@astrojs/prefetch'
 
 // https://astro.build/config
 export default defineConfig({
@@ -42,7 +42,7 @@ export default defineConfig({
         {
           selectors: ['a[href]'],
           inspectEach(url) {
-            url.node.properties.target = '_blank';
+            url.node.properties.target = '_blank'
           },
         },
       ],
@@ -57,11 +57,16 @@ export default defineConfig({
     }),
     mdx(),
     react(),
-    partytown(),
+    partytown({
+      // Adds dataLayer.push as a forwarding-event.
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
     prefetch(),
     compress(),
   ],
   legacy: {
     astroFlavoredMarkdown: true,
   },
-});
+})

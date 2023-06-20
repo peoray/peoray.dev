@@ -22,21 +22,24 @@ const { title, description, image, data, robots } = Astro.props
   <!-- <Seo {title} {description} url={Astro.url} {image} {data} {robots} /> -->
   <Seo {title} {description} {image} {data} {robots} />
 
-  <script>
+  <script type="text/partytown">
     import { inject } from '@vercel/analytics'
     inject()
   </script>
 
   <!-- Google tag (gtag.js) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-9B0V69DZWD"
+  <script
+    async
+    type="text/partytown"
+    src="https://www.googletagmanager.com/gtag/js?id=G-3Q7YQHMMBX"
   ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || []
     function gtag() {
-      dataLayer.push(arguments);
+      dataLayer.push(arguments)
     }
-    gtag('js', new Date());
+    gtag('js', new Date())
 
-    gtag('config', 'G-9B0V69DZWD');
-  </script> -->
+    gtag('config', 'G-3Q7YQHMMBX')
+  </script>
 </head>
