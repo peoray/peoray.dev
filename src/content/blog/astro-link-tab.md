@@ -10,11 +10,11 @@ lastmod: false
 thumbnail: ''
 ---
 
-As I was working on moving my website from [Gatsby to Astro](/blog/rebuilding-with-astro), I encountered the need to adjust how my markdown links are opened. I wanted to provide a seamless user experience by opening them in different tabs. By default, Astro opens all links in the same tab, which doesn't align with my desired behavior.
+As I was working on moving my website from [Gatsby to Astro](/blog/rebuilding-with-astro), I encountered the need to adjust how my markdown links are opened. I wanted to provide a seamless user experience by opening them in different tabs. By default, Astro opens all links in the same tab, which doesn't align with my desired behaviour.
 
 One solution is to switch to the `.mdx` file format and use a custom component with the `target="_blank"` attribute. However, this approach may not be ideal if you already have several articles in the `.md` file format and don't want to spend time converting them as was my case.
 
-After exploring various solutions, I discovered an approach that allowed me to achieve the desired link behavior without the need to switch to the `.mdx` file format. This solution involved leveraging a rehype plugin to process the resulting HTML from Markdown. We are using a plugin since it's not possible, yet, to customize `.md` with Astro components.
+After exploring various solutions, I discovered an approach that allowed me to achieve the desired link behaviour without the need to switch to the `.mdx` file format. This solution involved leveraging a rehype plugin to process the resulting HTML from Markdown. We are using a plugin since it is not possible yet to customize `.md` with Astro components.
 
 First, install the [@jsdevtools/rehype-url-inspector](https://github.com/JS-DevTools/rehype-url-inspector) package by running the following command:
 
@@ -57,4 +57,4 @@ Let's break down what's happening in the code:
 
 That's it! With this configuration, Astro will process the Markdown-generated HTML using the `inspectUrls` plugin and modify the link properties accordingly.
 
-This approach provides a more elegant solution compared to switching to `.mdx` files and using custom components. It allows you to maintain your existing `.md` files while achieving the desired link behavior.
+This approach provides a more elegant solution compared to switching to `.mdx` files and using custom components. It allows you to maintain your existing `.md` files while achieving the desired link behaviour.
