@@ -1,6 +1,6 @@
 ---
-title: How to Change a Repository Language on GitHub
-description: Learn how to change Github language.
+title: How to Change Your Repository's Language on GitHub
+description: Learn how to change your repository's language detection on Github.
 date: 2023-04-13
 slug: 'change-language-github'
 path: '/blog/change-language-github'
@@ -23,6 +23,6 @@ In my case, I had to do this:
 public/rss/* linguist-vendored
 ```
 
-In my `.gitattributes` file, I added a linguist-vendored entry for the directory I want to exclude. The linguist-vendored attribute tells Linguist to ignore any file in that directory.
+In my `.gitattributes` file, I added a linguist-vendored entry for the directory I want to exclude. The linguist-vendored attribute tells Linguist to ignore any file in that directory. Doing this fixed the issue for me and my repo's language became Astro again.
 
-It is important to note that I'm describing an issue I encountered, it is very much possible that the case would be different for you. I encourage you to look at the documentation for the Lingust library to see various you can alter the language of your repo.
+It is important to note that I'm describing an issue I encountered and what I did to fix it. It is likely that you might face a different issue. I encourage you to look at Lingust documentation to see various way you can alter the language of your repo.

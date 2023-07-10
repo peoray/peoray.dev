@@ -3,8 +3,12 @@ export default [
     title: 'peoray.dev',
     source: 'https://github.com/peoray/peoray.dev',
     demo: 'https://peoray.dev',
-    description:
-      '👨‍💻 My personal website and digital garden 🌱',
+    description: '👨‍💻 My personal website and digital garden 🌱',
+  },
+  {
+    title: 'tailwindcss-boilerplate',
+    source: 'https://github.com/peoray/tailwindcss-boilerplate',
+    description: '📦 Quick boilerplate to get you started with TailwindCSS ',
   },
   {
     title: 'Astro Starter Blog',
@@ -14,14 +18,9 @@ export default [
       'A simple, hackable & minimalistic starter for Astro that uses Markdown for content.',
   },
   {
-    title: 'tailwindcss-boilerplate',
-    source: 'https://github.com/peoray/tailwindcss-boilerplate',
-    description: '📦 Quick boilerplate to get you started with TailwindCSS ',
+    title: 'Astro Portfolio Starter',
+    demo: 'https://astro-portfolio-starter.netlify.app/',
+    source: 'https://github.com/peoray/astro-portfolio-starter/',
+    description: ' A simple portfolio theme for Astro powered by Tailwind CSS.',
   },
-  {
-    title: 'vue-initials-placeholder',
-    source: 'https://github.com/peoray/vue-initials-placeholder',
-    description:
-      'A vue component that uses parsed initials as placeholders. Can be used as a substitute for absent user profile photo.',
-  }
-];
+]
