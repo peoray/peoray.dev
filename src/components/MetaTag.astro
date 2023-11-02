@@ -1,21 +1,21 @@
 ---
-import config from '../data/site-config'
 import Seo from './Seo.astro'
-// interface Props {
-//   title: string;
-//   description: string;
-//   image: string;
-//   frontmatter: string;
-//   robots: string;
-// }
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  data: string;
+  robots: string;
+}
 
-const { title, description, image, data, robots } = Astro.props
+const { title, description, image, data, robots } = Astro.props as Props;
 ---
 
 <head>
   <title>{title}</title>
   <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
 
