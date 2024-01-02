@@ -4,7 +4,6 @@ import { remarkReadingTime } from './src/utils/remark-reading-time.mjs'
 import tailwind from '@astrojs/tailwind'
 import robotsTxt from 'astro-robots-txt'
 import sitemap from '@astrojs/sitemap'
-import image from '@astrojs/image'
 import mdx from '@astrojs/mdx'
 import inspectUrls from '@jsdevtools/rehype-url-inspector'
 import react from '@astrojs/react'
@@ -32,9 +31,6 @@ export default defineConfig({
     tailwind(),
     robotsTxt(),
     sitemap(),
-    image({
-      serviceEntryPoint: '@astrojs/image/sharp',
-    }),
     mdx(),
     react(),
     partytown({
