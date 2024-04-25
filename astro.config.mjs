@@ -12,7 +12,7 @@ import partytown from '@astrojs/partytown'
 import prefetch from '@astrojs/prefetch'
 
 export default defineConfig({
-  site: 'https://peoray.dev',
+  site: 'https://www.peoray.dev',
   markdown: {
     remarkPlugins: [remarkReadingTime],
     rehypePlugins: [
