@@ -1,13 +1,11 @@
 ---
 title: 'Git Tip: How to Easily Switch to Your Last Known Branch'
-date: 2023-02-16
 description: ' Discover a handy Git tip that allows you to effortlessly switch back to your last known branch without remembering its name'
+date: 2023-02-16
 slug: 'git-checkout'
 path: '/blog/git-checkout'
 draft: false
 tags: ['git', 'programming']
-lastmod: false
-thumbnail: ''
 ---
 
 As a developer working with Git, it's common to switch between different branches while working on multiple features or fixing bugs. Sometimes, you may find yourself in a situation where you need to switch back to the last branch you were working on, but you can't quite remember its name.

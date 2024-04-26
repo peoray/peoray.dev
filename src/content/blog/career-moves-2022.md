@@ -6,7 +6,6 @@ slug: 'career-moves-2022'
 path: '/blog/career-moves-2022'
 draft: true
 tags: ['career']
-lastmod: false
 thumbnail: '/images/career-moves-2022/cover.png'
 ---
 

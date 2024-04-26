@@ -6,7 +6,6 @@ draft: false
 slug: 'things-i-dont-know-2019'
 path: '/blog/things-i-dont-know-2019'
 tags: ['programming', 'career']
-lastmod: false
 thumbnail: '/images/blog/things-i-dont-know-2019/cover.png'
 ---
 

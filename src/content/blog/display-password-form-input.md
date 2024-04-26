@@ -6,7 +6,6 @@ draft: false
 slug: 'display-password-form-input'
 path: '/blog/display-password-form-input'
 tags: ['javascript']
-lastmod: false
 thumbnail: '/images/blog/display-password-form-input/cover.png'
 ---
 

@@ -6,7 +6,5 @@ slug: 'astro-reading-time'
 path: '/blog/astro-reading-time'
 draft: true
 tags: ['astro']
-lastmod: false
-thumbnail: ''
 ---
 

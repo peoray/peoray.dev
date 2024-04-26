@@ -6,7 +6,6 @@ slug: 'number-facts-generator'
 path: '/blog/number-facts-generator'
 draft: false
 tags: ['programming', 'javascript']
-lastmod: false
 thumbnail: '/images/blog/number-facts-generator/cover.png'
 ---
 

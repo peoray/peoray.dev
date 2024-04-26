@@ -36,11 +36,11 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
     keys: [
       {
         name: 'title',
-        getFn: (post) => post.data?.title,
+        getFn: (post: any) => post.data?.title,
       },
       {
         name: 'description',
-        getFn: (post) => post.data.description,
+        getFn: (post: any) => post.data.description,
       },
     ],
     threshold: 0.3,

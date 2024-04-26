@@ -6,7 +6,6 @@ slug: 'git-switch'
 path: '/blog/git-switch'
 draft: false
 tags: ['git', 'programming']
-lastmod: false
 thumbnail: '/images/git-switch/cover.png'
 ---
 
