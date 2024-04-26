@@ -1,6 +1,6 @@
 ---
-import SocialLinks from './SocialLinks.astro';
-const currentYear = new Date().getFullYear();
+import SocialLinks from './SocialLinks.astro'
+const currentYear = new Date().getFullYear()
 ---
 
 <footer class="bg-background-secondary mt-12">
@@ -16,12 +16,23 @@ const currentYear = new Date().getFullYear();
       </p>
     </div>
 
-    <div>
+    <div class="flex space-x-4">
+      <a href="/feed.xml" class="font-normal text-white hover:text-gray-400">
+        RSS
+      </a>
       <a
-        href="/rss.xml"
-        class="font-normal text-white underline hover:text-gray-400"
+        href="https://peoray.substack.com/"
+        target="_blank"
+        class="font-normal text-white hover:text-gray-400"
       >
-        RSS Feed
+        Newsletter
+      </a>
+      <a
+        href="https://ko-fi.com/emmanuelraymond"
+        target="_blank"
+        class="font-normal text-white hover:text-gray-400"
+      >
+        Ko-Fi
       </a>
     </div>
   </div>

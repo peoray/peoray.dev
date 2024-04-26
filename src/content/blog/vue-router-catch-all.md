@@ -6,7 +6,6 @@ slug: 'vue-router-catch-all'
 path: '/blog/vue-router-catch-all'
 draft: false
 tags: ['vue', 'programming']
-lastmod: false
 thumbnail: ''
 ---
 

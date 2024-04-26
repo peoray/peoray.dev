@@ -6,7 +6,6 @@ published: true
 slug: 'first-stackoverflow-question'
 path: '/blog/first-stackoverflow-question'
 tags: ['programming']
-lastmod: false
 thumbnail: './images/cover.png'
 ---
 

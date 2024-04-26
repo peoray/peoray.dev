@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://peoray.dev/sitemap-index.xml

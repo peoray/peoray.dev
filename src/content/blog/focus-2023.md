@@ -6,8 +6,6 @@ slug: 'things-to-focus-2023'
 path: '/blog/things-to-focus-2023'
 draft: false
 tags: ['career']
-lastmod: false
-thumbnail: ''
 ---
 
 As the dawn of a new year breaks, many of us find ourselves reflecting on the past and contemplating the future. It is usually a time for self-assessment, evaluation and making plans.

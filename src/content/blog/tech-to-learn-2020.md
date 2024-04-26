@@ -6,7 +6,6 @@ slug: 'tech-to-learn-2020'
 path: '/blog/tech-to-learn-2020'
 draft: false
 tags: ['career']
-lastmod: false
 thumbnail: '/images/blog/tech-to-learn-2020/cover.png'
 ---
 

@@ -6,7 +6,6 @@ draft: false
 slug: 'using-concurrently'
 path: '/blog/using-concurrently'
 tags: ['npm', 'node']
-lastmod: false
 thumbnail: '/images/blog/using-concurrently/cover.png'
 ---
 

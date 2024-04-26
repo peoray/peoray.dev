@@ -6,7 +6,6 @@ slug: 'hello-world'
 path: '/blog/hello-world'
 draft: false
 tags: ['career']
-lastmod: false
 thumbnail: '/images/blog/hello-world/cover.png'
 ---
 

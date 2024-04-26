@@ -6,7 +6,6 @@ draft: false
 slug: 'hide-vue-code-production'
 path: '/blog/hide-vue-code-production'
 tags: ['vue', 'webpack']
-lastmod: false
 thumbnail: '/images/hide-vue-code-production/cover.png'
 ---
 

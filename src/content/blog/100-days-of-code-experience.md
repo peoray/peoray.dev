@@ -6,7 +6,6 @@ slug: '100-days-of-code-experience'
 path: '/blog/100-days-of-code-experience'
 draft: false
 tags: ['100 days of code', 'career']
-lastmod: false
 thumbnail: '/images/blog/100-days-of-code/cover.png'
 ---
 

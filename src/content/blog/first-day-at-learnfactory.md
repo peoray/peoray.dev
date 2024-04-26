@@ -6,7 +6,6 @@ slug: 'first-day-at-learnfactory'
 path: '/blog/first-day-at-learnfactory'
 draft: false
 tags: ['career']
-lastmod: false
 thumbnail: '/images/blog/first-day-at-learnfactory/cover.png'
 ---
 

@@ -6,7 +6,6 @@ slug: 'astro-open-link-new-tab'
 path: '/blog/astro-open-link-new-tab'
 draft: false
 tags: ['astro']
-lastmod: false
 thumbnail: ''
 ---
 

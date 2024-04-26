@@ -5,8 +5,7 @@ description: '2023 is the year I tend to my digital garden'
 slug: 'digital-garden'
 path: '/blog/digital-garden'
 draft: false
-tags: ['writing', 'productivity']
-lastmod: false
+tags: ['writing']
 thumbnail: ''
 ---
 

@@ -6,7 +6,6 @@ slug: 'a-new-ending'
 path: '/blog/a-new-ending'
 draft: false
 tags: ['career']
-lastmod: false
 thumbnail: './images/cover.png'
 ---
 
