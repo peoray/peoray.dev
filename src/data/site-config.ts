@@ -3,7 +3,7 @@ export default {
   siteTitleShort: 'Emmanuel Raymond',
   siteTitleAlt: 'Emmanuel Raymond',
   siteLogo: '/static/logos/avatar.jpeg',
-  siteUrl: 'https://peoray.dev',
+  siteUrl: 'https://www.peoray.dev',
   image: {
     src: '/images/author.jpg',
     alt: 'Emmanuel Raymond photo',
