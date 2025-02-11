@@ -1,13 +1,13 @@
 ---
 interface Props {
-  link: string;
-  classes?: string;
+  link: string
+  classes?: string
 }
-const { link, classes, ...rest } = Astro.props;
+const { link, classes, ...rest } = Astro.props
 ---
 
+<!-- target="_blank" -->
 <a
-  target="_blank"
   rel="nofollow noopener noreferrer"
   href={link}
   class:list={[

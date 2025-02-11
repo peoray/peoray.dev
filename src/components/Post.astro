@@ -4,11 +4,11 @@ const { title, description, path, date, minutesRead } = post
 ---
 
 <a
-  href={`${path}/`}
+  href={`${path}`}
   rel="prefetch"
   class="flex flex-col gap-y-3 bg-background-tertiary hover:bg-background-secondary p-4 mb-6 transition-all rounded-xl text-copy-primary hover:text-copy-primary ease-out"
 >
-  <h2 class="text-purple-100 text-2xl font-bold">{title}</h2>
+  <h2 class="!text-purple-100 text-2xl font-bold">{title}</h2>
 
   <p class="text-xl">{description}</p>
 
@@ -28,3 +28,9 @@ const { title, description, path, date, minutesRead } = post
     {minutesRead && <span>{minutesRead}</span>}
   </div>
 </a>
+
+<!-- <style>
+  h2 {
+    color: var(--color-purple-100);
+  }
+</style> -->
