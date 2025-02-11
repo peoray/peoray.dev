@@ -1,7 +1,7 @@
 ---
 title: Hello World
-date: 2017-06-19
 description: 'My very first article'
+pubDate: 2017-06-19
 slug: 'hello-world'
 path: '/blog/hello-world'
 draft: false

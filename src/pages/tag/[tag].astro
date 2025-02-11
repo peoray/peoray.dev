@@ -1,15 +1,15 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
-import Post from '../../components/Post.astro';
+import MainLayout from '../../layouts/MainLayout.astro'
+import Post from '../../components/Post.astro'
 
-import { getCollection, CollectionEntry } from 'astro:content';
+import { getCollection, render, type CollectionEntry } from 'astro:content'
 
-import { formatBlogPosts, kebabCaseStr } from '../../utils/helpers';
-import config from '../../data/site-config';
+import { formatBlogPosts, kebabCaseStr } from '../../utils/helpers'
+import config from '../../data/site-config'
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts);
+  const posts = await getCollection('blog')
+  const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts)
 
   const uniqueTags = [
     ...new Set(
@@ -17,28 +17,28 @@ export async function getStaticPaths() {
         .map((post: { data: { tags: any } }) => post.data.tags)
         .flat()
     ),
-  ];
+  ]
 
   return uniqueTags.map((tag) => {
     const filteredPosts = formattedPosts.filter(
       (post: { data: { tags: unknown[] } }) => post.data.tags.includes(tag)
-    );
+    )
     return {
       params: { tag: kebabCaseStr(tag) },
       props: { posts: filteredPosts },
-    };
-  });
+    }
+  })
 }
 
-const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { tag } = Astro.params
+const { posts } = Astro.props
 
 // get reading time of each post
 posts.map(async (post: any) => {
-  const { remarkPluginFrontmatter } = await post.render();
-  post.data.minutesRead = remarkPluginFrontmatter.minutesRead;
-  return post;
-});
+  const { remarkPluginFrontmatter } = await render(post)
+  post.data.minutesRead = remarkPluginFrontmatter.minutesRead
+  return post
+})
 ---
 
 <MainLayout title={`Posts tagged as "${tag}" – ${config.siteTitle}`}>

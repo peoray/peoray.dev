@@ -1,7 +1,7 @@
 ---
 import Post from '../components/Post.astro'
 
-import { getCollection, CollectionEntry } from 'astro:content'
+import { getCollection, render, type CollectionEntry } from 'astro:content'
 
 import { formatBlogPosts } from '../utils/helpers'
 
@@ -13,8 +13,8 @@ const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts, {
 
 await Promise.all(
   formattedPosts.map(async (post) => {
-    const { remarkPluginFrontmatter } = await post.render()
-    post.data.minutesRead = remarkPluginFrontmatter.minutesRead
+    const { remarkPluginFrontmatter } = await render(post)
+    // post.data.minutesRead = remarkPluginFrontmatter.minutesRead
     return post
   })
 )

@@ -1,15 +1,17 @@
 interface Props {
   title: string
   description: string
-  date: string
+  pubDate: string
   minutesRead: string
   path: string
+  lastModified: string
 }
 
 import { formatDate } from '../utils/helpers'
 
 const Post = ({ post }: any) => {
-  const { title, description, path, date, minutesRead } = post as Props
+  const { title, description, path, pubDate, minutesRead, lastModified } =
+    post as Props
   return (
     <a
       href={`${path}`}
@@ -22,7 +24,7 @@ const Post = ({ post }: any) => {
 
       <div className="flex items-center gap-x-2">
         <time>
-          {new Date(date).toLocaleDateString('en-us', {
+          {new Date(pubDate).toLocaleDateString('en-us', {
             year: 'numeric',
             month: 'short',
             day: 'numeric',

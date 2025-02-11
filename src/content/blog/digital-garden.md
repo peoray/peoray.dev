@@ -1,7 +1,7 @@
 ---
 title: My Blog is Dead. Long Live my Digital Garden
-date: 2023-01-05
 description: '2023 is the year I tend to my digital garden'
+pubDate: 2023-01-05
 slug: 'digital-garden'
 path: '/blog/digital-garden'
 draft: false

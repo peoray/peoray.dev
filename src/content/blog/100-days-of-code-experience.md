@@ -1,7 +1,7 @@
 ---
 title: 'My First #100DaysOfCode Experience'
 description: 'My experience completing my first #100DaysOfCode challenge'
-date: 2018-04-27
+pubDate: 2018-04-27
 slug: '100-days-of-code-experience'
 path: '/blog/100-days-of-code-experience'
 draft: false

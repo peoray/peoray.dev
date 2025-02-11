@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config'
 import { remarkReadingTime } from './src/utils/remark-reading-time.mjs'
+import { remarkModifiedTime } from './src/utils/remark-modified-time.mjs'
 import sitemap from '@astrojs/sitemap'
 import mdx from '@astrojs/mdx'
 import inspectUrls from '@jsdevtools/rehype-url-inspector'
@@ -17,7 +18,7 @@ export default defineConfig({
   prefetch: true,
   site: 'https://peoray.dev',
   markdown: {
-    remarkPlugins: [remarkReadingTime],
+    remarkPlugins: [remarkReadingTime, remarkModifiedTime],
     rehypePlugins: [
       [
         inspectUrls,

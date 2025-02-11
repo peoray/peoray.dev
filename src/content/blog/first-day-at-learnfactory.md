@@ -1,7 +1,7 @@
 ---
 title: 'My First Day at LearnFactory Nigeria'
 description: 'A Journey to becoming a world-class developer'
-date: 2018-04-30
+pubDate: 2018-04-30
 slug: 'first-day-at-learnfactory'
 path: '/blog/first-day-at-learnfactory'
 draft: false

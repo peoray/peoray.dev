@@ -1,7 +1,7 @@
 ---
 title: 'Year in Review: 2017'
 description: 'The year I decided to take control of my life!'
-date: 2017-12-31
+pubDate: 2017-12-31
 slug: 'year-in-review-2017'
 path: '/blog/year-in-review-2017'
 draft: false

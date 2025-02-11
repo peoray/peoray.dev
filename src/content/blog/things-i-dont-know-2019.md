@@ -1,10 +1,10 @@
 ---
 title: "Things I Don't Know as of 2019 (In Programming)"
 description: "List of things I haven't used"
-date: 2019-01-05
-draft: false
+pubDate: 2019-01-05
 slug: 'things-i-dont-know-2019'
 path: '/blog/things-i-dont-know-2019'
+draft: false
 tags: ['programming', 'career']
 thumbnail: '/images/blog/things-i-dont-know-2019/cover.png'
 ---

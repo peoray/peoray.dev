@@ -1,6 +1,6 @@
 ---
 const { post } = Astro.props
-const { title, description, path, date, minutesRead } = post
+const { title, description, path, pubDate, minutesRead } = post
 ---
 
 <a
@@ -15,7 +15,7 @@ const { title, description, path, date, minutesRead } = post
   <div class="flex items-center gap-x-2">
     <time>
       {
-        new Date(date).toLocaleDateString('en-US', {
+        new Date(pubDate).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'short',
           day: 'numeric',

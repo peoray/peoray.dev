@@ -1,10 +1,10 @@
 ---
 title: 'I Asked my First StackOverflow Question '
 description: 'A first timer’s experience on StackOverflow'
-date: 2018-05-18
-published: true
+pubDate: 2018-05-18
 slug: 'first-stackoverflow-question'
 path: '/blog/first-stackoverflow-question'
+draft: false
 tags: ['programming']
 thumbnail: './images/cover.png'
 ---

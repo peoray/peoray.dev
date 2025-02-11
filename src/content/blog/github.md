@@ -1,7 +1,7 @@
 ---
 title: How to Change Your Repository's Language on GitHub
 description: Learn how to change your repository's language detection on Github.
-date: 2023-04-13
+pubDate: 2023-04-13
 slug: 'change-language-github'
 path: '/blog/change-language-github'
 draft: false
