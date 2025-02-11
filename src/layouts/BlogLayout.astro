@@ -1,13 +1,13 @@
 ---
-import MainLayout from './MainLayout.astro';
-import Newsletter from '../components/Newsletter.astro';
+import MainLayout from './MainLayout.astro'
+import Newsletter from '../components/Newsletter.astro'
 
-import { formatDate, kebabCaseStr } from '../utils/helpers';
+import { formatDate, kebabCaseStr } from '../utils/helpers'
 
-import '../styles/github-markdown.css';
-import Badge from '../components/Badge.astro';
+import '../styles/github-markdown.css'
+import Badge from '../components/Badge.astro'
 
-const { data } = Astro.props;
+const { data } = Astro.props
 let {
   title,
   description,
@@ -17,7 +17,7 @@ let {
   thumbnail,
   robots,
   // minutesRead,
-} = data;
+} = data
 ---
 
 <MainLayout
@@ -58,7 +58,7 @@ let {
         tags.map((tag: string) => (
           <>
             <Badge
-              link={`/tag/${kebabCaseStr(tag)}/`}
+              link={`/tag/${kebabCaseStr(tag)}`}
               classes="bg-gray-300 text-purple-100"
             >
               {tag}

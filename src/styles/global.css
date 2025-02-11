@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,800');
+@import 'tailwindcss';
 
 @font-face {
   font-family: 'Satoshi-Variable';
@@ -27,17 +28,44 @@
   font-display: swap;
 }
 
-:root {
-  --bg-background-primary: #111827;
-  --bg-background-secondary: #182635;
-  --bg-background-tertiary: #1f2937;
+@theme {
+  --color-background-primary: #111827;
+  --color-background-secondary: #182635;
+  --color-background-tertiary: #1f2937;
 
-  --bg-background-form: #1a202c;
+  --color-background-form: #1a202c;
 
-  --text-copy-primary: #9ca3af;
-  --text-copy-secondary: #cbd5e0;
+  --color-copy-primary: #9ca3af;
+  --color-copy-secondary: #cbd5e0;
 
-  --border-border-color-primary: #1a202c;
+  /* purple */
+  --color-purple-100: #7e60db;
+  --color-purple-200: #896cde;
+  /* green */
+  --color-green-100: #f0fff4;
+  --color-green-200: #c6f6d5;
+  --color-green-300: #9ae6b4;
+  --color-green-400: #68d391;
+  --color-green-500: #48bb78;
+  --color-green-600: #38a169;
+  --color-green-700: #2f855a;
+  --color-green-800: #276749;
+  --color-green-900: #22543d;
+  /* gray */
+  --color-gray-100: #f7fafc;
+  --color-gray-200: #edf2f7;
+  --color-gray-300: #e2e8f0;
+  --color-gray-400: #cbd5e0;
+  --color-gray-500: #a0aec0;
+  --color-gray-600: #718096;
+  --color-gray-700: #4a5568;
+  --color-gray-800: #2d3748;
+  --color-gray-900: #1a202c;
+
+  --color-copy-primary: #9ca3af;
+  --color-copy-secondary: #cbd5e0;
+
+  --color-border-color-primary: #1a202c;
 }
 
 body {
@@ -57,7 +85,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-copy-heading;
+  @apply text-copy-secondary;
 }
 
 :root .markdown-body {
