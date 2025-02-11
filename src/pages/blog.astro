@@ -20,6 +20,7 @@ const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts)
 formattedPosts.map(async (post: any) => {
   const { remarkPluginFrontmatter } = await render(post)
   post.data.minutesRead = remarkPluginFrontmatter.minutesRead
+  post.data.lastModified = remarkPluginFrontmatter.lastModified
   return post
 })
 

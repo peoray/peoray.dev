@@ -2,7 +2,6 @@
 title: 'A New Ending'
 description: 'I’m not giving up. I’m just starting over.'
 pubDate: 2017-11-13
-# updatedDate: ''
 slug: 'a-new-ending'
 path: '/blog/a-new-ending'
 draft: false

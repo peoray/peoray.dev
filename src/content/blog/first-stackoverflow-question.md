@@ -2,7 +2,6 @@
 title: 'I Asked my First StackOverflow Question '
 description: 'A first timer’s experience on StackOverflow'
 pubDate: 2018-05-18
-# updatedDate: ''
 slug: 'first-stackoverflow-question'
 path: '/blog/first-stackoverflow-question'
 draft: false

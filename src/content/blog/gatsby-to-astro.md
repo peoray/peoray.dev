@@ -2,7 +2,6 @@
 title: 'Rebuilding my Website with Astro'
 description: 'After over three years of Gatsby, I recently completed a rebuild of this site with Astro.'
 pubDate: 2023-03-16
-# updatedDate: ''
 published: true
 slug: 'rebuilding-with-astro'
 path: '/blog/rebuilding-with-astro'

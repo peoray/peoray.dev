@@ -4,13 +4,14 @@ interface Props {
   pubDate: string
   minutesRead: string
   path: string
+  lastModified: string
 }
 
 import { formatDate } from '../utils/helpers'
 
 const Post = ({ post }: any) => {
-  const { title, description, path, pubDate, minutesRead } = post as Props
-  console.log(minutesRead)
+  const { title, description, path, pubDate, minutesRead, lastModified } =
+    post as Props
   return (
     <a
       href={`${path}`}

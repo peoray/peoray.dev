@@ -2,7 +2,6 @@
 title: 'Git Tip: How to Easily Switch to Your Last Known Branch'
 description: ' Discover a handy Git tip that allows you to effortlessly switch back to your last known branch without remembering its name'
 pubDate: 2023-02-16
-# updatedDate: ''
 slug: 'git-checkout'
 path: '/blog/git-checkout'
 draft: false

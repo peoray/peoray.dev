@@ -2,7 +2,6 @@
 title: "Things I Don't Know as of 2019 (In Programming)"
 description: "List of things I haven't used"
 pubDate: 2019-01-05
-# updatedDate: ''
 slug: 'things-i-dont-know-2019'
 path: '/blog/things-i-dont-know-2019'
 draft: false

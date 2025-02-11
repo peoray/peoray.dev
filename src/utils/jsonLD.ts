@@ -16,7 +16,7 @@ export default function jsonLDGenerator({ type, post, url }: any) {
         "author": {
           "@type": "Person",
           "name": "Emmanuel Raymond",
-          "url": "${config.siteUrl}/about/"
+          "url": "${config.siteUrl}/about"
         },
         "datePublished": "${post.pubDate}"
       }

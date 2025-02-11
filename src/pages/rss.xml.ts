@@ -1,8 +1,5 @@
 import rss from '@astrojs/rss'
 import sanitizeHtml from 'sanitize-html'
-import MarkdownIt from 'markdown-it'
-
-// const parser = new MarkdownIt()
 
 export async function GET(context: { site: string }) {
   const postImportResult = import.meta.glob('../content/blog/**/*.md', {
@@ -17,21 +14,41 @@ export async function GET(context: { site: string }) {
         allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
       })
 
-      console.log(post.frontmatter)
-
       return {
         link: `blog/${post.frontmatter.slug}`,
         content: contentHtml,
         ...post.frontmatter,
+        customData: `<lastModified>${
+          post.frontmatter.lastModified || post.frontmatter.pubDate
+        }</lastModified>`,
       }
     })
   )
+
+  // Filter out draft posts
+  const filteredItems = items.filter((item) => !item.draft)
+
+  // Sort items in descending order based on lastModified or pubDate
+  filteredItems.sort((a, b) => {
+    const dateA = new Date(a.pubDate)
+    const dateB = new Date(b.pubDate)
+    return dateB.getTime() - dateA.getTime()
+  })
+
+  // Determine the last build date based on the most recent lastModified or pubDate
+  const lastBuildDate = filteredItems
+    .reduce((latestDate, item) => {
+      const itemDate = new Date(item.lastModified || item.pubDate)
+      return itemDate > latestDate ? itemDate : latestDate
+    }, new Date(0))
+    .toISOString()
+
   return rss({
     title: 'Emmanuel Raymond | RSS Feed',
     description: "Emmanuel Raymond's personal website",
     site: context.site,
     trailingSlash: false,
-    items,
-    customData: `<language>en-us</language>`,
+    items: filteredItems,
+    customData: `<language>en-us</language><lastBuildDate>${lastBuildDate}</lastBuildDate>`,
   })
 }

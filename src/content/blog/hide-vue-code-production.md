@@ -2,7 +2,6 @@
 title: 'How to Hide Vue Source Map on Browser Devtools'
 description: 'How to disable source map or debug mode in production for Vue.js applications'
 pubDate: 2019-07-09
-# updatedDate: ''
 slug: 'hide-vue-code-production'
 path: '/blog/hide-vue-code-production'
 draft: false

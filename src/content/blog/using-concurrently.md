@@ -2,7 +2,6 @@
 title: 'How to Run Multiple NPM Scripts Using Concurrently'
 description: 'How to use concurrently to run multiple npm scripts with a single script'
 pubDate: 2019-06-12
-# updatedDate: ''
 slug: 'using-concurrently'
 path: '/blog/using-concurrently'
 draft: false
