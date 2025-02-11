@@ -1,7 +1,8 @@
 ---
 title: How to Modify your Last Commit with Git Amend
 description: Learn how to modify your last commit using the Git Amend command.
-date: 2023-04-27
+pubDate: 2023-04-27
+# updatedDate: ''
 slug: 'git-commit-amend'
 path: '/blog/git-commit-amend'
 draft: false

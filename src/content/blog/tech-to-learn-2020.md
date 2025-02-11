@@ -1,7 +1,8 @@
 ---
 title: 'List of Technologies I Want to Learn in 2020'
 description: 'Improving my skills as a software developer'
-date: 2020-01-02
+pubDate: 2020-01-02
+# updatedDate: ''
 slug: 'tech-to-learn-2020'
 path: '/blog/tech-to-learn-2020'
 draft: false

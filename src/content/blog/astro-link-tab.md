@@ -1,7 +1,8 @@
 ---
 title: How to Open a Markdown Link in a New Tab in Astro
 description: Learn how to configure Astro to open markdown links in new tabs for better user experience.
-date: 2023-03-30
+pubDate: 2023-03-30
+# updatedDate: ''
 slug: 'astro-open-link-new-tab'
 path: '/blog/astro-open-link-new-tab'
 draft: false

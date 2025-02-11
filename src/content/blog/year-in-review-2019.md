@@ -1,7 +1,8 @@
 ---
 title: 'Year in Review: 2019'
 description: 'Still not quite there yet!'
-date: 2019-12-31
+pubDate: 2019-12-31
+# updatedDate: ''
 slug: 'year-in-review-2019'
 path: '/blog/year-in-review-2019'
 draft: false

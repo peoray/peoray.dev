@@ -1,46 +1,47 @@
 // ts-ignore
-import { useCallback, useEffect, useRef, useState } from 'react'
-import Fuse from 'fuse.js'
+import { useEffect, useRef, useState } from 'react'
+import Fuse, { type FuseResult } from 'fuse.js'
 
 import Post from './Post'
 import config from '../data/site-config'
 
-export const BlogPosts = ({ posts }: { posts: any }) => {
-  const inputRef = useRef<HTMLInputElement>(null || undefined)
+interface PostData {
+  title: string
+  description: string
+  path: string
+  minutesRead?: number
+}
+
+interface PostType {
+  data: PostData
+}
+
+interface PostWithRandom extends PostType {
+  random: number
+}
+
+interface BlogPostsProps {
+  posts: PostType[]
+}
+
+export const BlogPosts: React.FC<BlogPostsProps> = ({
+  posts,
+}: {
+  posts: any
+}) => {
+  const inputRef = useRef<HTMLInputElement>(null)
   const [query, setQuery] = useState('')
-  const [results, setResults] = useState(null)
-
-  posts.map(async (post) => {
-    const { remarkPluginFrontmatter } = await post.render()
-    post.data.minutesRead = remarkPluginFrontmatter.minutesRead
-    return post
-  })
-
-  //   const focusSearch = useCallback((event: { key: string }) => {
-  //     // setQuery('');
-  //     if (event.key === '/') {
-  //       //   setQuery('');
-  //       inputRef.current.focus();
-  //     }
-  //   }, []);
-
-  //   useEffect(() => {
-  //     document.addEventListener('keydown', focusSearch, false);
-
-  //     return () => {
-  //       document.removeEventListener('keydown', focusSearch, false);
-  //     };
-  //   }, [focusSearch]);
+  const [results, setResults] = useState<FuseResult<PostType>[] | null>(null)
 
   const fuse = new Fuse(posts, {
     keys: [
       {
         name: 'title',
-        getFn: (post: any) => post.data?.title,
+        getFn: (post: PostType) => post.data?.title,
       },
       {
         name: 'description',
-        getFn: (post: any) => post.data.description,
+        getFn: (post: PostType) => post.data?.description,
       },
     ],
     threshold: 0.3,
@@ -133,14 +134,12 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
 
       {results ? (
         results.length > 0 ? (
-          results.map(
-            (result: { refIndex: any; item: { path: any; data: any } }) => (
-              <Post
-                key={`${result.refIndex}-${result.item.data.path}`}
-                post={result.item.data}
-              />
-            )
-          )
+          results.map((result) => (
+            <Post
+              key={`${result.refIndex}-${result.item.data.path}`}
+              post={result.item.data}
+            />
+          ))
         ) : (
           <>
             <span className="text-xl md:text-2xl text-center text-gray-500 py-4 font-extrabold">
@@ -150,8 +149,13 @@ export const BlogPosts = ({ posts }: { posts: any }) => {
             <h2 className="mb-10" />
 
             {posts
-              .map((post) => ({ post, random: Math.random() })) // Add random property to each post object
-              .sort((a, b) => a.random - b.random) // Sort the posts based on the random property
+              .map((post: PostType) => ({
+                post,
+                random: Math.random(),
+              })) // Add random property to each post object
+              .sort(
+                (a: PostWithRandom, b: PostWithRandom) => a.random - b.random
+              ) // Sort the posts based on the random property
               .slice(0, 3) // Take the first three posts
               .map((item: any) => (
                 <Post

@@ -1,7 +1,8 @@
 ---
 title: 'How to Implement a Not Found Route in Vue 3'
 description: 'Learn how to handle catch-all routes and create a custom 404 page in Vue 3 applications using Vue Router 4'
-date: 2023-03-02
+pubDate: 2023-03-02
+# updatedDate: ''
 slug: 'vue-router-catch-all'
 path: '/blog/vue-router-catch-all'
 draft: false

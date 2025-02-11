@@ -1,4 +1,4 @@
-import config from '../data/site-config';
+import config from '../data/site-config'
 
 export default function jsonLDGenerator({ type, post, url }: any) {
   if (type === 'post') {
@@ -18,9 +18,9 @@ export default function jsonLDGenerator({ type, post, url }: any) {
           "name": "Emmanuel Raymond",
           "url": "${config.siteUrl}/about/"
         },
-        "datePublished": "${post.date}"
+        "datePublished": "${post.pubDate}"
       }
-    </script>`;
+    </script>`
   }
   return `<script type="application/ld+json">
       {
@@ -29,5 +29,5 @@ export default function jsonLDGenerator({ type, post, url }: any) {
       "name": "${config.siteTitle}",
       "url": "${import.meta.env.SITE}"
       }
-    </script>`;
+    </script>`
 }

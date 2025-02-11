@@ -1,7 +1,8 @@
 ---
 title: '#100DaysOfCode — Let’s Do This!'
 description: 'A challenge to help me get into the habit of coding daily'
-date: 2018-01-08
+pubDate: 2018-01-08
+# updatedDate: ''
 slug: '100-days-of-code'
 path: '/blog/100-days-of-code'
 draft: false

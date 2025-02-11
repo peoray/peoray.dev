@@ -1,7 +1,8 @@
 ---
 title: 'My Career moves for 2022'
 description: 'Growing my career as a software developer'
-date: 2022-01-06
+pubDate: 2022-01-06
+# updatedDate: ''
 slug: 'career-moves-2022'
 path: '/blog/career-moves-2022'
 draft: true

@@ -1,7 +1,8 @@
 ---
 title: Using Git Switch to Move Changes to a New Branch
-date: 2023-02-02
 description: 'How to move changes from a branch to another branch using Git Swtich'
+pubDate: 2023-02-02
+# updatedDate: ''
 slug: 'git-switch'
 path: '/blog/git-switch'
 draft: false

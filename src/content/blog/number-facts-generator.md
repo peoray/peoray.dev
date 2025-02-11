@@ -1,7 +1,8 @@
 ---
 title: 'Building a Project: Number Facts Generator'
 description: 'My experience creating my first ever project!'
-date: 2018-02-08
+pubDate: 2018-02-08
+# updatedDate: ''
 slug: 'number-facts-generator'
 path: '/blog/number-facts-generator'
 draft: false
