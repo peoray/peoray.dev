@@ -22,18 +22,10 @@ const { title, description, image, data, robots } = Astro.props as Props
   <!-- <Seo {title} {description} url={Astro.url} {image} {data} {robots} /> -->
   <Seo {title} {description} {image} {data} {robots} />
 
-  <!-- Google tag (gtag.js) -->
   <script
     type="text/partytown"
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-YPCTPRG03M"></script>
-  <script type="text/partytown" is:inline>
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-      dataLayer.push(arguments)
-    }
-    gtag('js', new Date())
-
-    gtag('config', 'G-YPCTPRG03M')
-  </script>
+    is:inline
+    src="https://analytics.ahrefs.com/analytics.js"
+    data-key="1IkSrkvV3mgcD1ACEvCYAQ"
+    async></script>
 </head>
