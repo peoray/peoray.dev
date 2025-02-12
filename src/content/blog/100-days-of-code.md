@@ -6,10 +6,10 @@ slug: '100-days-of-code'
 path: '/blog/100-days-of-code'
 draft: false
 tags: ['100 days of code', 'career']
-thumbnail: '/images/blog/100-days-of-code/cover.png'
+thumbnail: '../images/blog/100-days-of-code/cover.png'
 ---
 
-![picture of a computer](/images/blog/100-days-of-code/header.jpg)
+![picture of a computer](../images/blog/100-days-of-code/header.jpg)
 
 ## WHAT IS IT?
 
@@ -35,7 +35,7 @@ After months of speculation, I have decided to join the #100DaysofCode challenge
 
 At that stage, my coding experience isn’t as it is now and I wasn’t feeling the level of motivation I feel now. Also, I was alone, didn’t have mentors, friends who code or anyone to push me, I was all alone and that was a big factor. But I’m glad I’m doing it now, I mean there is no better time than now and I hope to start and finish without missing a day.
 
-![Can I get an Amen gif](/images/blog/100-days-of-code/giphy.gif)
+![Can I get an Amen gif](../images/blog/100-days-of-code/giphy.gif)
 
 My goal is to grow and improve my skills, as this challenge will help me keep track of my activities. Also, by doing this challenge, I hope to tackle my bad habit of starting a project and abandoning it half-way. I want to be able to build projects to show off in my portfolio and build my confidence overall.
 
@@ -59,6 +59,6 @@ I hope to achieve the following the following goals during this time:
 
 - Build stuff. Lots of them!!!
 
-![A goal without a plan is just a wish](/images/blog/100-days-of-code/plan.jpeg)
+![A goal without a plan is just a wish](../images/blog/100-days-of-code/plan.jpeg)
 
 Well, I’m pumped up and I can’t wait to see how this turns out. You can follow my daily [tweets](https://twitter.com/super_raay/status/950187188104454145) or check out my daily log on my [GitHub repo](https://github.com/peoray/100-Days-Of-Code). Also, you can check out my [learning tracker](https://github.com/peoray/My-Learning-Tracker) to keep up to date with my progress. I will be writing about my experience about the challenge in the next 100 days from today. So until then, Happy Coding!

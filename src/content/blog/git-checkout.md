@@ -6,6 +6,7 @@ slug: 'git-checkout'
 path: '/blog/git-checkout'
 draft: false
 tags: ['git', 'programming']
+thumbnail: ''
 ---
 
 As a developer working with Git, it's common to switch between different branches while working on multiple features or fixing bugs. Sometimes, you may find yourself in a situation where you need to switch back to the last branch you were working on, but you can't quite remember its name.

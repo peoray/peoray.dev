@@ -6,6 +6,7 @@ slug: 'change-language-github'
 path: '/blog/change-language-github'
 draft: false
 tags: ['astro']
+thumbnail: ''
 ---
 
 I recently moved my website from [Gatsby to Astro](/blog/rebuilding-with-astro). In the process, I also created an RSS feed for my blog. Instead of the default no CSS styling, I wanted it to look better and came across a way to style my RSS feed. Similarly to how we use CSS to style our HTML, we can use XSLT to style our XML.

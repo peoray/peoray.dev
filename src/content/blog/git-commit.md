@@ -6,6 +6,7 @@ slug: 'git-commit-amend'
 path: '/blog/git-commit-amend'
 draft: false
 tags: ['git']
+thumbnail: ''
 ---
 
 If you're like me, you're probably using git every day in your work. Chances are that when making commits for work done, you realize you misspelt something in the Git commit message. Or maybe you need to make a change to another file that really should be part of that commit.
