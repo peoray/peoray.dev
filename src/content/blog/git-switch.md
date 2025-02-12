@@ -6,7 +6,7 @@ slug: 'git-switch'
 path: '/blog/git-switch'
 draft: false
 tags: ['git', 'programming']
-thumbnail: '/images/git-switch/cover.png'
+thumbnail: '../images/blog/git-switch/cover.png'
 ---
 
 Imagine a typical workday where you open your laptop, ready to dive into your tasks. You scan through the task board, check the assignments, and select one to start working on.

@@ -6,10 +6,10 @@ slug: 'a-new-ending'
 path: '/blog/a-new-ending'
 draft: false
 tags: ['career']
-thumbnail: './images/cover.png'
+thumbnail: '../images/blog/a-new-ending/cover.png'
 ---
 
-![Starting over](/images/blog/a-new-ending//header.jpg)
+![Starting over](../images/blog/a-new-ending//header.jpg)
 
 > You can’t go back and make a new start, but you can start right now and make a brand new ending
 >
@@ -25,7 +25,7 @@ trends through tweets, articles and newsletters.
 
 Perhaps, this compulsory break actually is a blessing in disguise. This period made me think about lots of stuff and I learnt a lot about myself. This month will make a year I started learning how to code, looking back I have come a long way but something doesn’t feel right and I dare say it wasn’t a year of fulfillment but one of confusion, lack of planning and many days spent daydreaming about being the next Mark Zuckerberg.
 
-![bean smiling](/images/blog/a-new-ending//tenor.gif)
+![bean smiling](../images/blog/a-new-ending//tenor.gif)
 
 The period I lost my laptop made me realize I didn’t have enough practical experience to back up the theoretical knowledge and it kinda left me feeling empty. During this period, I decided to come up with a solid plan, goal and execution road map with much emphasis on practice of course. This means I’m starting right at the very basics again, although this time it will be more like a review still, I would have to go back and learn about HTML all over again and practice with it.
 
@@ -41,8 +41,8 @@ Fast forward after my internship, I got back to school and began to look around 
 
 So far, my programming hobby hasn’t resulted in all that much output. I made simple websites by following tutorials. While this is a good way to learn, it isn’t a good way to become better as you will need to [get out of the coding tutorial rut](https://medium.freecodecamp.org/how-to-dig-yourself-out-of-the-coding-tutorial-rut-7d3b2232f234?source=user_profile---------6----------------) and [start practising on your own](https://dev.to/inidaname/newbie-developers-dont-trust-those-tutorials-1ib).
 
-![quotes about beginning over](/images/blog/a-new-ending/preview1.jpeg)
+![quotes about beginning over](../images/blog/a-new-ending/preview1.jpeg)
 
 I want to do things right this time around and this is a start. My goal is to become better both as a person and as a developer. To build lots of stuff to solve problems. It is to immerse myself in the act of creation, to challenge myself, to attempt something difficult — if for no other reason than to finish it. I also hope to get back into the habit of blogging again to document my journey. Also, to build [my personal brand as a developer](https://medium.freecodecamp.org/building-your-personal-brand-as-a-new-web-developer-f6d4150fd217) and practice [learning how to learn](https://medium.freecodecamp.org/learning-how-to-learn-the-most-important-developer-skill-7bf62dfaf67d) to become better at my skills.
 
-![quotes about beginning over](/images/blog/a-new-ending/preview.jpeg)
+![quotes about beginning over](../images/blog/a-new-ending/preview.jpeg)

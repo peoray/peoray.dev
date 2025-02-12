@@ -6,10 +6,10 @@ draft: false
 slug: 'display-password-form-input'
 path: '/blog/display-password-form-input'
 tags: ['javascript']
-thumbnail: '/images/blog/display-password-form-input/cover.png'
+thumbnail: '../images/blog/display-password-form-input/cover.png'
 ---
 
-![hero image](/images/blog/display-password-form-input/preview.jpg)
+![hero image](../images/blog/display-password-form-input/preview.jpg)
 
 On most websites, when filling in the password in a form either to sign up or to log in, you will often see a button (or a checkbox) telling you to show password. This is often good for user experience so that the user, if unsure can check to see if they made an error.
 
@@ -28,7 +28,7 @@ Basic understanding of the skills above is enough for you to be able to follow a
 
 For context, this is a sample of what we will be building At the end of this tutorial we will have something like this:
 
-![hero image](/images/blog/display-password-form-input/preview2.gif)
+![hero image](../images/blog/display-password-form-input/preview2.gif)
 
 The final code snippet will be provided in a Codepen link at the end of the article.
 
@@ -145,7 +145,7 @@ button {
 
 Ensure that your code is saved and when you open up your browser, your page should be looking like this:
 
-![hero image](/images/blog/display-password-form-input/preview3.png)
+![hero image](../images/blog/display-password-form-input/preview3.png)
 
 Let’s move over to the app.js file and begin to write our JavaScript code.
 

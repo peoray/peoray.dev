@@ -4,9 +4,9 @@ description: 'Growing my career as a software developer'
 pubDate: 2022-01-06
 slug: 'career-moves-2022'
 path: '/blog/career-moves-2022'
-draft: true
+draft: false
 tags: ['career']
-thumbnail: '/images/career-moves-2022/cover.png'
+thumbnail: '../images/career-moves-2022/cover.png'
 ---
 
 It has been two years since I last wrote on this blog. A lot has happened between that time. There was a pandemic, I have changed jobs, massive Blockchain and Web3 hype and so much more. However, I decided to pick up active blogging again this year to document my learnings and experiences. I hope to become consistent moving forward.

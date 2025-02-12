@@ -6,10 +6,10 @@ slug: 'number-facts-generator'
 path: '/blog/number-facts-generator'
 draft: false
 tags: ['programming', 'javascript']
-thumbnail: '/images/blog/number-facts-generator/cover.png'
+thumbnail: '../images/blog/number-facts-generator/cover.png'
 ---
 
-![gif demo of application](/images/blog/number-facts-generator/preview.gif)
+![gif demo of application](../images/blog/number-facts-generator/preview.gif)
 
 **UPDATE: I finally managed to host the app thanks to The Shalvah**
 

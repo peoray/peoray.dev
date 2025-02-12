@@ -6,7 +6,7 @@ slug: 'hide-vue-code-production'
 path: '/blog/hide-vue-code-production'
 draft: false
 tags: ['vue', 'webpack']
-thumbnail: '/images/hide-vue-code-production/cover.png'
+thumbnail: '../images/hide-vue-code-production/cover.png'
 ---
 
 If you have ever created your Vue project using the Vue CLI and deployed to production before, chances are you might not know that your whole code is visible on the devtools.
