@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig, sharpImageService } from 'astro/config'
 import { remarkReadingTime } from './src/utils/remark-reading-time.mjs'
 import { remarkModifiedTime } from './src/utils/remark-modified-time.mjs'
 import sitemap from '@astrojs/sitemap'
@@ -16,6 +16,14 @@ export default defineConfig({
   },
   trailingSlash: 'never',
   prefetch: true,
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+      config: {
+        limitInputPixels: false,
+      },
+    },
+  },
   site: 'https://peoray.dev',
   markdown: {
     remarkPlugins: [remarkReadingTime, remarkModifiedTime],
@@ -41,6 +49,6 @@ export default defineConfig({
         forward: ['dataLayer.push'],
       },
     }),
-    (await import('@playform/compress')).default(),
+    // (await import('@playform/compress')).default(),
   ],
 })

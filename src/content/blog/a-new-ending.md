@@ -9,7 +9,7 @@ tags: ['career']
 thumbnail: '../images/blog/a-new-ending/cover.png'
 ---
 
-![Starting over](../images/blog/a-new-ending//header.jpg)
+![Starting over](../images/blog/a-new-ending/header.jpg)
 
 > You can’t go back and make a new start, but you can start right now and make a brand new ending
 >
@@ -25,7 +25,7 @@ trends through tweets, articles and newsletters.
 
 Perhaps, this compulsory break actually is a blessing in disguise. This period made me think about lots of stuff and I learnt a lot about myself. This month will make a year I started learning how to code, looking back I have come a long way but something doesn’t feel right and I dare say it wasn’t a year of fulfillment but one of confusion, lack of planning and many days spent daydreaming about being the next Mark Zuckerberg.
 
-![bean smiling](../images/blog/a-new-ending//tenor.gif)
+![bean smiling](/images/blog/a-new-ending/tenor.gif)
 
 The period I lost my laptop made me realize I didn’t have enough practical experience to back up the theoretical knowledge and it kinda left me feeling empty. During this period, I decided to come up with a solid plan, goal and execution road map with much emphasis on practice of course. This means I’m starting right at the very basics again, although this time it will be more like a review still, I would have to go back and learn about HTML all over again and practice with it.
 

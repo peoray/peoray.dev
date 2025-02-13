@@ -35,7 +35,7 @@ In summary, here is a list of why I want to blog:
 
 So what sort of interesting things will I be blogging about? Well, I’ll be writing about my thoughts, actions, successes, failures, lessons and experiences. Nowadays, my life revolves around tech, software and code (I’m a beginner, I like the tag), so you will be seeing lots of posts about that. If you are into programming, then you might want to follow me.
 
-![giphy cat](../images/blog/hello-world/programming.gif)
+![giphy cat](/images/blog/hello-world/programming.gif)
 
 I will also be writing about my monthly goals I hope to achieve, tips, advice, motivational and inspirational posts, quotes, books I read and even movies I watch (I hope I don’t get to do this). I hope to get into blogging about my myriad experiences (whenever I get them), my travels, food, places, life moments and about everything else that matters to me.
 
@@ -55,4 +55,4 @@ So whats the point of it all? Well, to document my journey in life and to share 
 
 So stay tuned and let the show begin!
 
-![So it begins gif](../images/blog/hello-world/giphy.gif)
+![So it begins gif](/images/blog/hello-world/giphy.gif)
