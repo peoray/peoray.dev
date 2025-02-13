@@ -28,7 +28,7 @@ Basic understanding of the skills above is enough for you to be able to follow a
 
 For context, this is a sample of what we will be building At the end of this tutorial we will have something like this:
 
-![hero image](../images/blog/display-password-form-input/preview2.gif)
+![hero image](/images/blog/display-password-form-input/preview2.gif)
 
 The final code snippet will be provided in a Codepen link at the end of the article.
 

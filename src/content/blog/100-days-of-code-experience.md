@@ -6,10 +6,10 @@ slug: '100-days-of-code-experience'
 path: '/blog/100-days-of-code-experience'
 draft: false
 tags: ['100 days of code', 'career']
-thumbnail: '../images/blog/100-days-of-code/cover.png'
+thumbnail: '../images/blog/100-days-of-code-experience/cover.png'
 ---
 
-![Code picture](../images/blog/100-days-of-code/header.jpg)
+![Code picture](../images/blog/100-days-of-code-experience/header.jpg)
 
 I completed my #100DaysOfCode challenge on 20th April 2018. In case you are wondering what it is, I wrote an [article](/blog/100-days-of-code/) when I started the challenge. The whole idea of the challenge is that you publicly commit to coding every day for 100 days. During this period, my experience has both been overwhelming and underwhelming. In this article, I hope to highlight my experience and also to offer advice to others doing it to make it more effective and gain the best out of it.
 
