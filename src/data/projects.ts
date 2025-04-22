@@ -1,9 +1,13 @@
 export default [
   {
-    title: 'peoray.dev',
-    source: 'https://github.com/peoray/peoray.dev',
-    demo: 'https://peoray.dev',
-    description: '👨‍💻 My personal website and digital garden 🌱',
+    title: 'Nuxt SaaS Kit',
+    website: 'https://nuxtsaaskit.dev',
+    description: 'Boilerplate that helps developers build SaaS products by providing essential features out of the box.',
+  },
+  {
+    title: 'Linkvoy',
+    demo: 'https://linkvoy.dev',
+    description: 'Everything you need to plan weddings without the chaos for professionals.',
   },
   {
     title: 'tailwindcss-boilerplate',
