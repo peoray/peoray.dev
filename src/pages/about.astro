@@ -1,72 +1,68 @@
 ---
-import Link from '../components/Link.astro'
-import SocialLinks from '../components/SocialLinks.astro'
-import MainLayout from '../layouts/MainLayout.astro'
+import Link from '../components/Link.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 
-import user from '../data/user'
-import config from '../data/site-config'
-import events from '../data/events'
-import SpeakingItem from '../components/SpeakingItem.astro'
-import Newsletter from '../components/Newsletter.astro'
+import user from '../data/user';
+import config from '../data/site-config';
+import events from '../data/events';
+import SpeakingItem from '../components/SpeakingItem.astro';
+import Newsletter from '../components/Newsletter.astro';
 
-const title = `About | ${config.siteTitle}`
-const description = `About | ${config.siteDescription}`
-const image = config.image.src
+const title = `About | ${config.siteTitle}`;
+const description = `About | ${config.siteDescription}`;
+const image = config.image.src;
 ---
 
 <MainLayout title={title} description={description} image={image}>
-  <div class="mx-auto container-inner">
-    <div class="text-xl">
-      <p class="">
-        Hi 👋 I'm Emmanuel. Welcome to my digital garden 🌱
-        <br />
+	<div class='mx-auto container-inner'>
+		<div class='text-xl'>
+			<p class=''>
+				Hey, I'm Raymond, a self-taught developer and indie hacker. Welcome to
+				my little corner of the internet.
+			</p>
 
-        Seems you just discovered my personal space on the internet. Enjoy!
-      </p>
+			<p class='mt-4'>
+				I’ve been building for the web for over 6 years, and I’m passionate
+				about shipping products that solve real problems and make life easier.
+				From developer tools to small indie products that scratch an itch, I
+				care about building things that are simple, useful, and fast to ship.
+			</p>
 
-      <p class="mt-4">
-        I'm a Full Stack Developer with over 5 years of experience building
-        applications for the web. I'm passionate about building products that
-        solve problems and make people's lives easier.
-        <br />
-        I also enjoy building tools for other developers. I'm a big fan of open source
-        and I'm always looking for ways to contribute to the community.
-      </p>
+			<p class='mt-4'>
+				Right now, I run <a
+					href='https://okikelabs.com'
+					class='link'
+					target='_blank'
+					rel='nofollow noopener noreferrer'>Okikelabs</a
+				>, a lean, bootstrapped startup studio I co-founded. We build useful
+				tools and SaaS products with speed and purpose, experiment with ideas,
+				and stay scrappy.
+			</p>
 
-      <p class="mt-4">
-        In my free time, I like to journal and read <Link
-          classes="link"
-          href={user.goodreads}
-          text="books"
-        /> too. My interest spans across thrillers and African literatures.
-        <br />
-        I listen to quite a couple of (seemingly random) collection of songs that
-        may seem chaotic to you but I like them anyway. <br /> I also enjoy watching
-        sitcom, documentaries, and detective series.
-      </p>
+			<p class='mt-4'>
+				I mostly work on my own ideas, but I’m open to selective freelance or
+				contract gigs, especially if it’s a good fit and aligns with my style of
+				building. Feel free to shoot me an email with your idea!
+			</p>
+		</div>
 
-      <p class="mt-4">
-        I'm open to any freelance work, feel free to shoot me an email with your
-        vision!
-      </p>
-    </div>
+		<div class='flex justify-start mt-4'>
+			<SocialLinks />
+		</div>
 
-    <div class="flex justify-start mt-4">
-      <SocialLinks />
-    </div>
+		<div class='my-20'>
+			<h2 class='mb-6 text-4xl font-extrabold'>Speaking</h2>
 
-    <div class="my-20">
-      <h2 class="mb-6 text-4xl font-extrabold">Speaking</h2>
+			<p class='mb-6 text-xl'>
+				Want me to speak at your event? Reach out to me via email or twitter.
+			</p>
 
-      <p class="mb-6 text-xl">
-        Want me to speak at your event? Reach out to me via email or twitter.
-      </p>
+			<div class=''>
+				{events.map((event) => <SpeakingItem event={event} />)}
+			</div>
+		</div>
 
-      <div class="">
-        {events.map((event) => <SpeakingItem event={event} />)}
-      </div>
-    </div>
-
-    <Newsletter />
-  </div>
+		<Newsletter />
+	</div>
 </MainLayout>

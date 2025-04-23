@@ -1,20 +1,21 @@
 ---
 interface Props {
-  link: string
-  classes?: string
+	link: string;
+	classes?: string;
 }
-const { link, classes, ...rest } = Astro.props
+const { link, classes, ...rest } = Astro.props;
 ---
 
 <!-- target="_blank" -->
 <a
-  rel="nofollow noopener noreferrer"
-  href={link}
-  class:list={[
-    'inline-block hover:bg-purple-200 hover:text-white px-4 py-2 rounded-full text-sm',
-    classes,
-  ]}
-  {...rest}
+	rel='nofollow noopener noreferrer'
+	target='_blank'
+	href={link}
+	class:list={[
+		'inline-block hover:bg-purple-200 hover:text-white px-4 py-2 rounded-full text-sm',
+		classes,
+	]}
+	{...rest}
 >
-  <slot />
+	<slot />
 </a>
