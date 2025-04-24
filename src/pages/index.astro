@@ -1,19 +1,19 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro'
-import About from '../components/About.astro'
-import ProjectListing from '../components/ProjectListing.astro'
-import Newsletter from '../components/Newsletter.astro'
+import MainLayout from '../layouts/MainLayout.astro';
+import About from '../components/About.astro';
+import ProjectListing from '../components/ProjectListing.astro';
+import Newsletter from '../components/Newsletter.astro';
 
-import config from '../data/site-config'
-import PostCard from '../components/PostCard.astro'
+import config from '../data/site-config';
+import PostCard from '../components/PostCard.astro';
 
-const title = `Home - ${config.siteTitle} | Software Developer and Open Source Enthusiast`
-const description = `Home - ${config.siteDescription}`
+const title = `${config.siteTitle}`;
+const description = `${config.siteDescription}`;
 ---
 
 <MainLayout title={title} description={description} image={config.image.src}>
-  <About />
-  <PostCard />
-  <ProjectListing />
-  <Newsletter />
+	<About />
+	<PostCard />
+	<ProjectListing />
+	<Newsletter />
 </MainLayout>

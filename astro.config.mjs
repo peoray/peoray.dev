@@ -13,6 +13,9 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
+	build: {
+		format: 'file',
+	},
 	trailingSlash: 'never',
 	prefetch: true,
 	image: {

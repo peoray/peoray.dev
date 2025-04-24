@@ -1,36 +1,36 @@
 ---
 import {
-  getCollection,
-  getEntry,
-  render,
-  type CollectionEntry,
-} from 'astro:content'
+	getCollection,
+	getEntry,
+	render,
+	type CollectionEntry,
+} from 'astro:content';
 
-import MainLayout from '../layouts/MainLayout.astro'
+import MainLayout from '../layouts/MainLayout.astro';
 
-import { formatBlogPosts } from '../utils/helpers'
-import config from '../data/site-config'
-import BlogPosts from '../components/BlogPost.tsx'
+import { formatBlogPosts } from '../utils/helpers';
+import config from '../data/site-config';
+import BlogPosts from '../components/BlogPost.tsx';
 
-const posts = await getCollection('blog')
+const posts = await getCollection('blog');
 // const posts = await getEntry('blog')
 
-const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts)
+const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts);
 
 formattedPosts.map(async (post: any) => {
-  const { remarkPluginFrontmatter } = await render(post)
-  post.data.minutesRead = remarkPluginFrontmatter.minutesRead
-  post.data.lastModified = remarkPluginFrontmatter.lastModified
-  return post
-})
+	const { remarkPluginFrontmatter } = await render(post);
+	post.data.minutesRead = remarkPluginFrontmatter.minutesRead;
+	post.data.lastModified = remarkPluginFrontmatter.lastModified;
+	return post;
+});
 
-const title = `Blog - ${config.siteTitle} | Software Developer and Open Source Enthusiast`
-const description = `About - ${config.siteDescription}`
-const image = config.image.src
+const title = `Blog - ${config.siteTitle}`;
+const description = `${config.siteDescription}`;
+const image = config.image.src;
 ---
 
 <MainLayout title={title} description={description} image={image}>
-  <div class="mx-auto container-inner">
-    <BlogPosts posts={formattedPosts} client:load />
-  </div>
+	<div class='mx-auto container-inner'>
+		<BlogPosts posts={formattedPosts} client:load />
+	</div>
 </MainLayout>
