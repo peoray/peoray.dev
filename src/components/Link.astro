@@ -1,19 +1,19 @@
 ---
 interface Props {
-  text: string;
-  href: string;
-  classes?: string;
+	text: string;
+	href: string;
+	classes?: string;
 }
 
 const { href, text, classes, ...rest } = Astro.props as Props;
 ---
 
 <a
-  target="_blank"
-  rel="nofollow noopener noreferrer"
-  href={href}
-  class:list={[classes]}
-  {...rest}
+	target='_blank'
+	rel='nofollow noopener noreferrer'
+	href={href}
+	class:list={[classes]}
+	{...rest}
 >
-  <span>{text}</span>
+	{text}
 </a>

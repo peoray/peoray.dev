@@ -1,23 +1,39 @@
 ---
-import projects from '../data/projects'
-import Link from './Link.astro'
-import ProjectItem from './ProjectItem.astro'
+import projects from '../data/projects';
+import Link from './Link.astro';
+import ProjectItem from './ProjectItem.astro';
 ---
 
-<div id="projects" class="projects container-inner mx-auto relative my-20">
-  <h2 class="mb-6 text-4xl font-extrabold">Projects</h2>
+<div id='projects' class='projects container-inner mx-auto relative my-20'>
+	<h2 class='mb-6 text-4xl font-extrabold'>Projects</h2>
 
-  <p class="mb-6 lg:w-2/3 text-xl">
-    During my free time, I like to hack on things that I find interesting and/or
-    would use. Here are a couple of them, you can find other random things I
-    build on my <Link
-      href="https://github.com/peoray"
-      text="GitHub"
-      classes="link"
-    />page.
-  </p>
+	<!-- <p class="mb-6 lg:w-2/3 text-xl"> -->
+	<p class='mb-6 text-lg'>
+		I like to explore ideas through side projects—most of what I build comes
+		from personal needs or things I wish existed. Some turn into real products,
+		some stay fun experiments. Here are a few highlights:
 
-  <div class="grid lg:grid-cols-2 gap-4 lg:gap-8">
-    {projects.map((project) => <ProjectItem project={project} />)}
-  </div>
+		<!-- <Link
+			href='https://github.com/peoray'
+			text='GitHub'
+			classes='link'
+		/>page. -->
+	</p>
+
+	<div class='grid lg:grid-cols-2 gap-4 lg:gap-8'>
+		{projects.map((project) => <ProjectItem project={project} />)}
+	</div>
+
+	<div class='mt-12 text-lg'>
+		<p>
+			I also enjoy building tools for other developers. I'm a big fan of open
+			source and I'm always looking for ways to contribute to the community. You
+			can check out my open source work and other experiments on <a
+				href='https://github.com/peoray'
+				class='link'
+				target='_blank'
+				rel='nofollow noopener noreferrer'>GitHub</a
+			>.
+		</p>
+	</div>
 </div>
