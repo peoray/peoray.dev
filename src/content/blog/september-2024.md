@@ -19,7 +19,7 @@ With the payment verification hurdle cleared, we began sharing Nuxt SaaS Kit in 
 
 The response has been encouraging. While this soft-launch approach has not generated any sales yet, we have received invaluable feedback about improving our landing page and refining our offering.
 
-You can check out the [website here](https://nuxtsaaskit.com). Let me know what you think.
+You can check out the [website here](https://nuxtsaaskit.com/?ref=peoray.dev). Let me know what you think.
 
 ## Moving Forward
 
