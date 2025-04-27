@@ -2,8 +2,8 @@
 title: 'Closing the Year: Reflections and Plans Ahead'
 description: November and December 2024 Recap
 pubDate: 2025-01-14
-slug: 'october-2024-from-launch-to-first-sales'
-path: '/blog/october-2024-from-launch-to-first-sales'
+slug: 'closing-the-year-reflections-and-plans-ahead'
+path: '/blog/closing-the-year-reflections-and-plans-ahead'
 draft: false
 tags: ['okikelabs', 'entrepreneurship', 'reflections']
 thumbnail: ''
