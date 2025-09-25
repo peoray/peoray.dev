@@ -7,11 +7,13 @@
 		<h2 class='mb-8 text-4xl font-extrabold'>Newsletter</h2>
 
 		<div class='lg:w-4/5 mx-auto mb-8'>
-			<p class='mb-8 text-xl'>
+			<p class='mb-6 text-xl'>
 				Sign up to get updates when I write something new. No spam ever.
 			</p>
 
-			<div id='custom-substack-embed'></div>
+			<!-- Subscribe embed code -->
+			<div data-supascribe-embed-id='336026060779' data-supascribe-subscribe>
+			</div>
 
 			<!-- <form
         action="https://tinyletter.com/peoray"
@@ -116,20 +118,7 @@
 	</div>
 </div>
 
-<script is:inline>
-	window.CustomSubstackWidget = {
-		substackUrl: 'peoray.substack.com',
-		placeholder: 'example@gmail.com',
-		buttonText: 'Subscribe',
-		theme: 'custom',
-		colors: {
-			primary: '#896DDE',
-			input: '#000000',
-			email: '#FFFFFF',
-			text: '#FFFFFF',
-		},
-		// Go to substackapi.com to unlock custom redirect
-	};
-</script>
-
-<script src='https://substackapi.com/widget.js' async></script>
+<!-- Supascribe Script -->
+<script
+	src='https://js.supascribe.com/v1/loader/LXKYZBiakKOtMtbAy2VPlQ4RUo62.js'
+	async></script>
