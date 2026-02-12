@@ -1,19 +1,43 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import About from '../components/About.astro';
-import ProjectListing from '../components/ProjectListing.astro';
-import Newsletter from '../components/Newsletter.astro';
+import MainLayout from '../layouts/MainLayout.astro'
+import About from '../components/About.astro'
+import Newsletter from '../components/Newsletter.astro'
+import SectionHeader from '../components/SectionHeader.astro'
+import OssCard from '../components/OssCard.astro'
+import PaidProjectCard from '../components/PaidProjectCard.astro'
 
-import config from '../data/site-config';
-import PostCard from '../components/PostCard.astro';
+import config from '../data/site-config'
+import ossProjects from '../data/oss'
+import paidProjects from '../data/paid'
+import PostCard from '../components/PostCard.astro'
 
-const title = `${config.siteTitle}`;
-const description = `${config.siteDescription}`;
+const title = `${config.siteTitle}`
+const description = `${config.siteDescription}`
 ---
 
 <MainLayout title={title} description={description} image={config.image.src}>
 	<About />
+
+	<div class="container-inner mx-auto relative my-20">
+		<SectionHeader title="Open Source" href="/oss" />
+
+		<div class="grid lg:grid-cols-2 gap-4 lg:gap-6">
+			{ossProjects.slice(0, 4).map((project) => <OssCard project={project} />)}
+		</div>
+	</div>
+
+	<div class="container-inner mx-auto relative my-20">
+		<SectionHeader title="Projects" href="/projects" />
+
+		<div class="grid lg:grid-cols-2 gap-4 lg:gap-6">
+			{
+				paidProjects
+					.slice(0, 4)
+					.map((project) => <PaidProjectCard project={project} />)
+			}
+		</div>
+	</div>
+
 	<PostCard />
-	<ProjectListing />
 	<Newsletter />
 </MainLayout>
