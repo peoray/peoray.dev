@@ -8,30 +8,30 @@ import { formatBlogPosts } from '../utils/helpers'
 const posts = await getCollection('blog')
 
 const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts, {
-  limit: 5,
+	limit: 5,
 })
 
 await Promise.all(
-  formattedPosts.map(async (post: any) => {
-    const { remarkPluginFrontmatter } = await render(post)
-    post.data.minutesRead = remarkPluginFrontmatter.minutesRead
-    return post
-  })
+	formattedPosts.map(async (post: any) => {
+		const { remarkPluginFrontmatter } = await render(post)
+		post.data.minutesRead = remarkPluginFrontmatter.minutesRead
+		return post
+	}),
 )
 ---
 
 <div id="projects" class="projects container-inner mx-auto relative my-20">
-  <div class="flex items-center mb-6 justify-between">
-    <h2 class="text-4xl font-extrabold">Latest Articles</h2>
-    <div class="self-center text-xl">
-      <a
-        class="link bg-background-tertiary hover:bg-background-secondary p-3 rounded-lg hover:bg-opacity-80"
-        href="/blog">View all</a
-      >
-    </div>
-  </div>
+	<div class="flex items-center mb-6 justify-between">
+		<h2 class="text-4xl font-extrabold">Latest Articles</h2>
+		<div class="self-center text-xl">
+			<a
+				class="link bg-background-tertiary hover:bg-background-secondary p-3 rounded-lg hover:bg-opacity-80"
+				href="/blog">View more</a
+			>
+		</div>
+	</div>
 
-  <div class="">
-    {formattedPosts.map((post: { data: any }) => <Post post={post.data} />)}
-  </div>
+	<div class="">
+		{formattedPosts.map((post: { data: any }) => <Post post={post.data} />)}
+	</div>
 </div>

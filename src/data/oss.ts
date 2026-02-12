@@ -4,61 +4,43 @@ export interface OssProject {
 	source: string
 	demo?: string
 	stars: number
-	forks: number
+	forks?: number
 	tech: string[]
 }
 
 const ossProjects: OssProject[] = [
 	{
-		title: 'Spark UI',
-		description: 'Experience The Magic Of Animated Vue Components.',
-		source: 'https://github.com/selemondev/spark-ui',
-		demo: 'https://spark-ui.vercel.app',
+		title: 'AI Elements Vue',
+		description:
+			'A component library built on top of shadcn-vue to help you build AI-native applications faster.',
+		source: 'https://github.com/vuepont/ai-elements-vue',
+		demo: 'https://ai-elements-vue.com',
 		stars: 631,
-		forks: 13,
-		tech: ['Vue', 'TailwindCSS', 'Vueuse', 'Motion', 'Vitepre'],
+		tech: ['Vue', 'AI', 'Shadcn-vue', 'TypeScript'],
 	},
 	{
-		title: 'Marquee',
-		description: 'A beautiful component for creating marquees in Vue.',
-		source: 'https://github.com/selemondev/vue3-marquee',
+		title: 'ElevenLabs UI Vue',
+		description:
+			'A collection of Open Source agent and audio components that you can customize and extend.',
+		source: 'https://github.com/vuepont/elevenlabs-ui-vue',
 		stars: 149,
-		forks: 7,
-		tech: ['Vue', 'TailwindCSS', 'TypeScript', 'Vite'],
+		tech: ['Vue', 'ElevenLabs', 'Shadcn-vue', 'TypeScript'],
 	},
 	{
-		title: 'Svelte Marquee',
-		description: 'A beautiful component for creating marquees in Svelte.',
-		source: 'https://github.com/selemondev/svelte-marquee',
+		title: 'Astro Starter Blog',
+		description:
+			'A simple, hackable & minimalistic starter for Astro that uses Markdown for content.',
+		source: 'https://github.com/peoray/astro-starter-blog',
 		stars: 100,
 		forks: 2,
-		tech: ['Svelte', 'TailwindCSS', 'TypeScript', 'Vite'],
+		tech: ['Astro', 'Blog', 'Markdown', 'UI'],
 	},
 	{
-		title: 'Create Vue3 App',
-		description: 'The Next Generation Vue 3 Scaffolding CLI Tool.',
-		source: 'https://github.com/selemondev/create-vue3-app',
+		title: 'Astro Portfolio Starter',
+		description: 'A simple portfolio theme for Astro powered by Tailwind CSS.',
+		source: 'https://github.com/peoray/astro-portfolio-starter',
 		stars: 72,
-		forks: 1,
-		tech: ['Node', 'Esbuild', 'TypeScript'],
-	},
-	{
-		title: 'Nuxt UI Primitives',
-		description:
-			'Unstyled, accessible UI primitives for building Nuxt applications.',
-		source: 'https://github.com/peoray/nuxt-ui-primitives',
-		stars: 45,
-		forks: 3,
-		tech: ['Nuxt', 'Vue', 'TypeScript'],
-	},
-	{
-		title: 'Vue Sonner',
-		description: 'An opinionated toast notification component for Vue.',
-		source: 'https://github.com/peoray/vue-sonner',
-		demo: 'https://vue-sonner.vercel.app',
-		stars: 38,
-		forks: 5,
-		tech: ['Vue', 'TypeScript', 'Vite'],
+		tech: ['Astro', 'Portfolio', 'TailwindCSS', 'UI'],
 	},
 ]
 

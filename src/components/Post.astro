@@ -4,29 +4,29 @@ const { title, description, path, pubDate, minutesRead } = post
 ---
 
 <a
-  href={`${path}`}
-  rel="prefetch"
-  class="flex flex-col gap-y-3 bg-background-tertiary hover:bg-background-secondary p-4 mb-6 transition-all rounded-xl text-copy-primary hover:text-copy-primary ease-out"
+	href={`${path}`}
+	rel="prefetch"
+	class="flex flex-col gap-y-3 bg-background-tertiary hover:bg-background-secondary p-4 mb-6 transition-all rounded-xl text-copy-primary hover:text-copy-primary ease-out"
 >
-  <h2 class="!text-purple-100 text-2xl font-bold">{title}</h2>
+	<h2 class="text-white text-2xl font-bold">{title}</h2>
 
-  <p class="text-xl">{description}</p>
+	<p class="text-xl">{description}</p>
 
-  <div class="flex items-center gap-x-2">
-    <time>
-      {
-        new Date(pubDate).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        })
-      }
-    </time>
+	<div class="flex items-center gap-x-2">
+		<time>
+			{
+				new Date(pubDate).toLocaleDateString('en-US', {
+					year: 'numeric',
+					month: 'short',
+					day: 'numeric',
+				})
+			}
+		</time>
 
-    <span>•</span>
+		<span>•</span>
 
-    {minutesRead && <span>{minutesRead}</span>}
-  </div>
+		{minutesRead && <span>{minutesRead}</span>}
+	</div>
 </a>
 
 <!-- <style>

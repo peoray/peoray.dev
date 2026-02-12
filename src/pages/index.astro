@@ -18,6 +18,8 @@ const description = `${config.siteDescription}`
 <MainLayout title={title} description={description} image={config.image.src}>
 	<About />
 
+	<PostCard />
+
 	<div class="container-inner mx-auto relative my-20">
 		<SectionHeader title="Open Source" href="/oss" />
 
@@ -37,7 +39,5 @@ const description = `${config.siteDescription}`
 			}
 		</div>
 	</div>
-
-	<PostCard />
 	<Newsletter />
 </MainLayout>
