@@ -8,26 +8,26 @@ import { formatBlogPosts, kebabCaseStr } from '../../utils/helpers'
 import config from '../../data/site-config'
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog')
-  const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts)
+	const posts = await getCollection('blog')
+	const formattedPosts: CollectionEntry<'blog'>[] = formatBlogPosts(posts)
 
-  const uniqueTags = [
-    ...new Set(
-      formattedPosts
-        .map((post: { data: { tags: any } }) => post.data.tags)
-        .flat()
-    ),
-  ]
+	const uniqueTags = [
+		...new Set(
+			formattedPosts
+				.map((post: { data: { tags: any } }) => post.data.tags)
+				.flat(),
+		),
+	]
 
-  return uniqueTags.map((tag) => {
-    const filteredPosts = formattedPosts.filter(
-      (post: { data: { tags: unknown[] } }) => post.data.tags.includes(tag)
-    )
-    return {
-      params: { tag: kebabCaseStr(tag) },
-      props: { posts: filteredPosts },
-    }
-  })
+	return uniqueTags.map((tag) => {
+		const filteredPosts = formattedPosts.filter(
+			(post: { data: { tags: unknown[] } }) => post.data.tags.includes(tag),
+		)
+		return {
+			params: { tag: kebabCaseStr(tag) },
+			props: { posts: filteredPosts },
+		}
+	})
 }
 
 const { tag } = Astro.params
@@ -35,16 +35,19 @@ const { posts } = Astro.props
 
 // get reading time of each post
 posts.map(async (post: any) => {
-  const { remarkPluginFrontmatter } = await render(post)
-  post.data.minutesRead = remarkPluginFrontmatter.minutesRead
-  return post
+	const { remarkPluginFrontmatter } = await render(post)
+	post.data.minutesRead = remarkPluginFrontmatter.minutesRead
+	return post
 })
 ---
 
-<MainLayout title={`Posts tagged as "${tag}" – ${config.siteTitle}`}>
-  <div class="container-inner mx-auto my-16">
-    <h2 class="text-4xl font-bold mb-8 border-b">Tag: {tag}</h2>
+<MainLayout
+	title={`Posts tagged as "${tag}" – ${config.siteTitle}`}
+	description={config.siteDescription}
+>
+	<div class="container-inner mx-auto my-16">
+		<h1 class="text-4xl font-bold mb-8 border-b">Tag: {tag}</h1>
 
-    {posts.map((post: any) => <Post post={post.data} />)}
-  </div>
+		{posts.map((post: any) => <Post post={post.data} />)}
+	</div>
 </MainLayout>

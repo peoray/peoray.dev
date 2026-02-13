@@ -1,64 +1,65 @@
 ---
-import Link from '../components/Link.astro';
-import SocialLinks from '../components/SocialLinks.astro';
-import MainLayout from '../layouts/MainLayout.astro';
+import Link from '../components/Link.astro'
+import SocialLinks from '../components/SocialLinks.astro'
+import MainLayout from '../layouts/MainLayout.astro'
 
-import user from '../data/user';
-import config from '../data/site-config';
-import events from '../data/events';
-import SpeakingItem from '../components/SpeakingItem.astro';
-import Newsletter from '../components/Newsletter.astro';
+import user from '../data/user'
+import config from '../data/site-config'
+import events from '../data/events'
+import SpeakingItem from '../components/SpeakingItem.astro'
+import Newsletter from '../components/Newsletter.astro'
 
-const title = `About - ${config.siteTitle}`;
-const description = `${config.siteDescription}`;
-const image = config.image.src;
+const title = `About ${config.siteTitle} — Software Engineer & Indie Hacker`
+const description = `${config.siteDescription}`
+const image = config.image.src
 ---
 
 <MainLayout title={title} description={description} image={image}>
-	<div class='mx-auto container-inner'>
-		<div class='text-xl'>
-			<p class=''>
+	<div class="mx-auto container-inner">
+		<h1 class="text-4xl font-extrabold mb-6">About Me</h1>
+		<div class="text-xl">
+			<p class="">
 				Hey, I'm Raymond, a self-taught developer and indie hacker. Welcome to
 				my little corner of the internet.
 			</p>
 
-			<p class='mt-4'>
+			<p class="mt-4">
 				I’ve been building for the web for over 6 years, and I’m passionate
 				about shipping products that solve real problems and make life easier.
 				From developer tools to small indie products that scratch an itch, I
 				care about building things that are simple, useful, and fast to ship.
 			</p>
 
-			<p class='mt-4'>
+			<p class="mt-4">
 				Right now, I run <a
-					href='https://okikelabs.com'
-					class='link'
-					target='_blank'
-					rel='nofollow noopener noreferrer'>Okikelabs</a
+					href="https://okikelabs.com"
+					class="link"
+					target="_blank"
+					rel="nofollow noopener noreferrer">Okikelabs</a
 				>, a lean, bootstrapped startup studio I co-founded. We build useful
 				tools and SaaS products with speed and purpose, experiment with ideas,
 				and stay scrappy.
 			</p>
 
-			<p class='mt-4'>
+			<p class="mt-4">
 				I mostly work on my own ideas, but I’m open to selective freelance or
 				contract gigs, especially if it’s a good fit and aligns with my style of
 				building. Feel free to shoot me an email with your idea!
 			</p>
 		</div>
 
-		<div class='flex justify-start mt-4'>
+		<div class="flex justify-start mt-4">
 			<SocialLinks />
 		</div>
 
-		<div class='my-20'>
-			<h2 class='mb-6 text-4xl font-extrabold'>Speaking</h2>
+		<div class="my-20">
+			<h2 class="mb-6 text-4xl font-extrabold">Speaking</h2>
 
-			<p class='mb-6 text-xl'>
+			<p class="mb-6 text-xl">
 				Want me to speak at your event? Reach out to me via email or twitter.
 			</p>
 
-			<div class=''>
+			<div class="">
 				{events.map((event) => <SpeakingItem event={event} />)}
 			</div>
 		</div>
