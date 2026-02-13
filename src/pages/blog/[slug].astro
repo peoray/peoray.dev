@@ -6,31 +6,32 @@ import BlogLayout from '../../layouts/BlogLayout.astro'
 import { formatBlogPosts } from '../../utils/helpers'
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection('blog')
-  const formattedPosts = formatBlogPosts(allPosts)
+	const allPosts = await getCollection('blog')
+	const formattedPosts = formatBlogPosts(allPosts)
 
-  return formattedPosts.map((post: any) => ({
-    params: { slug: post.id },
-    props: {
-      post,
-    },
-  }))
+	return formattedPosts.map((post: any) => ({
+		params: { slug: post.id },
+		props: {
+			post,
+		},
+	}))
 }
 
 interface Props {
-  post: CollectionEntry<'blog'>
+	post: CollectionEntry<'blog'>
 }
 
 const { post } = Astro.props
 const { title, description } = post.data
 
 const { Content, remarkPluginFrontmatter } = await render(post)
+
+const blogData = {
+	...remarkPluginFrontmatter,
+	thumbnail: remarkPluginFrontmatter.thumbnail || `/og/${post.id}.png`,
+}
 ---
 
-<BlogLayout
-  title={title}
-  description={description}
-  data={remarkPluginFrontmatter}
->
-  <Content />
+<BlogLayout title={title} description={description} data={blogData}>
+	<Content />
 </BlogLayout>
