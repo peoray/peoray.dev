@@ -6,6 +6,9 @@ interface Props {
 }
 
 const { project } = Astro.props
+
+// Extract owner/repo from GitHub URL for the API call
+const repoPath = project.source.replace('https://github.com/', '')
 ---
 
 <a
@@ -13,6 +16,7 @@ const { project } = Astro.props
 	target="_blank"
 	rel="nofollow noopener noreferrer"
 	class="h-auto flex flex-col justify-between border border-neutral-700 bg-background-tertiary hover:bg-background-secondary transition-all ease-out p-5 rounded-xl group"
+	data-repo={repoPath}
 >
 	<div class="flex flex-col space-y-2">
 		<div class="flex items-center justify-between">
@@ -22,30 +26,10 @@ const { project } = Astro.props
 				{project.title}
 			</h3>
 			<div class="flex items-center space-x-3 text-sm text-neutral-400">
-				{
-					project.stars > 0 && (
-						<span class="flex items-center space-x-1">
-							<span class="text-yellow-500">★</span>
-							<span>{project.stars.toLocaleString()}</span>
-						</span>
-					)
-				}
-				<!-- {
-					project.forks > 0 && (
-						<span class="flex items-center space-x-1">
-							<svg
-								class="w-3.5 h-3.5"
-								viewBox="0 0 16 16"
-								fill="currentColor"
-								aria-hidden="true"
-							>
-								<path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 0-1.5 0v.878h-3v-.878a2.25 2.25 0 1 0-1.5 0ZM8 14.25a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 1 1.5 0v4.5a.75.75 0 0 1-.75.75Z" />
-								<path d="M8 .25a2.25 2.25 0 0 0-.75 4.372v.878h1.5v-.878A2.25 2.25 0 0 0 8 .25Z" />
-							</svg>
-							<span>{project.forks}</span>
-						</span>
-					)
-				} -->
+				<span class="flex items-center space-x-1">
+					<span class="text-yellow-500">★</span>
+					<span class="star-count">{project.stars.toLocaleString()}</span>
+				</span>
 			</div>
 		</div>
 
@@ -62,3 +46,28 @@ const { project } = Astro.props
 		}
 	</div>
 </a>
+
+<script>
+	// Fetch live GitHub star counts and update the DOM
+	// Astro scripts are deferred by default, so DOM is ready when this runs
+	;(function () {
+		const cards = document.querySelectorAll('[data-repo]')
+		cards.forEach(async (card) => {
+			const repo = card.getAttribute('data-repo')
+			if (!repo) return
+
+			try {
+				const res = await fetch(`https://api.github.com/repos/${repo}`)
+				if (!res.ok) return
+
+				const data = await res.json()
+				const starEl = card.querySelector('.star-count')
+				if (starEl && typeof data.stargazers_count === 'number') {
+					starEl.textContent = data.stargazers_count.toLocaleString()
+				}
+			} catch {
+				// Silently fall back to the static value
+			}
+		})
+	})()
+</script>
