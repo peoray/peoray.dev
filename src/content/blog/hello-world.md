@@ -13,7 +13,7 @@ thumbnail: '../images/blog/hello-world/cover.png'
 
 Welcome to my first blog post! I felt that it would be customary for me to use a timeless greeting all techies and geeks would be used to seeing. I’ve been meaning to start a blog for a very long time, but I tend to procrastinate, one of the many reasons I am starting this blog. Finally, today I am writing my first ever article.
 
-# Why a Blog?
+## Why a Blog?
 
 ![Why blog](../images/blog/hello-world/why_blog.png)
 
@@ -31,7 +31,7 @@ In summary, here is a list of why I want to blog:
 
 - To market myself, show who I am, and what my interests and beliefs are.
 
-# What to Blog About?
+## What to Blog About?
 
 So what sort of interesting things will I be blogging about? Well, I’ll be writing about my thoughts, actions, successes, failures, lessons and experiences. Nowadays, my life revolves around tech, software and code (I’m a beginner, I like the tag), so you will be seeing lots of posts about that. If you are into programming, then you might want to follow me.
 
@@ -41,13 +41,13 @@ I will also be writing about my monthly goals I hope to achieve, tips, advice, m
 
 Too much right? Well, now you know why it’s called a Personal Blog (there are no rules!)
 
-# What’s the plan?
+## What’s the plan?
 
 It took me quite a long time to write this and publish, so you can imagine how hard it can be to blog. Little wonder most people tend to get started and abandon it later. So, I will be keeping things simple, don’t expect daily or weekly posts!
 
 ![blogging is hard](../images/blog/hello-world/blog_is_hard.jpeg)
 
-# Simple Right?
+## Simple Right?
 
 So everything looks simple and good enough. I’d recommend if you are reading my articles to be active, comment, like and share and don’t forget to subscribe o my newsletter (I promise not to feel bad if you don't).
 

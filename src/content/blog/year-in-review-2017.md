@@ -13,29 +13,29 @@ thumbnail: '../images/blog/year-in-review-2017/cover.png'
 
 2017 has been a great year despite many ups and downs, I’m excited about everything that happened and especially the progress I made personally in various aspects of my life. I also managed to learn more about myself and how I handle adversity and setbacks in my life.
 
-### Graduation
+## Graduation
 
 Overall, 2017 was an average year. My biggest achievement has to be my graduating from college. I studied Electrical and Electronics Engineering and it was a great relief to finally come to the end of my program. Huge win for me on that one.
 
-### Coding
+## Coding
 
 2017 was the year I found my passion. I’m eternally grateful for my friends who got me started into the field. I took my decision of learning to code serious and since then, I haven’t looked back. Even though I didn’t progress much, I’m excited I know enough to get by at least.
 
-### Blogging
+## Blogging
 
 I started blogging in 2017 as a means to document my journey as I try to learn web development having been inspired by dozens of people to do so. I didn’t believe that I was gonna stay at it till this point. Even though I did not write as much as I wanted but I made an head-way at least. Glad I started writing and I hope to stay at it forever.
 
-### Social Media
+## Social Media
 
 I became active on Twitter after becoming aware it was the social space for developers and it’s definitely true. If you are serious about coding, you should definitely have a Twitter account. Because of it, I lost interest in Facebook and other groups I was in.
 
-### Life
+## Life
 
 - I turned 22 December 2017 and it felt pretty good
 
 - My Family were all in good health.
 
-# My Goals For 2018
+## My Goals For 2018
 
 I’m excited about 2018. I already tagged it the year of excellence. These are just a summary of my plans for the new year:
 
