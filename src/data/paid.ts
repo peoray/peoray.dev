@@ -15,14 +15,14 @@ const paidProjects: PaidProject[] = [
 		status: 'Active',
 		role: 'Creator',
 	},
-	{
-		title: 'Linkvoy',
-		description:
-			'Everything you need to plan weddings without the chaos for professionals.',
-		website: 'https://linkvoy.com/?ref=peoray.dev',
-		status: 'Active',
-		role: 'Co-founder',
-	},
+	// {
+	// 	title: 'Linkvoy',
+	// 	description:
+	// 		'Everything you need to plan weddings without the chaos for professionals.',
+	// 	website: 'https://linkvoy.com/?ref=peoray.dev',
+	// 	status: 'Active',
+	// 	role: 'Co-founder',
+	// },
 ]
 
 export default paidProjects
