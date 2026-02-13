@@ -1,25 +1,21 @@
 ---
-import config from '../data/site-config';
-import jsonLDGenerator from '../utils/jsonLD';
+import config from '../data/site-config'
+import jsonLDGenerator from '../utils/jsonLD'
 
-const {
-  title,
-  description,
-  url = Astro.url,
-  image,
-  data,
-  robots,
-} = Astro.props;
+const { title, description, url = Astro.url, image, data, robots } = Astro.props
 
 const jsonLD = jsonLDGenerator({
-  type: data ? 'post' : 'website',
-  post: data,
-  url: url.href,
-});
+	type: data ? 'post' : 'website',
+	post: data,
+	url: url.href,
+})
+// Normalize canonical URL: strip .html extension and trailing slashes to match sitemap
+const canonicalUrl =
+	url.href.replace(/\.html$/, '').replace(/\/+$/, '') || url.href
 ---
 
 <!-- SEO -->
-<link rel="canonical" href={url.href} />
+<link rel="canonical" href={canonicalUrl} />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -33,13 +29,7 @@ const jsonLD = jsonLDGenerator({
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="600" />
-<meta
-  property="og:image:alt"
-  content={'Image of article' || config.image.alt}
-/>
-
-<!-- <meta property="og:image:alt" content={image?.src || config.image.alt} /> -->
-<!-- <meta property="og:image:alt" content={image?.alt || config.image.alt} /> -->
+<meta property="og:image:alt" content={image?.src || config.image.alt} />
 
 <!-- Twitter -->
 <meta name="twitter:title" content={title} />
