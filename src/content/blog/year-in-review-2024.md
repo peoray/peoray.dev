@@ -6,7 +6,6 @@ slug: 'closing-the-year-reflections-and-plans-ahead'
 path: '/blog/closing-the-year-reflections-and-plans-ahead'
 draft: false
 tags: ['okikelabs', 'entrepreneurship', 'reflections']
-thumbnail: ''
 ---
 
 Hey folks👋, It’s good to write to you again.

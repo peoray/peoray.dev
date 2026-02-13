@@ -6,7 +6,6 @@ slug: 'number-facts-generator'
 path: '/blog/number-facts-generator'
 draft: false
 tags: ['programming', 'javascript']
-thumbnail: '../images/blog/number-facts-generator/cover.png'
 ---
 
 ![gif demo of application](/images/blog/number-facts-generator/preview.gif)
@@ -41,13 +40,13 @@ First off I wanted to form input to clear when data has been returned after inpu
 Instead of this:
 
 ```js
-document.getElementById('id').reset();
+document.getElementById('id').reset()
 ```
 
 Do this:
 
 ```js
-document.getElementById('id').value = '';
+document.getElementById('id').value = ''
 ```
 
 This will set the form input text field to an empty string and make the field blank.

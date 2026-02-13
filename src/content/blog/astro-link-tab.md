@@ -6,7 +6,6 @@ slug: 'astro-open-link-new-tab'
 path: '/blog/astro-open-link-new-tab'
 draft: false
 tags: ['astro']
-thumbnail: ''
 ---
 
 As I was working on moving my website from [Gatsby to Astro](/blog/rebuilding-with-astro), I encountered the need to adjust how my markdown links are opened. I wanted to provide a seamless user experience by opening them in different tabs. By default, Astro opens all links in the same tab, which doesn't align with my desired behaviour.
@@ -25,25 +24,26 @@ npm install @jsdevtools/rehype-url-inspector
 Next, in your Astro project configuration file, usually `astro.config.mjs`, import the plugin and add it as a `rehypePlugin` in the `markdown` section:
 
 ```js
-import inspectUrls from "@jsdevtools/rehype-url-inspector";
+import inspectUrls from '@jsdevtools/rehype-url-inspector'
 
 export default defineConfig({
-  // ...other configuration options
-  markdown: {
-    rehypePlugins: [
-      [
-        inspectUrls, {
-          selectors: ["a[href]"],
-          inspectEach(url) {
-            url.node.properties.target = "_blank";
-          }
-        }
-      ]
-    // ...other markdown configuration options
-    ],
-  },
-  // ...other configuration options
-});
+	// ...other configuration options
+	markdown: {
+		rehypePlugins: [
+			[
+				inspectUrls,
+				{
+					selectors: ['a[href]'],
+					inspectEach(url) {
+						url.node.properties.target = '_blank'
+					},
+				},
+			],
+			// ...other markdown configuration options
+		],
+	},
+	// ...other configuration options
+})
 ```
 
 Let's break down what's happening in the code:

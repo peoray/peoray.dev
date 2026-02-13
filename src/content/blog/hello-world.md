@@ -6,7 +6,6 @@ slug: 'hello-world'
 path: '/blog/hello-world'
 draft: false
 tags: ['career']
-thumbnail: '../images/blog/hello-world/cover.png'
 ---
 
 ![Hello world](../images/blog/hello-world/hello_world.jpg)

@@ -6,7 +6,6 @@ slug: 'year-in-review-2019'
 path: '/blog/year-in-review-2019'
 draft: false
 tags: ['year in review', 'career']
-thumbnail: '../images/blog/year-in-review-2019/cover.png'
 ---
 
 ![2019 image](../images/blog/year-in-review-2019/2019.jpg)

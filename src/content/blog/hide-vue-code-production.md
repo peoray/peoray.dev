@@ -6,7 +6,6 @@ slug: 'hide-vue-code-production'
 path: '/blog/hide-vue-code-production'
 draft: false
 tags: ['vue', 'webpack']
-thumbnail: '../images/hide-vue-code-production/cover.png'
 ---
 
 If you have ever created your Vue project using the Vue CLI and deployed to production before, chances are you might not know that your whole code is visible on the devtools.
@@ -25,8 +24,8 @@ If you used the Vue CLI to create your project, then follow these steps:
 
 ```js
 module.exports = {
-  productionSourceMap: false,
-};
+	productionSourceMap: false,
+}
 ```
 
 What this will do is to tell Webpack to skip the source map generation. Also, setting this to false can speed up production builds.

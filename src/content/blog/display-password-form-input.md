@@ -6,7 +6,6 @@ draft: false
 slug: 'display-password-form-input'
 path: '/blog/display-password-form-input'
 tags: ['javascript']
-thumbnail: '../images/blog/display-password-form-input/cover.png'
 ---
 
 ![hero image](../images/blog/display-password-form-input/preview.jpg)
@@ -69,18 +68,18 @@ In our `index.html`, add the default boilerplate and name our title **“How to 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-    <title>How to display or hide password</title>
-  </head>
-  <body>
-    <!-- JavaScript file -->
-    <script src="main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<!-- CSS stylesheet -->
+		<link rel="stylesheet" href="style.css" />
+		<title>How to display or hide password</title>
+	</head>
+	<body>
+		<!-- JavaScript file -->
+		<script src="main.js"></script>
+	</body>
 </html>
 ```
 
@@ -93,23 +92,23 @@ Let’s create our form input so we can have a field to type in our password.
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Toggle</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <form>
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter your Password" />
-      <label for="togglePassword">show password</label>
-      <input type="checkbox" id="togglePassword" />
-      <button type="button">Submit</button>
-    </form>
-    <script src="main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Password Toggle</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<form>
+			<label for="password">Password</label>
+			<input type="password" id="password" placeholder="Enter your Password" />
+			<label for="togglePassword">show password</label>
+			<input type="checkbox" id="togglePassword" />
+			<button type="button">Submit</button>
+		</form>
+		<script src="main.js"></script>
+	</body>
 </html>
 ```
 
@@ -117,29 +116,29 @@ In our `style.css` file, add the following styles. This is just to make it look 
 
 ```css
 body {
-  font-family: 'Arial', 'Helvetica', sans-serif;
-  text-align: center;
-  margin-top: 100px;
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	text-align: center;
+	margin-top: 100px;
 }
 
 input[type='password'],
 input[type='text'] {
-  border: 1px #b6e7f9 solid;
-  padding: 5px 10px;
+	border: 1px #b6e7f9 solid;
+	padding: 5px 10px;
 }
 
 input[type='checkbox'] {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 button {
-  padding: 10px 20px;
-  margin-top: 20px;
-  color: #fff;
-  background-color: #65b0ed;
-  border: none;
-  display: inline-block;
-  cursor: pointer;
+	padding: 10px 20px;
+	margin-top: 20px;
+	color: #fff;
+	background-color: #65b0ed;
+	border: none;
+	display: inline-block;
+	cursor: pointer;
 }
 ```
 
@@ -158,7 +157,7 @@ We will be using ES6 arrow function to write our function.
 First thing, let’s assign the checkbox element tag and save it to a variable:
 
 ```js
-const togglePassword = document.getElementById('togglePassword');
+const togglePassword = document.getElementById('togglePassword')
 ```
 
 The `document.getElementById()` returns a HTML element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.
@@ -167,13 +166,13 @@ After assigning the checkbox element to a variable, let’s write our function t
 
 ```javascript {numberLines: true}
 const showOrHidePassword = () => {
-  const password = document.getElementById('password');
-  if (password.type === 'password') {
-    password.type = 'text';
-  } else {
-    password.type = 'password';
-  }
-};
+	const password = document.getElementById('password')
+	if (password.type === 'password') {
+		password.type = 'text'
+	} else {
+		password.type = 'password'
+	}
+}
 ```
 
 - **Line 1:** Our function is given a name called showOrHidePassword using the camel case notation.
@@ -189,7 +188,7 @@ const showOrHidePassword = () => {
 Our code is almost complete, the only thing left would be to add an event listener to listen to an event (in this case, a change event), so that when we check the checkbox, the function would execute.
 
 ```js
-togglePassword.addEventListener('change', showOrHidePassword);
+togglePassword.addEventListener('change', showOrHidePassword)
 ```
 
 You can find the complete code on this [repo](https://github.com/peoray/toggle-form-password). Also, the Codepen below contains the complete code:

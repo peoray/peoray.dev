@@ -6,12 +6,11 @@ slug: 'change-language-github'
 path: '/blog/change-language-github'
 draft: false
 tags: ['astro']
-thumbnail: ''
 ---
 
 I recently moved my website from [Gatsby to Astro](/blog/rebuilding-with-astro). In the process, I also created an RSS feed for my blog. Instead of the default no CSS styling, I wanted it to look better and came across a way to style my RSS feed. Similarly to how we use CSS to style our HTML, we can use XSLT to style our XML.
 
-After writing the code and ensuring it works as expected, I pushed my changes to GitHub. I notice that the language detection for the repo was displaying `XSLT`  instead of Astro which it was showing before the recent update to the repo.
+After writing the code and ensuring it works as expected, I pushed my changes to GitHub. I notice that the language detection for the repo was displaying `XSLT` instead of Astro which it was showing before the recent update to the repo.
 
 After much googling, I found out that Github uses a tool called [Linguist](https://github.com/github/linguist) to detect the languages you used based on file extensions in your repo. We can tell Linguist to exclude certain files from its calculations by configuring a `.gitattributes` file in the root of the repo.
 

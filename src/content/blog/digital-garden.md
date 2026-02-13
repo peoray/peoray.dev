@@ -6,7 +6,6 @@ slug: 'digital-garden'
 path: '/blog/digital-garden'
 draft: false
 tags: ['writing']
-thumbnail: ''
 ---
 
 Since I started writing in 2017, I haven't been the most consistent. Every year, I set ambitious goals to produce numerous articles, only to accomplish very little. Looking at the timestamps, my last entry was in 2020, the year of the Pandemic.
@@ -16,7 +15,7 @@ Upon reflection, the reason was not my lack of ideas. I have over 100 blog post 
 
 However, I tend to spend an excessive amount of time writing and editing each article, striving for perfection. When I get tired or overwhelmed, I start tweaking the design or adding unnecessary features to the website.
 
-I recently  came across [Rach Smith's](https://rachsmith.com/my-blog-is-dead/) note on digital gardens, and it struck a chord with me.
+I recently came across [Rach Smith's](https://rachsmith.com/my-blog-is-dead/) note on digital gardens, and it struck a chord with me.
 I have always referred to my website as a digital garden but never adhered to its [principles](https://joelhooks.com/digital-garden). Whenever I set out to write, I get overwhelmed by the sheer amount of work I seemingly have to do.
 
 Yet, I've realized that the goal is to write for myself. If others find value in my words, that's wonderful, but if not, that's perfectly alright. It doesn't have to be flawless; there's no requirement for a minimum word count, an elaborate deep-dive, or intricate illustrations. It can be a brief snippet, a random thought, or anything that resonates with me.

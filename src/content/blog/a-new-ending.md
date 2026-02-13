@@ -6,7 +6,6 @@ slug: 'a-new-ending'
 path: '/blog/a-new-ending'
 draft: false
 tags: ['career']
-thumbnail: '../images/blog/a-new-ending/cover.png'
 ---
 
 ![Starting over](../images/blog/a-new-ending/header.jpg)

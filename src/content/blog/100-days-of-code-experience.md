@@ -6,7 +6,6 @@ slug: '100-days-of-code-experience'
 path: '/blog/100-days-of-code-experience'
 draft: false
 tags: ['100 days of code', 'career']
-thumbnail: '../images/blog/100-days-of-code-experience/cover.png'
 ---
 
 ![Code picture](../images/blog/100-days-of-code-experience/header.jpg)
@@ -66,7 +65,6 @@ Like I said earlier, I haven’t completed any project prior to when I started t
 - [Todometer ](https://peoray.github.io/Todometer/):  A todo task manager made with Vue [(GitHub repo](https://github.com/peoray/Todometer))
 
 - 30 Days, 30 Sites — A challenge where you receive daily prompts to build 30 simple web pages in 30 days (It doesn’t have to be)
-
   - Day 2 (Events web page) — [GitHub repo](http://github.com/peoray/wedding-bells)
 
   - Day 3 (Tourism web page) — [GitHub repo](https://github.com/peoray/Travelify)

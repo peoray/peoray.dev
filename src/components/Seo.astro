@@ -27,9 +27,30 @@ const jsonLD = jsonLDGenerator({
 	post: data,
 	url,
 })
+
 // Normalize canonical URL: strip .html extension and trailing slashes to match sitemap
 const canonicalUrl =
 	url.href.replace(/\.html$/, '').replace(/\/+$/, '') || url.href
+
+// Resolve OG image to absolute URL
+const siteUrl = Astro.site?.href || 'https://peoray.dev'
+
+const resolveUrl = (img: any) => {
+	// If no image provided, use default from config
+	const src = typeof img === 'string' ? img : img?.src || config.image.src
+
+	// If it's already an absolute URL (starts with http or https), return it as is
+	if (src.startsWith('http')) return src
+
+	// Otherwise, resolve it against the site URL
+	// new URL checks if the path is absolute or relative
+	const fullUrl = new URL(src, siteUrl).href
+	return fullUrl
+}
+
+const ogImage = resolveUrl(image)
+const imageAlt =
+	typeof image === 'string' ? title : image?.alt || config.image.alt
 ---
 
 <!-- SEO -->
@@ -40,20 +61,20 @@ const canonicalUrl =
 <meta property="og:site_name" content={config.siteDescription} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:url" content={url.href} />
-<meta property="og:image" content={image?.src || config.image.src} />
-<meta property="og:image:url" content={image?.src || config.image.src} />
-<meta property="og:image:secure_url" content={image?.src || config.image.src} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:url" content={ogImage} />
+<meta property="og:image:secure_url" content={ogImage} />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image:alt" content={image?.src || config.image.alt} />
+<meta property="og:image:alt" content={imageAlt} />
 
 <!-- Twitter -->
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content={image?.src || config.image.src} />
+<meta name="twitter:image" content={ogImage} />
 <meta name="twitter:image:alt" content={title} />
 <meta name="twitter:domain" content={import.meta.env.SITE} />
 

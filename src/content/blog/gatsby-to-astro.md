@@ -6,7 +6,6 @@ slug: 'rebuilding-with-astro'
 path: '/blog/rebuilding-with-astro'
 draft: false
 tags: ['programming', 'astro']
-thumbnail: ''
 ---
 
 After over three years of using Gatsby, I recently completed a rebuild of my website using Astro. The decision to switch to Astro was driven by its growing popularity, framework-agnostic nature, and my desire for a simpler and easier-to-maintain website. In this article, I'll delve into the reasons behind my transition and highlight the changes I made during the process.

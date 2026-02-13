@@ -6,7 +6,6 @@ slug: '100-days-of-code'
 path: '/blog/100-days-of-code'
 draft: false
 tags: ['100 days of code', 'career']
-thumbnail: '../images/blog/100-days-of-code/cover.png'
 ---
 
 ![picture of a computer](../images/blog/100-days-of-code/header.jpg)
