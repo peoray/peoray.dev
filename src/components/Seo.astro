@@ -2,12 +2,30 @@
 import config from '../data/site-config'
 import jsonLDGenerator from '../utils/jsonLD'
 
-const { title, description, url = Astro.url, image, data, robots } = Astro.props
+interface Props {
+	title: string
+	description: string
+	url?: URL
+	image?: any
+	data?: any
+	robots?: boolean
+	type?: string
+}
+
+const {
+	title,
+	description,
+	url = Astro.url,
+	image,
+	data,
+	robots,
+	type,
+} = Astro.props as Props
 
 const jsonLD = jsonLDGenerator({
-	type: data ? 'post' : 'website',
+	type,
 	post: data,
-	url: url.href,
+	url,
 })
 // Normalize canonical URL: strip .html extension and trailing slashes to match sitemap
 const canonicalUrl =
@@ -23,9 +41,9 @@ const canonicalUrl =
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={url.href} />
-<meta property="og:image" content={image || config.image.src} />
-<meta property="og:image:url" content={image || config.image.src} />
-<meta property="og:image:secure_url" content={image || config.image.src} />
+<meta property="og:image" content={image?.src || config.image.src} />
+<meta property="og:image:url" content={image?.src || config.image.src} />
+<meta property="og:image:secure_url" content={image?.src || config.image.src} />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="600" />
