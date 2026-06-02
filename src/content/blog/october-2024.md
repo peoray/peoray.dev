@@ -5,7 +5,7 @@ pubDate: 2024-11-03
 slug: 'october-2024-from-launch-to-first-sales'
 path: '/blog/october-2024-from-launch-to-first-sales'
 draft: false
-tags: ['okikelabs', 'entrepreneurship', 'reflections']
+tags: ['okikelabs', 'entrepreneurship', 'reflections', ''newsletter']
 ---
 
 After months of preparation and overcoming various hurdles, October marked several significant milestones, including the public launch of Nuxt SaaS Kit.

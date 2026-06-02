@@ -5,7 +5,7 @@ pubDate: 2024-10-27
 slug: 'september-2024-small-steps-forward'
 path: '/blog/september-2024-small-steps-forward'
 draft: false
-tags: ['okikelabs', 'entrepreneurship', 'reflections']
+tags: ['okikelabs', 'entrepreneurship', 'reflections', 'newsletter']
 ---
 
 After [August's](/blog/august-2024-overcoming-hurdles-and-finding-silver-linings) challenges with bureaucratic hurdles, September brought some welcome progress. While the month wasn't filled with dramatic changes, we managed to overcome one of our biggest obstacles and started gathering feedback on Nuxt SaaS Kit.

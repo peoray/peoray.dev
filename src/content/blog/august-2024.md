@@ -5,7 +5,7 @@ pubDate: 2024-09-23
 slug: 'august-2024-overcoming-hurdles-and-finding-silver-linings'
 path: '/blog/august-2024-overcoming-hurdles-and-finding-silver-linings'
 draft: false
-tags: ['okikelabs', 'entrepreneurship', 'reflections']
+tags: ['okikelabs', 'entrepreneurship', 'reflections', 'newsletter']
 ---
 
 August wasn’t the smooth ride I had hoped for. While [July](/blog/july-2024-new-beginnings) was all about momentum and laying the groundwork, August reminded me that progress doesn’t always follow a straight line. We had the ambitious goal to launch Nuxt SaaS Kit, our Vue/Nuxt starter kit designed to help developers launch production and market-ready SaaS products quickly. Unfortunately, we ran into some significant roadblocks that derailed our plans.
